@@ -1,0 +1,72 @@
+import {createGlobalStyle} from 'styled-components';
+
+export const GlobalStyles = createGlobalStyle`
+
+    html {
+        box-sizing: border-box;
+        font-size: 100%;
+    }
+
+    *,*::before,*::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        
+        background-color: #fff;
+        color: #000;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+        
+        line-height: 1.4;
+        transition: all 200ms ease-in-out;
+    }
+
+    a, button, input {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    p {
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    img {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    button {
+        border: 0;
+        padding: 0.5rem;
+        background-color: transparent;
+    }
+
+    .container {
+        width: 75%;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding: 1rem;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+    }
+`
