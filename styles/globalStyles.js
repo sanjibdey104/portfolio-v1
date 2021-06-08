@@ -53,6 +53,11 @@ export const GlobalStyles = createGlobalStyle`
         background-color: transparent;
     }
 
+    --box-shadow: 
+        inset 3px 3px 8px 0 hsla(0deg, 0%, 100%, 80%), 
+        inset -3px -3px 8px 0 rgba(24, 50, 95, 16%), 
+        1px 1px 5px 0 rgba(178, 0, 255, 10%);
+
     .container {
         width: 75%;
         margin: 0 auto;
