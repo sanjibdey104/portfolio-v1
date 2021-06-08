@@ -17,8 +17,8 @@ export const GlobalStyles = createGlobalStyle`
         width: 100%;
         height: 100vh;
         
-        background-color: #fff;
-        color: #000;
+        background-color: ${({ theme }) => theme.backgroundColor};
+        color: ${({ theme }) => theme.textColor};
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
         
@@ -70,3 +70,23 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 `
+
+export const lightTheme = {
+    backgroundColor: "#fff",
+    textColor: "#000",
+    buttonText: "#fff",
+    primary: "#4262ff",
+    border: "1px solid #000",
+    mobileNavLink: "#fff",
+    mobileNavBg: "rgba(66,98,255, 0.5)"
+}
+
+export const darkTheme = {
+    backgroundColor: "#121212",
+    textColor: "#ffffffda",
+    buttonText: "#000",
+    primary: "#bb86fc",
+    border: "1px solid #fff",
+    mobileNavLink: "#000",
+    mobileNavBg: "rgba(187,134,252, 0.5)"
+}
