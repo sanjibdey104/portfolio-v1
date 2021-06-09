@@ -18,7 +18,6 @@ const Intro = styled.section`
   justify-content:center;
   align-items: center;
   gap: 2rem;
-  overflow: hidden;
 
   .about-self {
     display: flex;
@@ -56,6 +55,7 @@ const Intro = styled.section`
 
   .hero-image {
     position: relative;
+    margin: 0 auto;
 
     &::after {
       content: "";
@@ -71,24 +71,33 @@ const Intro = styled.section`
       border-bottom-left-radius: 50%;
 
       position: absolute;
-      top: 5rem;
-      left: 0;
-      right: 0;
+      top: 18%;
+      left: -2%;
+      right: -2%;
       bottom: 0;
     }
+    
+    @media (max-width: 768px) {
+      width: 19rem;
+      margin: 0 auto;
+
+      &::after {
+        left: 0;
+        right: 0;
+      }
+    }
+
 
     img {
+    border-bottom-left-radius: 60%;
     transform: translateY(0%);
     animation-name: wave;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    border-bottom-left-radius: 60%;
     }
-    
-  }
 
-  @keyframes wave {
+    @keyframes wave {
     from {
       transform: translateY(100%);
     }
@@ -97,6 +106,10 @@ const Intro = styled.section`
       transform: translateY(0%);
     }
   }
+    
+  }
+
+  
 `
 
 const Experience = styled.section`
