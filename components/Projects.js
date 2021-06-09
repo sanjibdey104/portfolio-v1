@@ -8,6 +8,7 @@ const ProjectList = styled.section`
     gap: 1rem;
     pointer-events: none;
     justify-content: center;
+    margin: 2rem 0;
 
     &:hover > .project-card:hover {
         transform: scale(1.15);

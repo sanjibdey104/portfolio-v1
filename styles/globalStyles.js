@@ -69,7 +69,6 @@ export const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 2rem;
 
         @media (max-width: 768px) {
             width: 95%;

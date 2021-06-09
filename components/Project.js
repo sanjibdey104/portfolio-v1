@@ -35,6 +35,11 @@ const ProjectCard = styled.li`
     &:nth-child(n) {
       transform: rotate(-5deg);
     }
+
+    .tech-stack {
+      font-size: 0.85rem;
+      color: ${({theme}) => theme.primary};
+    }
 `
 
 const ProjectLinks = styled.section`
@@ -47,10 +52,14 @@ const Project = ({projectDetails}) => {
     
     const { title, description, stack, githubLink, liveLink} = projectDetails;
 
+    const techStack = stack.join(',');
+    // console.log(stack);
+
     return (
       <ProjectCard className="project-card">
         <h3 className="title">{title}</h3>
         <p className="description">{description}</p>
+        <p className="tech-stack">{techStack}</p>
         <ProjectLinks>
           <a href={githubLink} rel="noreferrer" target="_blank">
           <FaGithub />
