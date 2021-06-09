@@ -45,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Source Code Pro', monospace;
     }
 
-    img {
+    img,svg {
         display: block;
     }
 
@@ -72,7 +72,7 @@ export const GlobalStyles = createGlobalStyle`
         gap: 2rem;
 
         @media (max-width: 768px) {
-            width: 90%;
+            width: 95%;
         }
     }
 `

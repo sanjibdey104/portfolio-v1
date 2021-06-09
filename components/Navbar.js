@@ -7,7 +7,6 @@ const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content:center;
-    position: relative;
 
     @media (max-width: 768px) {
         width: 90%;
@@ -47,19 +46,20 @@ const NavLinks = styled.ul`
     }
 
     @media (max-width: 768px) {
+        gap: 1.2rem;
         li {
             font-size: 1.2rem;
         }
     }
 `
 
-const NavToggler = styled.button`
+const NavToggleButton = styled.button`
     display: none;
 
     span {
         width: 70%;
         height: 2px;
-        background-color: black;
+        background-color: ${({theme}) => theme.textColor};
         margin: 0;
         padding: 0;
     }
@@ -80,7 +80,7 @@ const NavToggler = styled.button`
         width: 2.75rem;
         border-radius: 50%;
 
-        transform: translateY(-110%) translateX(40%);
+        transform: translateY(-110%) translateX(35%);
     }
 `
 
@@ -112,13 +112,13 @@ const Navbar = () => {
                 <li><ThemeToggleButton /></li>
             </NavLinks>
 
-            <NavToggler
+            <NavToggleButton
             onClick={() => toggleNavDisplay()}
             >
             <span></span>
             <span></span>
             <span></span>
-            </NavToggler>
+            </NavToggleButton>
         </Nav>
     )
 }

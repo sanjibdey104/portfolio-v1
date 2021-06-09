@@ -11,7 +11,6 @@ const ThemeSwitch = styled.button`
     svg {
         width: 1.5rem;
         height: 1.5rem;
-        display: block;
         color: ${({ theme }) => theme.textColor};
     }
 `

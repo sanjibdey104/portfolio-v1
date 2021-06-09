@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
+
 const Homepage = styled.main`
   width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -25,17 +27,6 @@ const Intro = styled.section`
     gap: 0.5rem;
     padding: 0 0.5rem;
 
-    h2 {
-      font-size: calc(1.2rem + 1vw);
-
-      span {
-        color: ${({theme}) => theme.primary};
-        font-size: calc(1.75rem + 1.2vw);
-        display: block;
-        text-shadow: inset 0 0 3px rgba(0,0,0,0.5);
-      }
-    }
-
     transform: translateX(0%);
     animation-name: slideIn;
     animation-duration: 1.5s;
@@ -49,6 +40,17 @@ const Intro = styled.section`
     to {
       transform: translateX(0%);
     }
+    }
+
+    h2 {
+      font-size: calc(1.2rem + 1vw);
+
+      span {
+        color: ${({theme}) => theme.primary};
+        font-size: calc(1.75rem + 1.2vw);
+        display: block;
+        text-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+      }
     }
   }
 
@@ -83,8 +85,10 @@ const Intro = styled.section`
     animation-timing-function: linear;
     border-bottom-left-radius: 60%;
     }
+    
+  }
 
-    @keyframes wave {
+  @keyframes wave {
     from {
       transform: translateY(100%);
     }
@@ -92,8 +96,6 @@ const Intro = styled.section`
     to {
       transform: translateY(0%);
     }
-  }
-    
   }
 `
 
@@ -107,20 +109,25 @@ const Experience = styled.section`
 
   border-radius: 1rem;
   padding: 1rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
-export default function Home() {
+const Home = () => {
+
   return (
     <Homepage>
 
-      <Intro>
+        <Intro>
         <div className="about-self">
           <h2>Hey, I'm <span>Sanjib</span></h2>
           <h2>A front-end developer based in Delhi</h2>
         </div>
 
         <div className="hero-image">
-          <Image src="/waving.png" height={440} width={390} />
+        <Image src="/waving.png" height={440} width={390} />
         </div>
       </Intro>
 
@@ -135,3 +142,6 @@ export default function Home() {
     </Homepage>
   )
 }
+
+
+export default Home;

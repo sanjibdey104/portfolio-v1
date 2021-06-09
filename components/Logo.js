@@ -7,6 +7,7 @@ const StyledLogo = styled.h2`
     font-size: 2.5rem;
     background-color: ${({theme}) => theme.backgroundColor};
     color: ${({ theme }) => theme.primary};
+    margin-right: auto;
 
     display: grid;
     place-content: center;
@@ -29,6 +30,7 @@ const StyledLogo = styled.h2`
         top: 0;
         right: 0;
     }
+
 `
 
 const Logo = () => {
