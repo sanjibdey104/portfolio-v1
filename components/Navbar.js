@@ -40,8 +40,39 @@ const NavLinks = styled.ul`
 
     a {
         cursor: pointer;
-        &:hover {
-            color: ${({theme}) => theme.primary};
+        padding: 0.5rem;
+        position: relative;
+
+        &:hover::before, &:hover::after {
+            transform: scale(1);
+        }
+
+        &::before {
+            content: "";
+            width: 0.75rem;
+            height: 0.75rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            border-left: 2px solid black;
+            border-top: 2px solid black;
+            transform: scale(0);
+            transition: transform 150ms ease-in-out;
+        }
+
+        &::after {
+            content: "";
+            width: 0.75rem;
+            height: 0.75rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+            transform: scale(0);
+            transition: transform 150ms ease-in-out;
         }
     }
 

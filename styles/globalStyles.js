@@ -29,7 +29,6 @@ export const GlobalStyles = createGlobalStyle`
         inset 3px 3px 8px 0 hsla(0deg, 0%, 100%, 80%), 
         inset -3px -3px 8px 0 rgba(24, 50, 95, 16%), 
         1px 1px 5px 0 rgba(178, 0, 255, 10%);
-
     }
 
     a, button, input {

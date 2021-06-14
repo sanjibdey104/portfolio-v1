@@ -130,7 +130,7 @@ const Experience = styled.section`
 
 const Technologies = styled.section`
 
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
