@@ -64,6 +64,7 @@ const WorkComponent = styled.section`
             li {
                 padding-left: 0.5rem;
                 margin-bottom: 1rem;
+                font-family: 'Lora';
 
                 &::marker {
                     content: "#";
@@ -105,11 +106,8 @@ const Work = ({works}) => {
                 <ul>
                     {responsibilities.map(res => {
                         let unikey = Math.random();
-                        return (
-                            <li key={unikey}>{res}</li>  
-                        )
-                    }  
-                    )}
+                        return <li key={unikey}>{res}</li>
+                    })}
                 </ul>
             </div>
         </WorkComponent>

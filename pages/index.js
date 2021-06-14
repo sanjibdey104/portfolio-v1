@@ -69,7 +69,6 @@ const Experience = styled.section`
   width: 80%;
   margin: 0 auto;
   height: 30rem;
-  margin-bottom: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -92,13 +91,13 @@ const Experience = styled.section`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 `
 
 const Technologies = styled.section`
 
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -154,7 +153,7 @@ const Home = ({workData}) => {
       </Intro>
 
       <Experience>
-        <h2>Experience</h2>
+        <h2>experience</h2>
         <Work works={works}/>
       </Experience>
 
