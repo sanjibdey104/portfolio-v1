@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
         
         background-color: ${({ theme }) => theme.backgroundColor};
         color: ${({ theme }) => theme.textColor};
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         scroll-behavior: smooth;
         
         line-height: 1.4;
@@ -32,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     a, button, input {
-        font-family: 'Poppins', sans-serif;
+        font-family: inherit;
     }
 
     a {
@@ -41,7 +41,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     p {
-        font-family: 'Source Code Pro', monospace;
+        font-family: 'Lora', sans-serif;
     }
 
     img,svg {
@@ -76,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
 `
 
 export const lightTheme = {
-    backgroundColor: "#fff",
+    backgroundColor: "#eee",
     textColor: "#000",
     buttonText: "#fff",
     primary: "#4262ff",

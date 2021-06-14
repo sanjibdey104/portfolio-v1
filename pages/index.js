@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Image from 'next/image';
-import { SiJavascript, SiReact, SiGatsby, SiNextDotJs, SiGraphql, SiSass, SiNetlify } from "react-icons/si";
+import { SiJavascript, SiReact, SiGatsby, 
+SiNextDotJs, SiGraphql, SiSass, SiNetlify } from "react-icons/si";
 
 
 const Homepage = styled.main`
@@ -13,14 +13,18 @@ const Homepage = styled.main`
 
 const Intro = styled.section`
 
-  min-height: 25rem;
+  min-height: 30rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-  justify-content:center;
-  align-items: center;
-  gap: 2rem;
+  place-content: center;
 
   .about-self {
+    width: 70%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -43,71 +47,25 @@ const Intro = styled.section`
     }
 
     h2 {
-      font-size: calc(1.2rem + 1vw);
+      font-size: calc(1rem + 1vw);
+
+      &:hover span {
+        text-shadow: 
+        4px 4px 0px tomato, 
+        7px 7px 0px rgba(0,0,0,0.2);
+      }
 
       span {
-        color: ${({theme}) => theme.primary};
-        font-size: calc(1.75rem + 1.2vw);
+        color: white;
+        font-size: clamp(1.85rem, 10vw, 5.2rem);
         display: block;
-        text-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        text-shadow: 
+        4px 4px 0px #d5d5d5, 
+        7px 7px 0px rgba(0,0,0,0.2);
+        color: #121212;
       }
     }
-  }
-
-  .hero-image {
-    position: relative;
-    margin: 0 auto;
-
-    &::after {
-      content: "";
-      max-height: 20rem;
-      max-width: 26rem;
-      border-radius: 1rem;
-      z-index: -1;
-
-      background-color: ${({theme}) => theme.primary};
-      padding: 1rem;
-      box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
-      border-top-right-radius: 50%;
-      border-bottom-left-radius: 50%;
-
-      position: absolute;
-      top: 18%;
-      left: -2%;
-      right: -2%;
-      bottom: 0;
-    }
-    
-    @media (max-width: 768px) {
-      width: 19rem;
-      margin: 0 auto;
-
-      &::after {
-        left: 0;
-        right: 0;
-      }
-    }
-
-
-    img {
-    border-bottom-left-radius: 60%;
-    transform: translateY(0%);
-    animation-name: wave;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    }
-
-    @keyframes wave {
-    from {
-      transform: translateY(100%);
-    }
-
-    to {
-      transform: translateY(0%);
-    }
-  }
-    
   }
 `
 
@@ -130,10 +88,15 @@ const Experience = styled.section`
 
 const Technologies = styled.section`
 
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 
   h3 {
     margin-bottom: 2rem;
@@ -144,7 +107,10 @@ const Technologies = styled.section`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+/* 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(3rem, 5rem)); */
+  gap: 3rem;
   }
 
   svg {
@@ -168,11 +134,8 @@ const Home = () => {
       <Intro>
         <div className="about-self">
           <h2>Hey, I'm <span>Sanjib</span></h2>
-          <h2>A front-end developer based in Delhi</h2>
-        </div>
-
-        <div className="hero-image">
-        <Image src="/waving.png" height={440} width={390} />
+          <h2>A front-end web developer based in Delhi, India</h2>
+          <p>love building interactive and functional web apps</p>
         </div>
       </Intro>
 
