@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import { SiJavascript, SiReact, SiGatsby, SiNextDotJs, SiGraphql, SiSass, SiNetlify } from "react-icons/si";
 
 
 const Homepage = styled.main`
@@ -108,8 +109,6 @@ const Intro = styled.section`
   }
     
   }
-
-  
 `
 
 const Experience = styled.section`
@@ -128,12 +127,45 @@ const Experience = styled.section`
   }
 `
 
+
+const Technologies = styled.section`
+
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  .tech-stack {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;  
+
+    &:hover {
+      color: tomato;
+    }
+  }
+
+`
+
 const Home = () => {
 
   return (
     <Homepage>
 
-        <Intro>
+      <Intro>
         <div className="about-self">
           <h2>Hey, I'm <span>Sanjib</span></h2>
           <h2>A front-end developer based in Delhi</h2>
@@ -148,9 +180,21 @@ const Home = () => {
         <h2>Experience</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi eveniet autem dolor expedita a ex?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi eveniet autem dolor expedita a ex?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam eveniet nemo debitis veritatis quaerat! Ratione, suscipit excepturi. Nulla et, magni delectus incidunt laudantium in architecto assumenda. Repellat fugiat quibusdam repellendus.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam eveniet nemo debitis veritatis quaerat! Ratione, suscipit excepturi. Nulla et, magni delectus incidunt laudantium in architecto assumenda. Repellat fugiat quibusdam repellendus.</p>
       </Experience>
+
+      <Technologies>
+        <h3>technologies i've worked with</h3>
+
+        <div className="tech-stack">
+          <SiJavascript />
+          <SiReact />
+          <SiSass />
+          <SiGatsby />
+          <SiNextDotJs />
+          <SiGraphql />
+          <SiNetlify />
+        </div>
+      </Technologies>
 
     </Homepage>
   )

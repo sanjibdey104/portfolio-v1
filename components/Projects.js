@@ -5,7 +5,7 @@ import Project from './Project';
 const ProjectList = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
-    gap: 1rem;
+    gap: 2rem;
     pointer-events: none;
     justify-content: center;
     margin: 2rem 0;
