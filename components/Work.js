@@ -29,11 +29,11 @@ const WorkComponent = styled.section`
             font-weight: 500;
 
             &:hover {
-                color: #1976d2;
+                color: var(--accent-color);
             }
 
             &.active {
-                color: #1976d2;
+                color: var(--accent-color);
             }
         }
     }

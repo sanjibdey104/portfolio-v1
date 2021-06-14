@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import React from 'react';
-import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { MdContactMail } from 'react-icons/md';
+import { SiLinkedin, SiGithub, SiTwitter, SiGmail } from "react-icons/si";
 import styled from 'styled-components';
 
 const ContactSection = styled.section`
@@ -18,12 +16,17 @@ const ContactSection = styled.section`
 
 const ContactPointList = styled.ul`
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: space-around;
 
     svg {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        transition: color 150ms ease-in-out;
+
+        &:hover {
+            color: var(--accent-color);
+        }
     }
 `
 
@@ -35,22 +38,22 @@ function contact() {
             <ContactPointList>
                 <li>
                     <a href="https://github.com/sanjibdey104" rel="noreferrer" target="_blank">
-                        <FaGithub className="github" />
+                        <SiGithub />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/" rel="noreferrer" target="_blank">
-                        <FaLinkedinIn color='#2867B2'/>
+                        <SiLinkedin />
                     </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/Sanjib_104" rel="noreferrer" target="_blank">
-                        <FaTwitter color='#1DA1F2' />
+                        <SiTwitter />
                     </a>
                 </li>
                 <li>
                     <a className="mail" href="mailto:sanjibdey.dey4@gmail.com">
-                        <MdContactMail />
+                        <SiGmail />
                     </a>                
                 </li>
             </ContactPointList>
