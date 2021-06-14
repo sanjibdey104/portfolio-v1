@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { SiJavascript, SiReact, SiGatsby, 
 SiNextDotJs, SiGraphql, SiSass, SiNetlify } from "react-icons/si";
+import Work from '../components/Work';
+import { getPortfolioData } from '../lib/data';
 
 
 const Homepage = styled.main`
@@ -22,7 +24,7 @@ const Intro = styled.section`
     margin: 0 auto;
 
     @media (max-width: 768px) {
-      width: 90%;
+      width: 95%;
     }
 
     display: flex;
@@ -49,12 +51,6 @@ const Intro = styled.section`
     h2 {
       font-size: calc(1rem + 1vw);
 
-      &:hover span {
-        text-shadow: 
-        4px 4px 0px tomato, 
-        7px 7px 0px rgba(0,0,0,0.2);
-      }
-
       span {
         color: white;
         font-size: clamp(1.85rem, 10vw, 5.2rem);
@@ -72,19 +68,33 @@ const Intro = styled.section`
 const Experience = styled.section`
   width: 80%;
   margin: 0 auto;
+  height: 30rem;
+  margin-bottom: 2rem;
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 
-  border-radius: 1rem;
-  padding: 1rem;
+  h2 {
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.3rem,3vw,1.5rem);
+  }
+
+  h2::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    display: inline-block;
+    margin-left: 1rem;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
+    margin-bottom: 10rem;
   }
 `
-
 
 const Technologies = styled.section`
 
@@ -92,14 +102,15 @@ const Technologies = styled.section`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
 
-
-  @media (max-width: 768px) {
-    width: 90%;
+  h2 {
+    font-size: clamp(1.3rem,3vw,1.5rem);
   }
 
-  h3 {
-    margin-bottom: 2rem;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 
   .tech-stack {
@@ -107,10 +118,11 @@ const Technologies = styled.section`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-/* 
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(3rem, 5rem)); */
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(3rem, 5rem));
+  gap: 1rem;
+  align-content: center;
   }
 
   svg {
@@ -120,13 +132,15 @@ const Technologies = styled.section`
     cursor: pointer;  
 
     &:hover {
-      color: tomato;
+      color: #1976d2;
     }
   }
 
 `
 
-const Home = () => {
+const Home = ({workData}) => {
+
+  const {works} = workData;
 
   return (
     <Homepage>
@@ -141,12 +155,11 @@ const Home = () => {
 
       <Experience>
         <h2>Experience</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi eveniet autem dolor expedita a ex?</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi eveniet autem dolor expedita a ex?</p>
+        <Work works={works}/>
       </Experience>
 
       <Technologies>
-        <h3>technologies i've worked with</h3>
+        <h2>technologies i've worked with</h2>
 
         <div className="tech-stack">
           <SiJavascript />
@@ -161,6 +174,16 @@ const Home = () => {
 
     </Homepage>
   )
+}
+
+export const getStaticProps = async() => {
+  const {workData} = await getPortfolioData();
+
+  return {
+    props: {
+      workData
+    }
+  }
 }
 
 

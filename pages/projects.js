@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Projects from '../components/Projects';
-import { getProjectsData } from '../lib/data';
+import { getPortfolioData } from '../lib/data';
 
 
 const ProjectsPage = styled.section`
@@ -16,26 +16,24 @@ const ProjectsPage = styled.section`
   }
 `
 
-export const getStaticProps = async() => {
+function projects({projectsData}) {
+  const {projects} = projectsData;
 
-  const data = await getProjectsData();
+  return (
+    <ProjectsPage> 
+    <Projects className="project-section" projects={projects} />
+    </ProjectsPage>
+  )
+}
+
+export const getStaticProps = async() => {
+  const {projectsData} = await getPortfolioData();
 
   return {
     props: {
-      data
+      projectsData
     }
   }
-}
-
-
-function projects({data}) {
-    const {projects} = data;
-
-    return (
-      <ProjectsPage> 
-      <Projects className="project-section" projects={projects} />
-      </ProjectsPage>
-    )
 }
 
 export default projects
