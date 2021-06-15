@@ -31,6 +31,8 @@ export const GlobalStyles = createGlobalStyle`
         1px 1px 5px 0 rgba(178, 0, 255, 10%);
 
         --accent-color: #1976d2;
+        --font-primary: 'Montserrat', sans-serif;
+        --font-secondary: 'Lora', sans-serif;
     }
 
     a, button, input {

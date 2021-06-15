@@ -5,15 +5,7 @@ import { getPortfolioData } from '../lib/data';
 
 
 const ProjectsPage = styled.section`
-  .project-section {
-    width: 80%;
-    margin-left: auto;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      margin-left: 0;
-    }
-  }
+    width: 100%;
 `
 
 function projects({projectsData}) {
@@ -21,7 +13,7 @@ function projects({projectsData}) {
 
   return (
     <ProjectsPage> 
-    <Projects className="project-section" projects={projects} />
+    <Projects projects={projects} />
     </ProjectsPage>
   )
 }

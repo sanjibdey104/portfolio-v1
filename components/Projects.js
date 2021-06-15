@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import Project from './Project';
 
 const ProjectList = styled.section`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
-    gap: 2rem;
+    margin: 3rem 0;
+    position: relative;
     pointer-events: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 20rem));
+    gap: 4rem;
     justify-content: center;
-    margin: 2rem 0;
 
     &:hover > .project-card:hover {
         transform: scale(1.15);
