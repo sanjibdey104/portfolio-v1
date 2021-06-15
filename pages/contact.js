@@ -7,6 +7,7 @@ const ContactSection = styled.section`
     height: 25rem;
     align-self: flex-start;
     justify-self: flex-start;
+    margin-top: 3rem;
 
     display: flex;
     flex-direction: column;
