@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Project from './Project';
+import Link from 'next/link';
 
 const ProjectList = styled.section`
     margin: 3rem 0;
@@ -8,8 +9,8 @@ const ProjectList = styled.section`
     pointer-events: none;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 20rem));
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 25rem));
+    gap: 3rem;
     justify-content: center;
 
     &:hover > .project-card:hover {

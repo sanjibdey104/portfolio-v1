@@ -5,7 +5,7 @@ import { getPortfolioData } from '../lib/data';
 
 
 const ProjectsPage = styled.section`
-    width: 100%;
+  width: 100%;
 `
 
 function projects({projectsData}) {

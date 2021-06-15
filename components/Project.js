@@ -2,13 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { SiGithub } from 'react-icons/si';
 import { BiLinkExternal } from 'react-icons/bi';
+import Link from 'next/link';
 
 const ProjectCard = styled.li`
-  width: 20rem;
-  height: 13rem;
+  width: 22rem;
+  height: 15rem;
   margin: 0 auto;
-  cursor: pointer;
   padding: 0.5rem;
+
+  cursor: pointer;
   position: relative;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 
@@ -27,6 +29,23 @@ const ProjectCard = styled.li`
     box-shadow: inset -2px 0 rgba(0,0,0,0.3);
     transform: translateX(-50%) translateY(-50%);
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border-right: 1px solid ${({theme}) => theme.mobileNavLinks};
+
+    background-color: inherit;
+    box-shadow: inset -2px 0 rgba(0,0,0,0.3);
+    transform: rotate(180deg) translateX(-50%) translateY(50%);
+  }
+  
 
   @media (max-width: 768px) {
     width: 90%;
@@ -80,28 +99,30 @@ const ProjectLinks = styled.section`
 
 const Project = ({projectDetails}) => {
     
-  const { title, description, stack, githubLink, liveLink} = projectDetails;
+  const { title, slug, description, stack, githubLink, liveLink} = projectDetails;
 
   const techStack = stack.join(', ');
 
   return (
-    <ProjectCard className="project-card">   
-      <h3 className="title">{title}</h3>
-      
-      <section className="other-half">
-        <p className="description">{description}</p>
-        <p className="tech-stack">{techStack}</p>
+    <Link href={`/projects/${slug}`}>
+      <ProjectCard className="project-card">   
+        <h3 className="title">{title}</h3>
+        
+        <section className="other-half">
+          <p className="description">{description}</p>
+          <p className="tech-stack">{techStack}</p>
 
-        <ProjectLinks>
-          <a href={githubLink} rel="noreferrer" target="_blank">
-          <SiGithub />
-          </a>
-          <a href={liveLink} rel="noreferrer" target="_blank">
-          <BiLinkExternal />
-          </a>
-        </ProjectLinks>
-      </section>
-    </ProjectCard>
+          <ProjectLinks>
+            <a href={githubLink} rel="noreferrer" target="_blank">
+            <SiGithub />
+            </a>
+            <a href={liveLink} rel="noreferrer" target="_blank">
+            <BiLinkExternal />
+            </a>
+          </ProjectLinks>
+        </section>
+      </ProjectCard>
+    </Link>
   )
 }
 
