@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { ThemeToggleButton } from './ThemeToggleButton';
 import Link from 'next/link';
+import { NavbarDisplayContext } from '../context/NavbarDisplayContext';
 
 const Nav = styled.nav`
     display: flex;
@@ -16,10 +17,8 @@ const Nav = styled.nav`
         z-index: 10;
 
         border-radius: 1rem;
-        box-shadow: var(--box-shadow);
         background-color: ${({theme}) => theme.mobileNavBg};
-        backdrop-filter: blur(5px);
-        color: ${({ theme }) => theme.textColor};
+        color: ${({ theme }) => theme.mobileNavLink};
 
         transform: translateY(120%);
         transition: transform 200ms ease-in-out;
@@ -78,6 +77,19 @@ const NavLinks = styled.ul`
 
     @media (max-width: 768px) {
         gap: 1.2rem;
+
+        a {
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
         li {
             font-size: 1.2rem;
         }
@@ -90,7 +102,7 @@ const NavToggleButton = styled.button`
     span {
         width: 70%;
         height: 2px;
-        background-color: ${({theme}) => theme.textColor};
+        background-color: ${({theme}) => theme.mobileNavLink};
         margin: 0;
         padding: 0;
     }
@@ -119,17 +131,19 @@ const NavToggleButton = styled.button`
 
 const Navbar = () => {
 
-    const [navDisplay, setNavDisplay] = useState(false);
+    const {navDisplay, toggleNavDisplay} = useContext(NavbarDisplayContext);
 
-    const toggleNavDisplay = () => {
-        setNavDisplay(!navDisplay);
-    }
+    // const [navDisplay, setNavDisplay] = useState(false);
+
+    // const toggleNavDisplay = () => {
+    //     setNavDisplay(!navDisplay);
+    // }
 
     return (
         <Nav id={navDisplay ? 'open' : null }>
             <NavLinks>
-                <Link href="/about">
-                    <li><a>About</a></li>
+                <Link href="/">
+                    <li><a>Home</a></li>
                 </Link>
 
                 <Link href="/projects">

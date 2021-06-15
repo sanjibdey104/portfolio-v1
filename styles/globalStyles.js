@@ -25,11 +25,6 @@ export const GlobalStyles = createGlobalStyle`
         line-height: 1.4;
         transition: all 200ms ease-in-out;
 
-        --box-shadow: 
-        inset 3px 3px 8px 0 hsla(0deg, 0%, 100%, 80%), 
-        inset -3px -3px 8px 0 rgba(24, 50, 95, 16%), 
-        1px 1px 5px 0 rgba(178, 0, 255, 10%);
-
         --accent-color: #1976d2;
         --font-primary: 'Montserrat', sans-serif;
         --font-secondary: 'Lora', sans-serif;
@@ -85,8 +80,8 @@ export const lightTheme = {
     buttonText: "#fff",
     primary: "#4262ff",
     border: "1px solid #000",
-    mobileNavLink: "#fff",
-    mobileNavBg: "rgba(66,98,255, 0.5)"
+    mobileNavLink: "#ffffffda",
+    mobileNavBg: "#000"
 }
 
 export const darkTheme = {
@@ -96,5 +91,5 @@ export const darkTheme = {
     primary: "#bb86fc",
     border: "1px solid #fff",
     mobileNavLink: "#000",
-    mobileNavBg: "rgba(187,134,252, 0.5)"
+    mobileNavBg: "#fff"
 }

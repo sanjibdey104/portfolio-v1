@@ -13,6 +13,12 @@ const ThemeSwitch = styled.button`
         height: 1.5rem;
         color: ${({ theme }) => theme.textColor};
     }
+
+    @media (max-width: 768px) {
+        svg {
+            color: ${({ theme }) => theme.mobileNavLink};
+        }
+    }
 `
 
 export const ThemeToggleButton = () => {
