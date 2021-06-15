@@ -2,22 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-// const StyledLogo = styled.h3`
-
-//     font-size: calc(0.85rem, 2vw);
-//     cursor: pointer;
-//     margin-right: auto;
-//     padding: 0.5rem;
-
-//     color: ${({ theme }) => theme.textColor};
-//     border: 2px solid ${({theme}) => theme.textColor};
-//     border-bottom-right-radius: 50%;
-
-//     display: grid;
-//     place-content: center;
-// `
-
-
 const StyledLogo = styled.h3`
 
     font-size: 1rem;
@@ -54,6 +38,17 @@ const StyledLogo = styled.h3`
         display: block;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
+    }
+
+    &:hover {
+        &::before{
+            left: -0.2rem;
+            top: -0.2rem;
+        }
+        &::after{
+            right: -0.2rem;
+            bottom: -0.2rem;
+        }
     }
 `
 
