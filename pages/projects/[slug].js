@@ -9,6 +9,7 @@ const ProjectDetailsSection = styled.section`
     width: 80%;
     margin: 0 auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -20,6 +21,7 @@ const ProjectDetailsSection = styled.section`
     gap: 2rem;
 
     h2 {
+        width: 100%;
         font-size: clamp(1.75rem, 8vw, 2.5rem);
         padding-bottom: 1rem;
         border-bottom: 2px solid ${({theme}) => theme.textColor};

@@ -55,8 +55,8 @@ const NavLinks = styled.ul`
             left: 0;
             top: 0;
             display: block;
-            border-left: 2px solid black;
-            border-top: 2px solid black;
+            border-left: 2px solid ${({theme}) => theme.textColor};
+            border-top: 2px solid ${({theme}) => theme.textColor};
             transform: scale(0);
             transition: transform 150ms ease-in-out;
         }
@@ -69,8 +69,8 @@ const NavLinks = styled.ul`
             right: 0;
             bottom: 0;
             display: block;
-            border-right: 2px solid black;
-            border-bottom: 2px solid black;
+            border-right: 2px solid ${({theme}) => theme.textColor};
+            border-bottom: 2px solid ${({theme}) => theme.textColor};
             transform: scale(0);
             transition: transform 150ms ease-in-out;
         }

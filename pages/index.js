@@ -74,24 +74,14 @@ const Experience = styled.section`
   flex-direction: column;
   gap: 2rem;
 
-  h2 {
-    display: flex;
-    align-items: center;
-    font-size: clamp(1.3rem,3vw,1.5rem);
-  }
-
-  h2::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    display: inline-block;
-    margin-left: 1rem;
-  }
-
   @media (max-width: 768px) {
     width: 100%;
     margin-bottom: 5rem;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem,3vw,2rem);
+    border-bottom: 2px solid ${({theme}) => theme.textColor};
   }
 `
 
@@ -101,27 +91,29 @@ const Technologies = styled.section`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 2rem;
-
-  h2 {
-    font-size: clamp(1.3rem,3vw,1.5rem);
-  }
 
   @media (max-width: 768px) {
     width: 100%;
   }
 
-  .tech-stack {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  h2 {
+    font-size: clamp(1.75rem,3vw,2rem);
+    border-bottom: 2px solid ${({theme}) => theme.textColor};
+  }
 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(3rem, 5rem));
-  gap: 1rem;
-  align-content: center;
+  .tech-stack {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3rem, 5rem));
+    gap: 1rem;
+    align-content: center;
+    justify-items: center;
   }
 
   svg {
@@ -158,7 +150,7 @@ const Home = ({workData}) => {
       </Experience>
 
       <Technologies>
-        <h2>technologies i've worked with</h2>
+        <h2>technologies</h2>
 
         <div className="tech-stack">
           <SiJavascript />
