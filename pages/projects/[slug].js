@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { getProjectData, getProjectSlugs } from '../../lib/data';
 import Image from 'next/image';
+import { FiArrowRightCircle } from 'react-icons/fi';
 
 const ProjectDetailsSection = styled.section`
 
@@ -17,6 +18,51 @@ const ProjectDetailsSection = styled.section`
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+
+    h2 {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        padding-bottom: 1rem;
+        border-bottom: 2px solid ${({theme}) => theme.textColor};
+    }
+
+    .display-image {
+        width: 24rem;
+        height: 18rem;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        align-self: center;
+        margin: 2rem 0;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .links {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+
+        a:hover {
+            svg {
+                color: var(--accent-color);
+            }
+        }
+
+        svg {
+            font-size: 1.45rem;
+            display: inline-block;
+            transform: rotate(-30deg);
+            transition: all 150ms ease-in-out;
+        }
+    }
 `
 
 
@@ -44,10 +90,10 @@ function projects({projectData}) {
 
     <div className="links">
         <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            source code
+            <FiArrowRightCircle /> source code
         </a>
         <a href={liveLink} target="_blank" rel="noopener noreferrer">
-            live link
+            live link <FiArrowRightCircle />
         </a>
     </div>
     
