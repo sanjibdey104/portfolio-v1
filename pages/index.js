@@ -6,11 +6,10 @@ import { getPortfolioData } from '../lib/data';
 
 
 const Homepage = styled.main`
-  width: 100%;
-
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  margin-bottom: 3rem;
 `
 
 const Intro = styled.section`
@@ -105,15 +104,9 @@ const Technologies = styled.section`
 
   .tech-stack {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(3rem, 5rem));
-    gap: 1rem;
-    align-content: center;
-    justify-items: center;
+    justify-content: center;
+    gap: 3rem;
   }
 
   svg {
@@ -156,10 +149,8 @@ const Home = ({workData}) => {
           <SiJavascript />
           <SiReact />
           <SiSass />
-          <SiGatsby />
           <SiNextDotJs />
           <SiGraphql />
-          <SiNetlify />
         </div>
       </Technologies>
 
