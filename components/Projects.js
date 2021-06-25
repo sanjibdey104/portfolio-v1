@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Project from './Project';
-import Link from 'next/link';
 
-const ProjectList = styled.section`
+const ProjectList = styled.ul`
     margin: 3rem 0;
     position: relative;
     pointer-events: none;
