@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { SiJavascript, SiReact, SiGatsby, 
-SiNextDotJs, SiGraphql, SiSass, SiNetlify } from "react-icons/si";
+import { SiJavascript, SiReact, SiNextDotJs, SiGraphql, SiSass } from "react-icons/si";
 import Work from '../components/Work';
 import { getPortfolioData } from '../lib/data';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 
 const Homepage = styled.main`
@@ -12,7 +13,7 @@ const Homepage = styled.main`
   margin-bottom: 3rem;
 `
 
-const Intro = styled.section`
+const Intro = styled(motion.section)`
 
   min-height: 30rem;
   display: grid;
@@ -32,7 +33,7 @@ const Intro = styled.section`
     gap: 0.5rem;
     padding: 0 0.5rem;
 
-    transform: translateX(0%);
+    /* transform: translateX(0%);
     animation-name: slideIn;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
@@ -45,7 +46,7 @@ const Intro = styled.section`
     to {
       transform: translateX(0%);
     }
-    }
+    } */
 
     h2 {
       font-size: calc(1rem + 1vw);
@@ -106,7 +107,9 @@ const Technologies = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 3rem;
+    list-style: none;
   }
 
   svg {
@@ -129,7 +132,7 @@ const Home = ({workData}) => {
   return (
     <Homepage>
 
-      <Intro>
+      <Intro initial={{x:-200}} animate={{x:0}}>
         <div className="about-self">
           <h2>Hey, I'm <span>Sanjib</span></h2>
           <h2>A front-end web developer based in Delhi, India</h2>
@@ -144,7 +147,6 @@ const Home = ({workData}) => {
 
       <Technologies>
         <h2>technologies</h2>
-
         <div className="tech-stack">
           <SiJavascript />
           <SiReact />
