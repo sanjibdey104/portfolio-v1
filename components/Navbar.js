@@ -127,17 +127,9 @@ const NavToggleButton = styled.button`
     }
 `
 
-
-
 const Navbar = () => {
 
     const {navDisplay, toggleNavDisplay} = useContext(NavbarDisplayContext);
-
-    // const [navDisplay, setNavDisplay] = useState(false);
-
-    // const toggleNavDisplay = () => {
-    //     setNavDisplay(!navDisplay);
-    // }
 
     return (
         <Nav id={navDisplay ? 'open' : null }>
