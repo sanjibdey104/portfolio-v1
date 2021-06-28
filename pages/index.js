@@ -119,7 +119,7 @@ const Technologies = styled.section`
     cursor: pointer;  
 
     &:hover {
-      color: #1976d2;
+      color: ${({theme}) => theme.accentColor};
     }
   }
 

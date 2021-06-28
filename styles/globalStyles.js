@@ -78,7 +78,7 @@ export const lightTheme = {
     backgroundColor: "#eee",
     textColor: "#000",
     buttonText: "#fff",
-    primary: "#4262ff",
+    accentColor: "#3f51b5",
     border: "1px solid #000",
     mobileNavLink: "#ffffffda",
     mobileNavBg: "#000"
@@ -88,7 +88,7 @@ export const darkTheme = {
     backgroundColor: "#121212",
     textColor: "#ffffffda",
     buttonText: "#000",
-    primary: "#bb86fc",
+    accentColor: "#757de8",
     border: "1px solid #fff",
     mobileNavLink: "#000",
     mobileNavBg: "#fff"

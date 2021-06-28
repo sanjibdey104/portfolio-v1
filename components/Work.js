@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import { FaCaretRight } from "react-icons/fa";
 
 const WorkComponent = styled.section`
     width: 100%;
@@ -19,7 +18,6 @@ const WorkComponent = styled.section`
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        font-size: 0.9rem;
 
         @media (max-width: 768px) {
             width: 100%;
@@ -31,7 +29,7 @@ const WorkComponent = styled.section`
             font-weight: 500;
 
             &.active {
-                color: var(--accent-color);
+                color: ${({theme}) => theme.accentColor};
             }
         }
     }
@@ -59,7 +57,7 @@ const WorkComponent = styled.section`
         }
 
         #company {
-            color: var(--accent-color);
+            color: ${({theme}) => theme.accentColor};
         }
 
         ul {
@@ -74,7 +72,7 @@ const WorkComponent = styled.section`
                     display: inline;
                     position: absolute;
                     left: 0;
-                    color: var(--accent-color);
+                    color: ${({theme}) => theme.accentColor};
                     font-size: 1.3rem;
                     line-height: 1;
                 }
