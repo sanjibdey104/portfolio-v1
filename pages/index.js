@@ -132,7 +132,7 @@ const Home = ({workData}) => {
   return (
     <Homepage>
 
-      <Intro initial={{y:-100}} animate={{y:0}} transition={{delay:0.2}}>
+      <Intro initial={{y:-100, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.5}}>
         <div className="about-self">
           <h2>Hey, I'm <span>Sanjib</span></h2>
           <h2>A front-end web developer based in Delhi, India</h2>
