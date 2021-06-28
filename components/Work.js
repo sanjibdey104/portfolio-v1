@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import { FaCaretRight } from "react-icons/fa";
 
 const WorkComponent = styled.section`
     width: 100%;
@@ -18,6 +19,7 @@ const WorkComponent = styled.section`
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        font-size: 0.9rem;
 
         @media (max-width: 768px) {
             width: 100%;
@@ -27,10 +29,6 @@ const WorkComponent = styled.section`
         li {
             cursor: pointer;
             font-weight: 500;
-
-            &:hover {
-                color: var(--accent-color);
-            }
 
             &.active {
                 color: var(--accent-color);
@@ -60,16 +58,25 @@ const WorkComponent = styled.section`
             margin-bottom: 2rem;
         }
 
+        #company {
+            color: var(--accent-color);
+        }
+
         ul {
             li {
-                padding-left: 0.5rem;
-                margin-bottom: 1rem;
                 font-family: 'Lora';
+                margin-bottom: 1rem;
+                position: relative;
+                padding-left: 1.5rem;
 
-                &::marker {
-                    content: "#";
-                    color: black;
-                    font-weight: 500;
+                &:before {
+                    content: '▹';
+                    display: inline;
+                    position: absolute;
+                    left: 0;
+                    color: var(--accent-color);
+                    font-size: 1.3rem;
+                    line-height: 1;
                 }
             }
         }
@@ -100,7 +107,7 @@ const Work = ({works}) => {
 
             <div className="job-desc">
                 <div className="position">
-                    <span>{position}</span>@ <span>{company}</span>
+                    <span>{position}</span> @ <span id="company">{company}</span>
                 </div>
                 <p className="duration">{duration}</p>
                 <ul>

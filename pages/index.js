@@ -136,7 +136,7 @@ const Home = ({workData}) => {
         <div className="about-self">
           <h2>Hey, I'm <span>Sanjib</span></h2>
           <h2>A front-end web developer based in Delhi, India</h2>
-          <p>love building interactive and functional web apps</p>
+          <p>passionate about building accessible, user-first web applications.</p>
         </div>
       </Intro>
 
