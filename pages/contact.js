@@ -3,10 +3,12 @@ import { SiLinkedin, SiGithub, SiTwitter, SiGmail } from "react-icons/si";
 import styled from "styled-components";
 
 const ContactSection = styled.section`
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  flex-grow: 1;
   gap: 3rem;
 `;
 
