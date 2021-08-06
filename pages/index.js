@@ -40,6 +40,10 @@ const Intro = styled(motion.section)`
     gap: 0.5rem;
     padding: 0 0.5rem;
 
+    p {
+      font-family: var(--font-secondary);
+    }
+
     h2 {
       font-size: calc(1rem + 1vw);
 

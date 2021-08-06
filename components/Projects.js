@@ -5,21 +5,10 @@ import Project from "./Project";
 const ProjectList = styled.ul`
   margin: 3rem 0;
   position: relative;
-  pointer-events: none;
-
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 25rem));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 24rem));
   justify-content: center;
-
-  &:hover > .project-card:hover {
-    transform: scale(1.15);
-    z-index: 5;
-  }
-
-  &:hover > .project-card:not(:hover) {
-    opacity: 0.5;
-  }
+  gap: 4rem;
 `;
 
 const Projects = ({ projects }) => {

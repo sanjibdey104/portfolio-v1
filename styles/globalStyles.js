@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
 
         --accent-color: #1976d2;
         --font-primary: 'Montserrat', sans-serif;
-        --font-secondary: 'Lora', sans-serif;
+        --font-secondary: 'Space Mono', monospace;
     }
 
     a, button, input {

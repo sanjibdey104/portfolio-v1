@@ -8,6 +8,7 @@ const WorkComponent = styled.section`
   display: flex;
   gap: 2rem;
   padding: 1rem;
+  font-family: var(--font-secondary);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -45,14 +46,15 @@ const WorkComponent = styled.section`
 
     .position {
       margin-bottom: 0.5rem;
+      font-size: 1.15rem;
       span {
-        font-size: 1.2rem;
         font-weight: 500;
       }
     }
 
     .duration {
       font-size: 0.9rem;
+      font-family: inherit;
       margin-bottom: 2rem;
     }
 
@@ -62,8 +64,8 @@ const WorkComponent = styled.section`
 
     ul {
       li {
-        font-family: "Lora";
-        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
         position: relative;
         padding-left: 1.5rem;
 

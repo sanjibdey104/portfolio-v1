@@ -2,91 +2,62 @@ import React from "react";
 import styled from "styled-components";
 import { SiGithub } from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";
-import Link from "next/link";
+import Image from "next/image";
 
 const ProjectCard = styled.li`
-  width: 22rem;
-  height: 15rem;
   margin: 0 auto;
-  padding: 0.5rem;
-
-  cursor: pointer;
+  min-height: 20rem;
+  padding: 0.75rem;
   position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px ${({ theme }) => theme.accentColor};
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    border-right: 1px solid ${({ theme }) => theme.mobileNavLinks};
-
-    background-color: inherit;
-    box-shadow: inset -2px 0 rgba(0, 0, 0, 0.3);
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    border-right: 1px solid ${({ theme }) => theme.mobileNavLinks};
-
-    background-color: inherit;
-    box-shadow: inset -2px 0 rgba(0, 0, 0, 0.3);
-    transform: rotate(180deg) translateX(-50%) translateY(50%);
-  }
-
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-
-  background-color: ${({ theme }) => theme.backgroundColor};
-
-  pointer-events: auto;
-  transform: scale(1);
-  opacity: 1;
-  transition: all 150ms ease-in-out;
+  border-radius: 0.75rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
 
-  .title {
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  & > * {
+    flex: 1;
+  }
+
+  .project-image {
+    padding: 0;
+    display: grid;
+    place-content: center;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      margin: 0;
+    }
+  }
+
+  .project-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+
+  #title {
     color: ${({ theme }) => theme.accentColor};
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    border-left: 1px dashed ${({ theme }) => theme.mobileNavLinks};
-    padding-right: 0.5rem;
-    height: 100%;
-    text-align: center;
     font-size: clamp(1.2rem, 2vw, 1.4rem);
   }
 
-  .other-half {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-
-    .description {
-      font-size: 0.9rem;
-    }
-
-    .tech-stack {
-      font-size: 0.85rem;
-      font-family: var(--font-primary);
-    }
+  #description,
+  #tech-stack {
+    font-size: 0.85rem;
+    font-family: var(--font-secondary);
   }
 `;
 
@@ -94,33 +65,43 @@ const ProjectLinks = styled.section`
   display: flex;
   gap: 2rem;
   font-size: 1.3rem;
+
+  a:hover {
+    color: ${({ theme }) => theme.accentColor};
+  }
 `;
 
 const Project = ({ projectDetails }) => {
-  const { title, slug, brief, stack, githubLink, liveLink } = projectDetails;
+  const { title, description, stack, thumbnail, githubLink, liveLink } =
+    projectDetails;
 
   const techStack = stack.join(", ");
 
   return (
-    <Link href={`/projects/${slug}`}>
-      <ProjectCard className="project-card">
-        <h3 className="title">{title}</h3>
+    <ProjectCard className="project-card">
+      <div className="project-image">
+        <Image
+          src={thumbnail.url}
+          placeholder="project screenshot"
+          width={384}
+          height={288}
+        />
+      </div>
+      <div className="project-main">
+        <h3 id="title">{title}</h3>
+        <p id="description">{description}</p>
+        <p id="tech-stack">{techStack}</p>
 
-        <section className="other-half">
-          <p className="description">{brief}</p>
-          <p className="tech-stack">{techStack}</p>
-
-          <ProjectLinks>
-            <a href={githubLink} rel="noreferrer" target="_blank">
-              <SiGithub />
-            </a>
-            <a href={liveLink} rel="noreferrer" target="_blank">
-              <BiLinkExternal />
-            </a>
-          </ProjectLinks>
-        </section>
-      </ProjectCard>
-    </Link>
+        <ProjectLinks id="project-links">
+          <a href={githubLink} rel="noreferrer" target="_blank">
+            <SiGithub />
+          </a>
+          <a href={liveLink} rel="noreferrer" target="_blank">
+            <BiLinkExternal />
+          </a>
+        </ProjectLinks>
+      </div>
+    </ProjectCard>
   );
 };
 
