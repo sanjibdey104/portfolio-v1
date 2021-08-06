@@ -97,8 +97,7 @@ const ProjectLinks = styled.section`
 `;
 
 const Project = ({ projectDetails }) => {
-  const { title, slug, description, stack, githubLink, liveLink } =
-    projectDetails;
+  const { title, slug, brief, stack, githubLink, liveLink } = projectDetails;
 
   const techStack = stack.join(", ");
 
@@ -108,7 +107,7 @@ const Project = ({ projectDetails }) => {
         <h3 className="title">{title}</h3>
 
         <section className="other-half">
-          <p className="description">{description}</p>
+          <p className="description">{brief}</p>
           <p className="tech-stack">{techStack}</p>
 
           <ProjectLinks>

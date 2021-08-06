@@ -10,7 +10,6 @@ const ProjectsPage = styled(motion.section)`
 
 function projects({ projectsData }) {
   const { projects } = projectsData;
-
   return (
     <ProjectsPage initial={{ y: 50 }} animate={{ y: 0 }}>
       <Projects projects={projects} />
