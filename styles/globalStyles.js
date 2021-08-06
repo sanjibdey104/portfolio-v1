@@ -88,7 +88,6 @@ export const darkTheme = {
   backgroundColor: "#121212",
   textColor: "#ffffffda",
   buttonText: "#000",
-  accentColor: "#757de8",
   accentColor: "#3dffc5",
   border: "1px solid #fff",
   mobileNavLink: "#000",
