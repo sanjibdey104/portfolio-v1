@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -72,24 +72,25 @@ export const GlobalStyles = createGlobalStyle`
             width: 95%;
         }
     }
-`
+`;
 
 export const lightTheme = {
-    backgroundColor: "#eee",
-    textColor: "#000",
-    buttonText: "#fff",
-    accentColor: "#3f51b5",
-    border: "1px solid #000",
-    mobileNavLink: "#ffffffda",
-    mobileNavBg: "#000"
-}
+  backgroundColor: "#eee",
+  textColor: "#000",
+  buttonText: "#fff",
+  accentColor: "#3f51b5",
+  border: "1px solid #000",
+  mobileNavLink: "#ffffffda",
+  mobileNavBg: "#000",
+};
 
 export const darkTheme = {
-    backgroundColor: "#121212",
-    textColor: "#ffffffda",
-    buttonText: "#000",
-    accentColor: "#757de8",
-    border: "1px solid #fff",
-    mobileNavLink: "#000",
-    mobileNavBg: "#fff"
-}
+  backgroundColor: "#121212",
+  textColor: "#ffffffda",
+  buttonText: "#000",
+  accentColor: "#757de8",
+  accentColor: "#3dffc5",
+  border: "1px solid #fff",
+  mobileNavLink: "#000",
+  mobileNavBg: "#fff",
+};

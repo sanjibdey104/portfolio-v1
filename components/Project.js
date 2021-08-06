@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { SiGithub } from 'react-icons/si';
-import { BiLinkExternal } from 'react-icons/bi';
-import Link from 'next/link';
+import React from "react";
+import styled from "styled-components";
+import { SiGithub } from "react-icons/si";
+import { BiLinkExternal } from "react-icons/bi";
+import Link from "next/link";
 
 const ProjectCard = styled.li`
   width: 22rem;
@@ -12,7 +12,8 @@ const ProjectCard = styled.li`
 
   cursor: pointer;
   position: relative;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px ${({ theme }) => theme.accentColor};
 
   &::before {
     content: "";
@@ -23,10 +24,10 @@ const ProjectCard = styled.li`
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border-right: 1px solid ${({theme}) => theme.mobileNavLinks};
+    border-right: 1px solid ${({ theme }) => theme.mobileNavLinks};
 
     background-color: inherit;
-    box-shadow: inset -2px 0 rgba(0,0,0,0.3);
+    box-shadow: inset -2px 0 rgba(0, 0, 0, 0.3);
     transform: translateX(-50%) translateY(-50%);
   }
 
@@ -39,34 +40,33 @@ const ProjectCard = styled.li`
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border-right: 1px solid ${({theme}) => theme.mobileNavLinks};
+    border-right: 1px solid ${({ theme }) => theme.mobileNavLinks};
 
     background-color: inherit;
-    box-shadow: inset -2px 0 rgba(0,0,0,0.3);
+    box-shadow: inset -2px 0 rgba(0, 0, 0, 0.3);
     transform: rotate(180deg) translateX(-50%) translateY(50%);
   }
-  
 
   @media (max-width: 768px) {
     width: 90%;
   }
 
-  background-color: ${({theme}) => theme.backgroundColor};
-  
-  pointer-events: auto;  
+  background-color: ${({ theme }) => theme.backgroundColor};
+
+  pointer-events: auto;
   transform: scale(1);
   opacity: 1;
-  transition: all 150ms ease-in-out; 
-  
+  transition: all 150ms ease-in-out;
+
   display: flex;
   align-items: center;
   gap: 2rem;
-  
+
   .title {
-    color: ${({theme}) => theme.textColor};
+    color: ${({ theme }) => theme.accentColor};
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    border-left: 1px dashed ${({theme}) => theme.mobileNavLinks};
+    border-left: 1px dashed ${({ theme }) => theme.mobileNavLinks};
     padding-right: 0.5rem;
     height: 100%;
     text-align: center;
@@ -88,42 +88,41 @@ const ProjectCard = styled.li`
       font-family: var(--font-primary);
     }
   }
-  
-`
+`;
 
 const ProjectLinks = styled.section`
   display: flex;
   gap: 2rem;
   font-size: 1.3rem;
-`
+`;
 
-const Project = ({projectDetails}) => {
-    
-  const { title, slug, description, stack, githubLink, liveLink} = projectDetails;
+const Project = ({ projectDetails }) => {
+  const { title, slug, description, stack, githubLink, liveLink } =
+    projectDetails;
 
-  const techStack = stack.join(', ');
+  const techStack = stack.join(", ");
 
   return (
     <Link href={`/projects/${slug}`}>
-      <ProjectCard className="project-card">   
+      <ProjectCard className="project-card">
         <h3 className="title">{title}</h3>
-        
+
         <section className="other-half">
           <p className="description">{description}</p>
           <p className="tech-stack">{techStack}</p>
 
           <ProjectLinks>
             <a href={githubLink} rel="noreferrer" target="_blank">
-            <SiGithub />
+              <SiGithub />
             </a>
             <a href={liveLink} rel="noreferrer" target="_blank">
-            <BiLinkExternal />
+              <BiLinkExternal />
             </a>
           </ProjectLinks>
         </section>
       </ProjectCard>
     </Link>
-  )
-}
+  );
+};
 
 export default Project;
