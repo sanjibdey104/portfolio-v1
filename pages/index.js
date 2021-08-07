@@ -41,6 +41,12 @@ const Intro = styled(motion.section)`
     align-items: flex-start;
     gap: 0.5rem;
     padding: 0 0.5rem;
+    width: 75%;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
 
     p {
       font-family: var(--font-secondary);
@@ -54,8 +60,10 @@ const Intro = styled(motion.section)`
         font-size: clamp(2rem, 12vw, 4.5rem);
         display: block;
         text-transform: uppercase;
-        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
-        color: #121212;
+        text-shadow: 4px 4px 0px #e85d04, 7px 7px 0px #ffba08;
+        /* text-shadow: 4px 4px 0px ${({ theme }) => theme.accentColor},
+          7px 7px 0px #e63946; */
+        color: ${({ theme }) => theme.textColor};
       }
     }
   }
@@ -74,7 +82,7 @@ const Experience = styled.section`
   }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     border-bottom: 2px solid ${({ theme }) => theme.textColor};
   }
 `;
@@ -91,6 +99,7 @@ const Technologies = styled.section`
 
   h2 {
     font-size: clamp(1.75rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     border-bottom: 2px solid ${({ theme }) => theme.textColor};
   }
 
