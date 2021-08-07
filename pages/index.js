@@ -45,11 +45,11 @@ const Intro = styled(motion.section)`
     }
 
     h2 {
-      font-size: calc(1rem + 1vw);
+      font-size: calc(1rem + 2vw);
 
       span {
         color: white;
-        font-size: clamp(1.85rem, 10vw, 5.2rem);
+        font-size: clamp(2rem, 12vw, 5.2rem);
         display: block;
         text-transform: uppercase;
         text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
