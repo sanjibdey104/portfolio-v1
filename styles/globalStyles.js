@@ -58,7 +58,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .container {
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
         min-height: 100vh;
         padding: 1rem;

@@ -2,56 +2,42 @@ import React from "react";
 import styled from "styled-components";
 import { SiGithub } from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";
-import Image from "next/image";
 
 const ProjectCard = styled.li`
+  width: 100%;
   margin: 0 auto;
-  min-height: 20rem;
-  padding: 0.75rem;
+  height: 20rem;
   position: relative;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: ${({ theme }) => theme.accentColor};
+    border-radius: 0.5rem;
+    z-index: -1;
+    transform: rotate(5deg);
+  }
 
-  @media (max-width: 768px) {
+  .card-inner {
+    height: 100%;
     width: 100%;
-    flex-direction: column;
-  }
+    padding: 0.75rem;
+    border-radius: 0.5rem;
 
-  & > * {
-    flex: 1;
-  }
-
-  .project-image {
-    padding: 0;
-    display: grid;
-    place-content: center;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      margin: 0;
-    }
-  }
-
-  .project-main {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: ${({ theme }) => theme.backgroundColor};
+    box-shadow: 0 0 5px ${({ theme }) => theme.accentColor};
   }
 
   #title {
     color: ${({ theme }) => theme.accentColor};
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
   }
 
   #description,
@@ -72,22 +58,13 @@ const ProjectLinks = styled.section`
 `;
 
 const Project = ({ projectDetails }) => {
-  const { title, description, stack, thumbnail, githubLink, liveLink } =
-    projectDetails;
+  const { title, description, stack, githubLink, liveLink } = projectDetails;
 
   const techStack = stack.join(", ");
 
   return (
     <ProjectCard className="project-card">
-      <div className="project-image">
-        <Image
-          src={thumbnail.url}
-          placeholder="project screenshot"
-          width={384}
-          height={288}
-        />
-      </div>
-      <div className="project-main">
+      <div className="card-inner">
         <h3 id="title">{title}</h3>
         <p id="description">{description}</p>
         <p id="tech-stack">{techStack}</p>
@@ -101,6 +78,8 @@ const Project = ({ projectDetails }) => {
           </a>
         </ProjectLinks>
       </div>
+      {/* <div className="project-main">
+      </div> */}
     </ProjectCard>
   );
 };

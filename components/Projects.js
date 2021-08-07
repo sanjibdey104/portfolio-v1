@@ -4,11 +4,14 @@ import Project from "./Project";
 
 const ProjectList = styled.ul`
   margin: 3rem 0;
+  width: 100%;
   position: relative;
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 24rem));
-  justify-content: center;
-  gap: 4rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 20rem));
+  justify-content: space-evenly;
+  align-self: center;
+  gap: 6rem;
 `;
 
 const Projects = ({ projects }) => {
