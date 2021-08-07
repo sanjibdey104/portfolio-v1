@@ -19,6 +19,15 @@ const Homepage = styled.main`
   flex-direction: column;
   gap: 4rem;
   margin-bottom: 3rem;
+
+  & > * {
+    width: 75%;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      width: 95%;
+    }
+  }
 `;
 
 const Intro = styled(motion.section)`
@@ -27,13 +36,6 @@ const Intro = styled(motion.section)`
   place-content: center;
 
   .about-self {
-    width: 70%;
-    margin: 0 auto;
-
-    @media (max-width: 768px) {
-      width: 95%;
-    }
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -45,11 +47,11 @@ const Intro = styled(motion.section)`
     }
 
     h2 {
-      font-size: calc(1rem + 2vw);
+      font-size: calc(1rem + 1.5vw);
 
       span {
         color: white;
-        font-size: clamp(2rem, 12vw, 5.2rem);
+        font-size: clamp(2rem, 12vw, 4.5rem);
         display: block;
         text-transform: uppercase;
         text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
@@ -60,15 +62,13 @@ const Intro = styled(motion.section)`
 `;
 
 const Experience = styled.section`
-  width: 80%;
-  margin: 0 auto;
   height: 30rem;
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     width: 100%;
     margin-bottom: 5rem;
   }
@@ -80,14 +80,12 @@ const Experience = styled.section`
 `;
 
 const Technologies = styled.section`
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin-bottom: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     width: 100%;
   }
 
@@ -132,9 +130,7 @@ const Home = ({ workData }) => {
             Hey, I'm <span>Sanjib</span>
           </h2>
           <h2>A front-end web developer based in Delhi, India</h2>
-          <p>
-            passionate about building accessible, user-first web applications.
-          </p>
+          <p>passionate about building user-first web applications.</p>
         </div>
       </Intro>
 
