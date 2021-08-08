@@ -35,10 +35,6 @@ export const GlobalStyles = createGlobalStyle`
         color: inherit;
     }
 
-    p {
-        font-family: 'Lora', sans-serif;
-    }
-
     img,svg {
         display: block;
     }
