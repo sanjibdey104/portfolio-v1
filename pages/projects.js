@@ -18,11 +18,12 @@ const ProjectsPage = styled(motion.section)`
     border: 0.5rem;
     border-radius: 0.5rem;
     padding: 0.3rem;
+    margin-top: 2rem;
 
     font-size: 1rem;
     color: ${({ theme }) => theme.textColor};
     background-color: ${({ theme }) => theme.mobileNav};
-    box-shadow: 0 0 5px ${({ theme }) => theme.layerShadow};
+    box-shadow: 0 0 3px ${({ theme }) => theme.accentColor};
 
     display: flex;
     align-items: center;
@@ -30,7 +31,15 @@ const ProjectsPage = styled(motion.section)`
     gap: 0.5rem;
 
     svg {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      transition: transform 300ms ease-in-out;
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px ${({ theme }) => theme.accentColor};
+      svg {
+        transform: rotate(360deg);
+      }
     }
   }
 `;
