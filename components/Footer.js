@@ -1,4 +1,5 @@
 import React from "react";
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
@@ -7,18 +8,73 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.85rem;
+  gap: 0.3rem;
+  font-size: 0.65rem;
 
   p {
     font-family: "Montserrat", monospace;
+  }
+
+  .quick-contact-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: ${({ theme }) => theme.accentColor};
+
+    a {
+      font-size: 1.2rem;
+
+      &:hover {
+        color: ${({ theme }) => theme.textColor};
+      }
+    }
   }
 `;
 
 function Footer() {
   return (
     <StyledFooter>
+      <ul className="quick-contact-links">
+        <li>
+          <a
+            href="https://github.com/sanjibdey104"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FiGithub />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FiLinkedin />
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:sanjibdey.dey4@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FiMail />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/Sanjib_104"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FiTwitter />
+          </a>
+        </li>
+      </ul>
       <p>&copy; 2021, Sanjib Kumar Dey</p>
-      <p>build with Next JS</p>
+      <p>build with 💗 and Next JS</p>
     </StyledFooter>
   );
 }
