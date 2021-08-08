@@ -6,7 +6,7 @@ import { BiLinkExternal } from "react-icons/bi";
 const ProjectCard = styled.li`
   width: 100%;
   margin: 0 auto;
-  height: 20rem;
+  height: 18rem;
   position: relative;
   border-radius: 0.5rem;
 
@@ -31,7 +31,6 @@ const ProjectCard = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
     background-color: ${({ theme }) => theme.backgroundColor};
     box-shadow: 0 0 8px ${({ theme }) => theme.layerShadow};
   }

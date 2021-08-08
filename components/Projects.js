@@ -15,9 +15,13 @@ const ProjectList = styled.ul`
 `;
 
 const Projects = ({ projects }) => {
+  const sortedProjectList = projects.slice().sort(function (a, b) {
+    return new Date(b.updatedAt) - new Date(a.updatedAt);
+  });
+
   return (
     <ProjectList>
-      {projects.map((project) => (
+      {sortedProjectList.map((project) => (
         <Project key={project.id} projectDetails={project} />
       ))}
     </ProjectList>
