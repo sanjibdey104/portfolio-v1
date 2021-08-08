@@ -15,33 +15,10 @@ const ProjectCard = styled.li`
   cursor: pointer;
 
   &:hover .card-layer-two {
-    transform: rotate(6deg);
+    transform: rotate(5deg);
   }
   &:hover .card-layer-three {
     transform: rotate(10deg);
-  }
-
-  .card-layer-three {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: ${({ theme }) => theme.accentColor};
-    background-color: #e63946;
-    border-radius: 0.5rem;
-    z-index: -2;
-    transform: rotate(5deg);
-    transition: transform 200ms ease-in-out;
-  }
-
-  .card-layer-two {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: ${({ theme }) => theme.accentColor};
-    border-radius: 0.5rem;
-    z-index: -1;
-    transform: rotate(3deg);
-    transition: transform 200ms ease-in-out;
   }
 
   .card-layer-one {
@@ -56,7 +33,7 @@ const ProjectCard = styled.li`
     justify-content: space-between;
     gap: 2rem;
     background-color: ${({ theme }) => theme.backgroundColor};
-    box-shadow: 0 0 3px ${({ theme }) => theme.accentColor};
+    box-shadow: 0 0 8px ${({ theme }) => theme.layerShadow};
   }
 
   #title {
@@ -68,6 +45,28 @@ const ProjectCard = styled.li`
   #tech-stack {
     font-size: 0.85rem;
     font-family: var(--font-secondary);
+  }
+
+  .card-layer-two,
+  .card-layer-three {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    background-color: ${({ theme }) => theme.accentColor};
+    box-shadow: 0 0 5px ${({ theme }) => theme.layerShadow};
+    transition: transform 200ms ease-in-out;
+  }
+
+  .card-layer-two {
+    z-index: -1;
+    transform: rotate(3deg);
+  }
+
+  .card-layer-three {
+    z-index: -2;
+    transform: rotate(6deg);
+    background-color: #ffba08;
   }
 `;
 
@@ -104,8 +103,6 @@ const Project = ({ projectDetails }) => {
       </div>
       <div className="card-layer-two"></div>
       <div className="card-layer-three"></div>
-      {/* <div className="project-main">
-      </div> */}
     </ProjectCard>
   );
 };

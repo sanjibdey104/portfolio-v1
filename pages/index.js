@@ -60,10 +60,11 @@ const Intro = styled(motion.section)`
         font-size: clamp(2rem, 12vw, 4.5rem);
         display: block;
         text-transform: uppercase;
-        text-shadow: 4px 4px 0px #e85d04, 7px 7px 0px #ffba08;
-        /* text-shadow: 4px 4px 0px ${({ theme }) => theme.accentColor},
-          7px 7px 0px #e63946; */
-        color: ${({ theme }) => theme.textColor};
+        text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
+          5px 5px 0px ${({ theme }) => theme.accentColor};
+        -webkit-text-stroke: 1px ${({ theme }) => theme.textColor};
+        color: ${({ theme }) => theme.backgroundColor};
+        color: #ffba08;
       }
     }
   }
