@@ -86,38 +86,6 @@ const Brief = styled.section`
 
   p {
     font-family: var(--font-secondary);
-    font-size: 0.9rem;
-  }
-
-  .links {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    font-family: var(--font-secondary);
-  }
-
-  a {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: space-around;
-    width: 10rem;
-
-    font-size: 0.85rem;
-    color: black;
-    box-shadow: 0 0 3px ${({ theme }) => theme.layerShadow};
-    background-color: #eee;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-  }
-
-  svg {
-    display: inline;
-    font-size: 1.5rem;
-    transition: color 150ms ease-in-out;
   }
 `;
 
@@ -193,42 +161,16 @@ const Home = ({ workData }) => {
 
       <Brief>
         <h2>More about me: </h2>
-        <p>Firm believer of learning by sharing.</p>
+        <p>Blogging and learning by sharing.</p>
+        <p>Explore everything web, tech, tools, stack pairing.</p>
         <p>
-          Quite obsessed with design, Dribbble is the window you'll find me
-          staring 👀.
+          Obsessed with design, Dribbble is the window you'll find me staring.
         </p>
+        <p>Often sketching, scribbling on blank canvas, glaring.</p>
         <p>
-          I'm often sketching, scribbling on blank canvas in front, glaring 👩‍🎨.
-        </p>
-        <p>
-          Free verse poetry ✍ and short stories 📝 are some hobbies I'm
-          layering.
+          Free verse poetry and short stories are some hobbies I'm layering.
         </p>
         <p>(and you just got a taste of that 😉)</p>
-        <div className="links">
-          <a
-            href="https://codepen.io/sanjib104"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Peep my pens: <SiCodepen />
-          </a>
-          <a
-            href="https://github.com/sanjibdey104"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Catch my code: <SiGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Link with me: <SiLinkedin />
-          </a>
-        </div>
       </Brief>
 
       <Experience>
