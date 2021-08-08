@@ -8,6 +8,9 @@ import {
   SiNextDotJs,
   SiGraphql,
   SiFirebase,
+  SiCodepen,
+  SiGithub,
+  SiLinkedin,
 } from "react-icons/si";
 import Work from "../components/Work";
 import { getPortfolioData } from "../lib/data";
@@ -17,7 +20,7 @@ import React from "react";
 const Homepage = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 7rem;
   margin-bottom: 3rem;
 
   & > * {
@@ -25,28 +28,26 @@ const Homepage = styled.main`
     margin: 0 auto;
 
     @media (max-width: 600px) {
-      width: 95%;
+      width: 100%;
     }
   }
 `;
 
 const Intro = styled(motion.section)`
-  min-height: 30rem;
+  height: 22rem;
   display: grid;
   place-content: center;
+
+  width: 60%;
+  margin: 0 auto;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 
   .about-self {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 0.5rem;
-    padding: 0 0.5rem;
-    width: 75%;
-    margin: 0 auto;
-
-    @media (max-width: 600px) {
-      width: 100%;
-    }
 
     p {
       font-family: var(--font-secondary);
@@ -63,24 +64,67 @@ const Intro = styled(motion.section)`
         text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
           5px 5px 0px ${({ theme }) => theme.accentColor};
         -webkit-text-stroke: 1px ${({ theme }) => theme.textColor};
-        color: ${({ theme }) => theme.backgroundColor};
         color: #ffba08;
       }
     }
   }
 `;
 
-const Experience = styled.section`
-  height: 30rem;
+const Brief = styled.section`
+  width: 60%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 
-  @media (max-width: 600px) {
-    width: 100%;
-    margin-bottom: 5rem;
+  h2 {
+    margin-bottom: 1.5rem;
   }
+
+  p {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-family: var(--font-secondary);
+  }
+
+  a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 10rem;
+
+    font-size: 0.85rem;
+    color: black;
+    box-shadow: 0 0 3px ${({ theme }) => theme.layerShadow};
+    background-color: #eee;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+  }
+
+  svg {
+    display: inline;
+    font-size: 1.5rem;
+    transition: color 150ms ease-in-out;
+  }
+`;
+
+const Experience = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -140,9 +184,52 @@ const Home = ({ workData }) => {
             Hey, I'm <span>Sanjib</span>
           </h2>
           <h2>A front-end web developer based in Delhi, India</h2>
-          <p>passionate about building user-first web applications.</p>
+          <p>
+            Passionate about building human-first web applications (who isn't 🤷‍♂️
+            ?)
+          </p>
         </div>
       </Intro>
+
+      <Brief>
+        <h2>More about me: </h2>
+        <p>Firm believer of learning by sharing.</p>
+        <p>
+          Quite obsessed with design, Dribbble is the window you'll find me
+          staring 👀.
+        </p>
+        <p>
+          I'm often sketching, scribbling on blank canvas in front, glaring 👩‍🎨.
+        </p>
+        <p>
+          Free verse poetry ✍ and short stories 📝 are some hobbies I'm
+          layering.
+        </p>
+        <p>(and you just got a taste of that 😉)</p>
+        <div className="links">
+          <a
+            href="https://codepen.io/sanjib104"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Peep my pens: <SiCodepen />
+          </a>
+          <a
+            href="https://github.com/sanjibdey104"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Catch my code: <SiGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Link with me: <SiLinkedin />
+          </a>
+        </div>
+      </Brief>
 
       <Experience>
         <h2>experience</h2>

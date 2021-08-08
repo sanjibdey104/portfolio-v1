@@ -28,21 +28,12 @@ const ContactPointList = styled.ul`
   }
 `;
 
-function contact() {
+function Contact() {
   return (
     <ContactSection>
       <h3>Feel free to reach out:</h3>
 
       <ContactPointList>
-        <li>
-          <a
-            href="https://github.com/sanjibdey104"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <SiGithub />
-          </a>
-        </li>
         <li>
           <a
             href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
@@ -71,4 +62,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

@@ -19,11 +19,7 @@ export const GlobalStyles = createGlobalStyle`
         
         background-color: ${({ theme }) => theme.backgroundColor};
         color: ${({ theme }) => theme.textColor};
-        font-family: 'Montserrat', sans-serif;
-        scroll-behavior: smooth;
-        
         line-height: 1.4;
-        transition: all 200ms ease-in-out;
 
         --accent-color: #1976d2;
         --font-primary: 'Montserrat', sans-serif;
@@ -63,6 +59,7 @@ export const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         padding: 1rem;
         position: relative;
+        font-family: var(--font-primary);
 
         display: flex;
         flex-direction: column;
