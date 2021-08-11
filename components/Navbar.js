@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import Link from "next/link";
@@ -143,12 +143,6 @@ const Navbar = () => {
         <Link href="/projects">
           <li>
             <a>Projects</a>
-          </li>
-        </Link>
-
-        <Link href="/contact">
-          <li>
-            <a>Contact</a>
           </li>
         </Link>
 

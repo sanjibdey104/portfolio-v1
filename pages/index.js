@@ -8,10 +8,11 @@ import {
   SiNextDotJs,
   SiGraphql,
   SiFirebase,
-  SiCodepen,
-  SiGithub,
   SiLinkedin,
+  SiGmail,
+  SiTwitter,
 } from "react-icons/si";
+import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
 import { getPortfolioData } from "../lib/data";
 import { motion } from "framer-motion";
@@ -21,20 +22,10 @@ const Homepage = styled.main`
   display: flex;
   flex-direction: column;
   gap: 7rem;
-  margin-bottom: 3rem;
-
-  & > * {
-    width: 75%;
-    margin: 0 auto;
-
-    @media (max-width: 600px) {
-      width: 100%;
-    }
-  }
+  margin-bottom: 5rem;
 `;
 
 const Intro = styled(motion.section)`
-  height: 22rem;
   width: 60%;
   margin: 0 auto;
 
@@ -44,30 +35,66 @@ const Intro = styled(motion.section)`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
 
   p {
+    padding: 0.5rem 0;
     font-family: var(--font-secondary);
   }
 
   h2 {
     font-size: calc(1rem + 1.5vw);
   }
+
   #name {
-    color: white;
-    font-size: clamp(2rem, 12vw, 4.5rem);
     display: block;
+    font-size: clamp(2rem, 12vw, 4.5rem);
     text-transform: uppercase;
     text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
       5px 5px 0px ${({ theme }) => theme.accentColor};
     -webkit-text-stroke: 1px ${({ theme }) => theme.textColor};
     color: #ffba08;
   }
+
+  .quick-contact-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+      min-width: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+
+      color: ${({ theme }) => theme.backgroundColor};
+      background-color: ${({ theme }) => theme.textColor};
+    }
+
+    a:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+
+    svg {
+      font-size: 1.3rem;
+      transition: transform 200ms ease-in-out;
+    }
+  }
 `;
 
 const Brief = styled.section`
-  width: 60%;
+  width: 75%;
+  margin: 0 auto;
+
   @media (max-width: 600px) {
     width: 100%;
   }
@@ -90,6 +117,13 @@ const Experience = styled.section`
   flex-direction: column;
   gap: 2rem;
 
+  width: 75%;
+  margin: 0 auto;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
   h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
     border-bottom: 2px solid ${({ theme }) => theme.textColor};
@@ -101,6 +135,9 @@ const Technologies = styled.section`
   flex-direction: column;
   gap: 3rem;
   margin-bottom: 2rem;
+
+  width: 75%;
+  margin: 0 auto;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -143,15 +180,35 @@ const Home = ({ workData }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <div>
-          <h2>
-            Namaste 🙏, I'm <span id="name">Sanjib</span>
-          </h2>
-          <h2>A front-end web developer based in Delhi, India</h2>
-          <p>
-            Passionate about building human-first web applications (who isn't 🤷‍♂️
-            ?)
-          </p>
+        <h2>
+          Namaste 🙏, I'm <span id="name">Sanjib</span>
+        </h2>
+        <h2>A front-end web developer based in Delhi, India</h2>
+        <p>
+          Passionate about building human-centered web applications (who isn't
+          🤷‍♂️ ?)
+        </p>
+        <div className="quick-contact-links">
+          <a href="#">
+            Fetch resume <FiDownload />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Forge a link @ <SiLinkedin />
+          </a>
+          <a className="mail" href="mailto:sanjibdey.dey4@gmail.com">
+            Drop a mail @ <SiGmail />
+          </a>
+          <a
+            href="https://twitter.com/Sanjib_104"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Nudge the bird @ <SiTwitter />
+          </a>
         </div>
       </Intro>
 

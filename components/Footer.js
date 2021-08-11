@@ -11,11 +11,7 @@ const StyledFooter = styled.footer`
   gap: 0.3rem;
   font-size: 0.65rem;
 
-  p {
-    font-family: "Montserrat", monospace;
-  }
-
-  .quick-contact-links {
+  .contact-links {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -35,7 +31,7 @@ const StyledFooter = styled.footer`
 function Footer() {
   return (
     <StyledFooter>
-      <ul className="quick-contact-links">
+      <ul className="contact-links">
         <li>
           <a
             href="https://github.com/sanjibdey104"
