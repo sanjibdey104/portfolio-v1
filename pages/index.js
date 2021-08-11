@@ -35,38 +35,34 @@ const Homepage = styled.main`
 
 const Intro = styled(motion.section)`
   height: 22rem;
-  display: grid;
-  place-content: center;
-
   width: 60%;
   margin: 0 auto;
+
   @media (max-width: 600px) {
     width: 100%;
   }
 
-  .about-self {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
 
-    p {
-      font-family: var(--font-secondary);
-    }
+  p {
+    font-family: var(--font-secondary);
+  }
 
-    h2 {
-      font-size: calc(1rem + 1.5vw);
-
-      span {
-        color: white;
-        font-size: clamp(2rem, 12vw, 4.5rem);
-        display: block;
-        text-transform: uppercase;
-        text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
-          5px 5px 0px ${({ theme }) => theme.accentColor};
-        -webkit-text-stroke: 1px ${({ theme }) => theme.textColor};
-        color: #ffba08;
-      }
-    }
+  h2 {
+    font-size: calc(1rem + 1.5vw);
+  }
+  #name {
+    color: white;
+    font-size: clamp(2rem, 12vw, 4.5rem);
+    display: block;
+    text-transform: uppercase;
+    text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
+      5px 5px 0px ${({ theme }) => theme.accentColor};
+    -webkit-text-stroke: 1px ${({ theme }) => theme.textColor};
+    color: #ffba08;
   }
 `;
 
@@ -147,9 +143,9 @@ const Home = ({ workData }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <div className="about-self">
+        <div>
           <h2>
-            Hey, I'm <span>Sanjib</span>
+            Namaste 🙏, I'm <span id="name">Sanjib</span>
           </h2>
           <h2>A front-end web developer based in Delhi, India</h2>
           <p>
@@ -160,17 +156,22 @@ const Home = ({ workData }) => {
       </Intro>
 
       <Brief>
-        <h2>More about me: </h2>
-        <p>Blogging and learning by sharing.</p>
-        <p>Explore everything web, tech, tools, stack pairing.</p>
+        <h2>A bit more about me: </h2>
         <p>
-          Obsessed with design, Dribbble is the window you'll find me staring.
+          I find blogging as a handy tool to document my learning and hopefully
+          help others along the way.
         </p>
-        <p>Often sketching, scribbling on blank canvas, glaring.</p>
         <p>
-          Free verse poetry and short stories are some hobbies I'm layering.
+          Exploring tech and tools that can help bring my notion to fruition.
         </p>
-        <p>(and you just got a taste of that 😉)</p>
+        <p>
+          Obsess over UI design and onboard the core learning in my own
+          projects.
+        </p>
+        <p>
+          Outside dev environment, you could find me sketching, scribbling on
+          blank canvas, writing free verse poetry and short stories.
+        </p>
       </Brief>
 
       <Experience>
