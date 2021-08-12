@@ -65,7 +65,7 @@ const WorkComponent = styled.section`
     ul {
       li {
         font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         position: relative;
         padding-left: 1.5rem;
 
