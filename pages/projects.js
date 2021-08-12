@@ -21,25 +21,30 @@ const ProjectsPage = styled(motion.section)`
     margin-top: 2rem;
 
     font-size: 1rem;
-    color: ${({ theme }) => theme.textColor};
+    /* color: ${({ theme }) => theme.textColor};
     background-color: ${({ theme }) => theme.mobileNav};
-    box-shadow: 0 0 3px ${({ theme }) => theme.accentColor};
+    box-shadow: 0 0 3px ${({ theme }) => theme.accentColor}; */
+
+    color: ${({ theme }) => theme.backgroundColor};
+    background-color: ${({ theme }) => theme.textColor};
+    border: 2px solid ${({ theme }) => theme.textColor};
 
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 0.5rem;
+    transition: all 200ms ease-in-out;
 
     svg {
       font-size: 1.75rem;
-      transition: transform 300ms ease-in-out;
     }
 
     &:hover {
-      box-shadow: 0 0 5px ${({ theme }) => theme.accentColor};
-      svg {
-        transform: rotate(360deg);
-      }
+      color: ${({ theme }) => theme.textColor};
+      background-color: ${({ theme }) => theme.backgroundColor};
+      /* svg {
+        transform: scale(1.2);
+      } */
     }
   }
 `;
@@ -50,7 +55,12 @@ function projects({ projectsData }) {
     <ProjectsPage initial={{ y: 50 }} animate={{ y: 0 }}>
       <h2>Projects in spotlight</h2>
       <Projects projects={projects} />
-      <a href="https://github.com/sanjibdey104" className="github-link">
+      <a
+        href="https://github.com/sanjibdey104"
+        className="github-link"
+        rel="noreferrer"
+        target="_blank"
+      >
         <SiGithub />
         <span>Head to the hub for more</span>
       </a>

@@ -76,17 +76,17 @@ const Intro = styled(motion.section)`
 
       color: ${({ theme }) => theme.backgroundColor};
       background-color: ${({ theme }) => theme.textColor};
+      border: 2px solid ${({ theme }) => theme.textColor};
+      transition: all 200ms ease-in-out;
     }
 
     a:hover {
-      svg {
-        transform: scale(1.2);
-      }
+      color: ${({ theme }) => theme.textColor};
+      background-color: ${({ theme }) => theme.backgroundColor};
     }
 
     svg {
       font-size: 1.3rem;
-      transition: transform 200ms ease-in-out;
     }
   }
 `;

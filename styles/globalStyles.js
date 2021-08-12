@@ -70,21 +70,17 @@ export const GlobalStyles = createGlobalStyle`
 export const lightTheme = {
   backgroundColor: "#eee",
   textColor: "#000",
-  buttonText: "#fff",
   accentColor: "#3f51b5",
   layerShadow: "rgba(0,0,0,0.3)",
-  border: "1px solid #000",
   mobileNavLink: "#ffffffda",
   mobileNavBg: "#000",
 };
 
 export const darkTheme = {
   backgroundColor: "#121212",
-  textColor: "#ffffffda",
-  buttonText: "#000",
+  textColor: "#fff",
   accentColor: "#bb86fc",
   layerShadow: "#000",
-  border: "1px solid #fff",
   mobileNavLink: "#000",
   mobileNavBg: "#fff",
 };
