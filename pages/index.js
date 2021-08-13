@@ -35,6 +35,8 @@ const Intro = styled(motion.section)`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   p {
     padding: 0.5rem 0;
@@ -58,12 +60,13 @@ const Intro = styled(motion.section)`
   .quick-contact-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
 
     a {
-      min-width: 10rem;
+      width: 11rem;
       display: flex;
       align-items: center;
       justify-content: center;
