@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { SiGithub } from "react-icons/si";
-import styled from "styled-components";
-import Projects from "../components/Projects";
 import { getPortfolioData } from "../lib/data";
+import Projects from "../components/Projects";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { SiGithub } from "react-icons/si";
 
 const ProjectsPage = styled(motion.section)`
   width: 100%;
@@ -21,10 +21,6 @@ const ProjectsPage = styled(motion.section)`
     margin-top: 2rem;
 
     font-size: 1rem;
-    /* color: ${({ theme }) => theme.textColor};
-    background-color: ${({ theme }) => theme.mobileNav};
-    box-shadow: 0 0 3px ${({ theme }) => theme.accentColor}; */
-
     color: ${({ theme }) => theme.backgroundColor};
     background-color: ${({ theme }) => theme.textColor};
     border: 2px solid ${({ theme }) => theme.textColor};
@@ -42,9 +38,6 @@ const ProjectsPage = styled(motion.section)`
     &:hover {
       color: ${({ theme }) => theme.textColor};
       background-color: ${({ theme }) => theme.backgroundColor};
-      /* svg {
-        transform: scale(1.2);
-      } */
     }
   }
 `;
