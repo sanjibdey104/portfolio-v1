@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomHead from "./CustomHead";
 import Header from "./Header";
 import Footer from "./Footer";
-import { NavbarDisplayContext } from "../context/NavbarDisplayContext";
+import { NavbarDisplayContext } from "../../context/NavbarDisplayContext";
 
 const Layout = ({ children }) => {
   const [navDisplay, setNavDisplay] = useState(false);
