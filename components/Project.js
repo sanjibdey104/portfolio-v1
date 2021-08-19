@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { SiGithub } from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";
+import Link from "next/link";
 
 const ProjectCard = styled.li`
   width: 100%;
@@ -80,29 +81,32 @@ const ProjectLinks = styled.section`
 `;
 
 const Project = ({ projectDetails }) => {
-  const { title, description, stack, githubLink, liveLink } = projectDetails;
+  const { title, slug, description, stack, githubLink, liveLink } =
+    projectDetails;
 
   const techStack = stack.join(", ");
 
   return (
-    <ProjectCard className="project-card">
-      <div className="card-layer-one">
-        <h3 id="title">{title}</h3>
-        <p id="description">{description}</p>
-        <p id="tech-stack">{techStack}</p>
+    <Link href={`/projects/${slug}`}>
+      <ProjectCard className="project-card">
+        <div className="card-layer-one">
+          <h3 id="title">{title}</h3>
+          <p id="description">{description}</p>
+          <p id="tech-stack">{techStack}</p>
 
-        <ProjectLinks id="project-links">
-          <a href={githubLink} rel="noreferrer" target="_blank">
-            <SiGithub />
-          </a>
-          <a href={liveLink} rel="noreferrer" target="_blank">
-            <BiLinkExternal />
-          </a>
-        </ProjectLinks>
-      </div>
-      <div className="card-layer-two"></div>
-      <div className="card-layer-three"></div>
-    </ProjectCard>
+          <ProjectLinks id="project-links">
+            <a href={githubLink} rel="noreferrer" target="_blank">
+              <SiGithub />
+            </a>
+            <a href={liveLink} rel="noreferrer" target="_blank">
+              <BiLinkExternal />
+            </a>
+          </ProjectLinks>
+        </div>
+        <div className="card-layer-two"></div>
+        <div className="card-layer-three"></div>
+      </ProjectCard>
+    </Link>
   );
 };
 
