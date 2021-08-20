@@ -16,7 +16,7 @@ const ProjectsPage = styled(motion.section)`
 
   h2 {
     color: ${({ theme }) => theme.textColor};
-    font-size: 2rem;
+    font-size: 1.85rem;
     text-align: center;
   }
 
