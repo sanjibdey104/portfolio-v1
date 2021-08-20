@@ -12,7 +12,7 @@ const StyledCustomCta = styled.a`
   font-size: 0.85rem;
   font-weight: 500;
   padding: 0.5rem;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 
   color: ${({ theme }) => theme.textColor};
   border: 2px solid ${({ theme }) => theme.textColor};
