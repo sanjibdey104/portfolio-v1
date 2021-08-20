@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { getProject, getProjectSlugs } from "../../lib/data";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import CustomLink from "../../components/CustomLink";
+import CustomLink from "../../components/custom/CustomLink";
 
 const StyledProjectTourTemplate = styled.main`
   width: 80%;

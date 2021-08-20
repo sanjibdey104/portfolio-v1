@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CustomHead from "./CustomHead";
+import CustomHead from "../custom/CustomHead";
 import Header from "./Header";
 import Footer from "./Footer";
 import { NavbarDisplayContext } from "../../context/NavbarDisplayContext";
