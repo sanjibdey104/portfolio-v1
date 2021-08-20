@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import CustomLink from "./custom/CustomLink";
 
 const StyledProjectCard = styled.li`
   width: 100%;
@@ -26,27 +26,11 @@ const StyledProjectCard = styled.li`
     font-family: var(--font-secondary);
     font-size: 1.1rem;
     border-bottom: 2px solid ${({ theme }) => theme.backgroundColor};
-
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    transform: translateX(15%);
-
-    svg {
-      font-size: 1.3rem;
-      color: ${({ theme }) => theme.accentColor};
-      opacity: 0;
-      transform: translateX(-45%);
-      transition: all 200ms ease-in-out;
-    }
+    transition: all 200ms ease-in-out;
   }
 
   &:hover .project-tour-link {
-    color: ${({ theme }) => theme.accentColor};
-    svg {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    border-bottom: 2px solid ${({ theme }) => theme.accentColor};
   }
 
   .card-layer-one {
@@ -106,10 +90,8 @@ const ProjectCard = ({ projectDetails }) => {
         <div className="card-layer-one">
           <h3 id="title">{title}</h3>
           <p id="description">{description}</p>
-          <a href="#" className="project-tour-link">
-            learn more
-            <MdKeyboardArrowRight />
-            <MdKeyboardArrowRight />
+          <a href={`/projects/${slug}`} className="project-tour-link">
+            learn more...
           </a>
         </div>
         <div className="card-layer-two"></div>
