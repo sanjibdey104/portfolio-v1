@@ -23,6 +23,10 @@ const Homepage = styled.main`
   flex-direction: column;
   gap: 7rem;
   margin-bottom: 5rem;
+
+  h2 {
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+  }
 `;
 
 const Intro = styled(motion.section)`
@@ -39,17 +43,14 @@ const Intro = styled(motion.section)`
   text-align: center;
 
   p {
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
+    font-size: 1.1rem;
     font-family: var(--font-secondary);
-  }
-
-  h2 {
-    font-size: calc(1rem + 1.5vw);
   }
 
   #name {
     display: block;
-    font-size: clamp(2rem, 12vw, 4.5rem);
+    font-size: clamp(2rem, 10vw, 4rem);
     text-transform: uppercase;
     text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
       5px 5px 0px ${({ theme }) => theme.accentColor};
@@ -128,7 +129,6 @@ const Experience = styled.section`
   }
 
   h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
     border-bottom: 2px solid ${({ theme }) => theme.textColor};
   }
 `;
@@ -147,8 +147,6 @@ const Technologies = styled.section`
   }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2rem);
-    font-size: clamp(1.5rem, 3vw, 2rem);
     border-bottom: 2px solid ${({ theme }) => theme.textColor};
   }
 
@@ -192,7 +190,7 @@ const Home = ({ workData }) => {
           🤷‍♂️ ?)
         </p>
         <div className="quick-contact-links">
-          <a href="#">
+          <a href="Sanjib_Kumar_Dey_Resume.pdf" download>
             Fetch resume <FiDownload />
           </a>
           <a
@@ -240,7 +238,7 @@ const Home = ({ workData }) => {
       </Experience>
 
       <Technologies>
-        <h2>technologies</h2>
+        <h2>technologies I've worked with:</h2>
         <div className="tech-stack">
           <SiHtml5 />
           <SiCss3 />

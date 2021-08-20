@@ -8,6 +8,7 @@ const WorkComponent = styled.section`
   display: flex;
   gap: 2rem;
   padding: 1rem;
+  font-size: 1.1rem;
   font-family: var(--font-secondary);
 
   @media (max-width: 768px) {
@@ -28,6 +29,7 @@ const WorkComponent = styled.section`
     li {
       cursor: pointer;
       font-weight: 500;
+      font-size: 1.2rem;
 
       &.active {
         color: ${({ theme }) => theme.accentColor};
@@ -46,7 +48,7 @@ const WorkComponent = styled.section`
 
     .position {
       margin-bottom: 0.5rem;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       span {
         font-weight: 500;
       }
@@ -64,7 +66,7 @@ const WorkComponent = styled.section`
 
     ul {
       li {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
         position: relative;
         padding-left: 1.5rem;

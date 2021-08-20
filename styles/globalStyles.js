@@ -2,6 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
+    :root {
+        --accent-color: #1976d2;
+        --font-primary: 'Montserrat', sans-serif;
+        --font-secondary: 'Quicksand', sans-serif;
+        --font-secondary: 'Josefin Sans', sans-serif;
+    }
+
     html {
         box-sizing: border-box;
         font-size: 100%;
@@ -20,10 +27,8 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.backgroundColor};
         color: ${({ theme }) => theme.textColor};
         line-height: 1.4;
+        font-family: var(--font-secondary);
 
-        --accent-color: #1976d2;
-        --font-primary: 'Montserrat', sans-serif;
-        --font-secondary: 'Space Mono', monospace;
     }
 
     a, button, input {

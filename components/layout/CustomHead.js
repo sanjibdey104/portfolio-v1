@@ -14,7 +14,7 @@ const CustomHead = () => {
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
       />
     </Head>

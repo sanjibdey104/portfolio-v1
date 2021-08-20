@@ -10,6 +10,7 @@ const ProjectCard = styled.li`
   height: 18rem;
   position: relative;
   border-radius: 0.5rem;
+  line-height: 1.6;
 
   transition: transform 200ms ease-in-out;
   transform-origin: center;
@@ -41,9 +42,8 @@ const ProjectCard = styled.li`
     font-size: clamp(1.3rem, 2vw, 1.5rem);
   }
 
-  #description,
-  #tech-stack {
-    font-size: 0.85rem;
+  #description {
+    text-align: center;
     font-family: var(--font-secondary);
   }
 
@@ -81,10 +81,7 @@ const ProjectLinks = styled.section`
 `;
 
 const Project = ({ projectDetails }) => {
-  const { title, slug, description, stack, githubLink, liveLink } =
-    projectDetails;
-
-  const techStack = stack.join(", ");
+  const { title, slug, description, githubLink, liveLink } = projectDetails;
 
   return (
     <Link href={`/projects/${slug}`}>
@@ -92,7 +89,6 @@ const Project = ({ projectDetails }) => {
         <div className="card-layer-one">
           <h3 id="title">{title}</h3>
           <p id="description">{description}</p>
-          <p id="tech-stack">{techStack}</p>
 
           <ProjectLinks id="project-links">
             <a href={githubLink} rel="noreferrer" target="_blank">
@@ -101,6 +97,7 @@ const Project = ({ projectDetails }) => {
             <a href={liveLink} rel="noreferrer" target="_blank">
               <BiLinkExternal />
             </a>
+            <a href="#">take a tour</a>
           </ProjectLinks>
         </div>
         <div className="card-layer-two"></div>
