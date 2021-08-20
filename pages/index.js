@@ -21,11 +21,54 @@ import React from "react";
 const Homepage = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 7rem;
+  gap: 7.5rem;
   margin-bottom: 5rem;
 
   h2 {
-    font-size: clamp(1.3rem, 2vw, 1.5rem);
+    font-size: clamp(1.3rem, 1.8vw, 1.5rem);
+    color: ${({ theme }) => theme.lgText};
+    border-bottom: 2px solid ${({ theme }) => theme.lgText};
+  }
+
+  p {
+    font-size: 1.1rem;
+    font-family: var(--font-secondary);
+    color: ${({ theme }) => theme.smText};
+  }
+
+  .about-me,
+  .experience,
+  .technologies {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  .about-me ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    svg {
+      font-size: 1.75rem;
+      color: ${({ theme }) => theme.smText};
+    }
   }
 `;
 
@@ -41,11 +84,11 @@ const Intro = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 0.75rem;
 
-  p {
-    /* padding: 0.5rem 0; */
-    font-size: 1.1rem;
-    font-family: var(--font-secondary);
+  h2 {
+    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    border: 0;
   }
 
   #name {
@@ -58,7 +101,7 @@ const Intro = styled(motion.section)`
     color: #ffba08;
   }
 
-  .quick-contact-links {
+  .cta {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +110,7 @@ const Intro = styled(motion.section)`
     margin-top: 1rem;
 
     a {
-      width: 11rem;
+      width: 10rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -95,82 +138,6 @@ const Intro = styled(motion.section)`
   }
 `;
 
-const Brief = styled.section`
-  width: 75%;
-  margin: 0 auto;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-family: var(--font-secondary);
-  }
-`;
-
-const Experience = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  width: 75%;
-  margin: 0 auto;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-
-  h2 {
-    border-bottom: 2px solid ${({ theme }) => theme.textColor};
-  }
-`;
-
-const Technologies = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-bottom: 2rem;
-
-  width: 75%;
-  margin: 0 auto;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
-
-  h2 {
-    border-bottom: 2px solid ${({ theme }) => theme.textColor};
-  }
-
-  .tech-stack {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-    list-style: none;
-  }
-
-  svg {
-    width: 2rem;
-    height: 2rem;
-    transition: all 150ms ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      color: ${({ theme }) => theme.accentColor};
-    }
-  }
-`;
-
 const Home = ({ workData }) => {
   const { works } = workData;
 
@@ -189,7 +156,7 @@ const Home = ({ workData }) => {
           Passionate about building human-centered web applications (who isn't
           🤷‍♂️ ?)
         </p>
-        <div className="quick-contact-links">
+        <div className="cta">
           <a href="Sanjib_Kumar_Dey_Resume.pdf" download>
             Fetch resume <FiDownload />
           </a>
@@ -203,41 +170,37 @@ const Home = ({ workData }) => {
           <a className="mail" href="mailto:sanjibdey.dey4@gmail.com">
             Drop a mail @ <SiGmail />
           </a>
-          <a
-            href="https://twitter.com/Sanjib_104"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Nudge the bird @ <SiTwitter />
-          </a>
         </div>
       </Intro>
 
-      <Brief>
+      <section className="about-me">
         <h2>A bit more about me: </h2>
-        <p>
-          I find blogging as a handy tool to document my learning and hopefully
-          help others along the way.
-        </p>
-        <p>
-          Exploring tech and tools that can help bring my notion to fruition.
-        </p>
-        <p>
-          Obsess over UI design and onboard the core learning in my own
-          projects.
-        </p>
-        <p>
-          Outside dev environment, you could find me sketching, scribbling on
-          blank canvas, writing free verse poetry and short stories.
-        </p>
-      </Brief>
 
-      <Experience>
+        <ul>
+          <li>
+            I find blogging as a handy tool to document my learning and
+            hopefully help others along the way.
+          </li>
+          <li>
+            Exploring tech and tools that can help bring my notion to fruition.
+          </li>
+          <li>
+            Obsess over UI design and onboard the core learning in my own
+            projects.
+          </li>
+          <li>
+            Outside dev environment, you could find me sketching, scribbling on
+            blank canvas, writing free verse poetry and short stories.
+          </li>
+        </ul>
+      </section>
+
+      <section className="experience">
         <h2>experience</h2>
         <Work works={works} />
-      </Experience>
+      </section>
 
-      <Technologies>
+      <section className="technologies">
         <h2>technologies I've worked with:</h2>
         <div className="tech-stack">
           <SiHtml5 />
@@ -249,7 +212,7 @@ const Home = ({ workData }) => {
           <SiGraphql />
           <SiFirebase />
         </div>
-      </Technologies>
+      </section>
     </Homepage>
   );
 };

@@ -75,6 +75,9 @@ export const GlobalStyles = createGlobalStyle`
 export const lightTheme = {
   backgroundColor: "#eee",
   textColor: "#000",
+  lgText: "#250902",
+  smText: "#151515",
+  lightText: "#4d4d4d",
   accentColor: "#3f51b5",
   layerShadow: "rgba(0,0,0,0.3)",
   mobileNavLink: "#ffffffda",
@@ -84,6 +87,9 @@ export const lightTheme = {
 export const darkTheme = {
   backgroundColor: "#121212",
   textColor: "#fff",
+  lgText: "#d3cecc",
+  smText: "#d1d5db",
+  lightText: "#808080",
   accentColor: "#bb86fc",
   layerShadow: "#000",
   mobileNavLink: "#000",

@@ -10,6 +10,7 @@ const WorkComponent = styled.section`
   padding: 1rem;
   font-size: 1.1rem;
   font-family: var(--font-secondary);
+  color: ${({ theme }) => theme.smText};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -48,14 +49,14 @@ const WorkComponent = styled.section`
 
     .position {
       margin-bottom: 0.5rem;
-      font-size: 1.3rem;
+      font-size: 1.45rem;
       span {
         font-weight: 500;
       }
     }
 
     .duration {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-family: inherit;
       margin-bottom: 2rem;
     }
@@ -66,7 +67,7 @@ const WorkComponent = styled.section`
 
     ul {
       li {
-        font-size: 1rem;
+        font-size: 1.05rem;
         margin-bottom: 1rem;
         position: relative;
         padding-left: 1.5rem;
