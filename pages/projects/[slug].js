@@ -114,17 +114,19 @@ const ProjectTemplate = ({ projectData }) => {
       <p>{description}</p>
 
       <div className="links">
-        <CustomLink>
+        <CustomLink href={githubLink} rel="noreferrer" target="_blank">
           view the code <FiGithub />
         </CustomLink>
-        <CustomLink>
+        <CustomLink href={liveLink} rel="noreferrer" target="_blank">
           catch it live <FiExternalLink />
         </CustomLink>
       </div>
 
-      <div className="banner">
-        <img src={desktopBanner.url} alt="banner" />
-      </div>
+      {desktopBanner ? (
+        <div className="banner">
+          <img src={desktopBanner.url} alt="banner" />
+        </div>
+      ) : null}
 
       <section id="goal">
         <h2>Goal</h2>

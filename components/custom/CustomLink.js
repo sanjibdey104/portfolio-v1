@@ -40,8 +40,8 @@ const StyledCustomLink = styled.a`
   }
 `;
 
-const CustomLink = ({ children }) => {
-  return <StyledCustomLink>{children}</StyledCustomLink>;
+const CustomLink = ({ children, ...props }) => {
+  return <StyledCustomLink {...props}>{children}</StyledCustomLink>;
 };
 
 export default CustomLink;
