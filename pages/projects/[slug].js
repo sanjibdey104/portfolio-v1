@@ -71,7 +71,7 @@ const StyledProjectTourTemplate = styled.main`
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
-      list-style: initial;
+      list-style: circle;
     }
   }
 
@@ -104,8 +104,8 @@ const ProjectTemplate = ({ projectData }) => {
     screens,
   } = project;
 
-  const banner = screens[0];
-  // console.log(screens);
+  // fetch the desktop banner image
+  const desktopBanner = screens[0];
 
   return (
     <StyledProjectTourTemplate>
@@ -123,7 +123,7 @@ const ProjectTemplate = ({ projectData }) => {
       </div>
 
       <div className="banner">
-        <img src={banner.url} alt="banner" />
+        <img src={desktopBanner.url} alt="banner" />
       </div>
 
       <section id="goal">
