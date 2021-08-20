@@ -17,6 +17,7 @@ import Work from "../components/Work";
 import { getPortfolioData } from "../lib/data";
 import { motion } from "framer-motion";
 import React from "react";
+import CustomCta from "../components/custom/CustomCta";
 
 const Homepage = styled.main`
   display: flex;
@@ -107,7 +108,7 @@ const Intro = styled(motion.section)`
     gap: 1rem;
     margin-top: 1rem;
 
-    a {
+    /* a {
       width: 10rem;
       display: flex;
       align-items: center;
@@ -119,15 +120,19 @@ const Intro = styled(motion.section)`
       padding: 0.5rem;
       border-radius: 0.5rem;
 
+      color: ${({ theme }) => theme.textColor};
+      border: 2px solid ${({ theme }) => theme.textColor};
+      transition: all 200ms ease-in-out;
+    } */
+
+    a:nth-child(1) {
       color: ${({ theme }) => theme.backgroundColor};
       background-color: ${({ theme }) => theme.textColor};
       border: 2px solid ${({ theme }) => theme.textColor};
-      transition: all 200ms ease-in-out;
     }
 
     a:hover {
-      color: ${({ theme }) => theme.textColor};
-      background-color: ${({ theme }) => theme.backgroundColor};
+      border-radius: initial;
     }
 
     svg {
@@ -155,19 +160,19 @@ const Home = ({ workData }) => {
           🤷‍♂️ ?)
         </p>
         <div className="cta">
-          <a href="Sanjib_Kumar_Dey_Resume.pdf" download>
+          <CustomCta href="Sanjib_Kumar_Dey_Resume.pdf" download>
             Fetch resume <FiDownload />
-          </a>
-          <a
+          </CustomCta>
+          <CustomCta
             href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
             rel="noreferrer"
             target="_blank"
           >
             Forge a link @ <SiLinkedin />
-          </a>
-          <a className="mail" href="mailto:sanjibdey.dey4@gmail.com">
+          </CustomCta>
+          <CustomCta href="mailto:sanjibdey.dey4@gmail.com">
             Drop a mail @ <SiGmail />
-          </a>
+          </CustomCta>
         </div>
       </Intro>
 

@@ -4,6 +4,7 @@ import Projects from "../components/Projects";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { SiGithub } from "react-icons/si";
+import CustomCta from "../components/custom/CustomCta";
 
 const ProjectsPage = styled(motion.section)`
   width: 100%;
@@ -20,29 +21,10 @@ const ProjectsPage = styled(motion.section)`
 
   .github-link {
     width: 18rem;
-    border: 0.5rem;
-    border-radius: 0.5rem;
-    padding: 0.3rem;
-    margin-top: 2rem;
-
     font-size: 1rem;
-    color: ${({ theme }) => theme.backgroundColor};
-    background-color: ${({ theme }) => theme.textColor};
-    border: 2px solid ${({ theme }) => theme.textColor};
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 0.5rem;
-    transition: all 200ms ease-in-out;
 
     svg {
       font-size: 1.75rem;
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.textColor};
-      background-color: ${({ theme }) => theme.backgroundColor};
     }
   }
 `;
@@ -53,7 +35,8 @@ function projects({ projectsData }) {
     <ProjectsPage>
       <h2>Stuff I've worked on...</h2>
       <Projects projects={projects} />
-      <a
+      <CustomCta
+        id="github-link"
         href="https://github.com/sanjibdey104"
         className="github-link"
         rel="noreferrer"
@@ -61,7 +44,7 @@ function projects({ projectsData }) {
       >
         <SiGithub />
         <span>Head to the hub for more</span>
-      </a>
+      </CustomCta>
     </ProjectsPage>
   );
 }
