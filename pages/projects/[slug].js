@@ -100,7 +100,7 @@ const ProjectTemplate = ({ projectData }) => {
     goal,
     learnings,
     prospective,
-    problems,
+    challenges,
     screens,
   } = project;
 
@@ -147,10 +147,10 @@ const ProjectTemplate = ({ projectData }) => {
       </section>
 
       <section>
-        <h2>Problems</h2>
+        <h2>Challenges</h2>
         <ul>
-          {problems.map((problem, index) => (
-            <li key={index}>{problem}</li>
+          {challenges.map((challenge, index) => (
+            <li key={index}>{challenge}</li>
           ))}
         </ul>
       </section>
