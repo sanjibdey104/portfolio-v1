@@ -1,10 +1,10 @@
 import React from "react";
 import { getPortfolioData } from "../lib/data";
-import Projects from "../components/Projects";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { SiGithub } from "react-icons/si";
+import ProjectList from "../components/ProjectList";
 import CustomCta from "../components/custom/CustomCta";
+import { SiGithub } from "react-icons/si";
 
 const ProjectsPage = styled(motion.section)`
   width: 100%;
@@ -35,7 +35,7 @@ function projects({ projectsData }) {
   return (
     <ProjectsPage>
       <h2>Stuff I've worked on...</h2>
-      <Projects projects={projects} />
+      <ProjectList projects={projects} />
       <CustomCta
         id="github-link"
         href="https://github.com/sanjibdey104"

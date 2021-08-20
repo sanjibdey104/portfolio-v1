@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Project from "./Project";
+import ProjectCard from "./ProjectCard";
 
-const ProjectList = styled.ul`
+const StyledProjectList = styled.ul`
   margin: 3rem 0;
   width: 100%;
   position: relative;
@@ -13,18 +13,18 @@ const ProjectList = styled.ul`
   gap: 6rem;
 `;
 
-const Projects = ({ projects }) => {
+const ProjectList = ({ projects }) => {
   const sortedProjectList = projects.slice().sort(function (a, b) {
     return new Date(b.updatedAt) - new Date(a.updatedAt);
   });
 
   return (
-    <ProjectList>
+    <StyledProjectList>
       {sortedProjectList.map((project) => (
-        <Project key={project.id} projectDetails={project} />
+        <ProjectCard key={project.id} projectDetails={project} />
       ))}
-    </ProjectList>
+    </StyledProjectList>
   );
 };
 
-export default Projects;
+export default ProjectList;

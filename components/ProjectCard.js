@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const ProjectCard = styled.li`
+const StyledProjectCard = styled.li`
   width: 100%;
   margin: 0 auto;
   height: 18rem;
@@ -70,7 +70,6 @@ const ProjectCard = styled.li`
 
   #description {
     text-align: center;
-    /* font-weight: 300; */
     font-family: var(--font-secondary);
     color: ${({ theme }) => theme.smText};
   }
@@ -98,12 +97,12 @@ const ProjectCard = styled.li`
   }
 `;
 
-const Project = ({ projectDetails }) => {
+const ProjectCard = ({ projectDetails }) => {
   const { title, slug, description } = projectDetails;
 
   return (
     <Link href={`/projects/${slug}`}>
-      <ProjectCard className="project-card">
+      <StyledProjectCard className="project-card">
         <div className="card-layer-one">
           <h3 id="title">{title}</h3>
           <p id="description">{description}</p>
@@ -115,9 +114,9 @@ const Project = ({ projectDetails }) => {
         </div>
         <div className="card-layer-two"></div>
         <div className="card-layer-three"></div>
-      </ProjectCard>
+      </StyledProjectCard>
     </Link>
   );
 };
 
-export default Project;
+export default ProjectCard;
