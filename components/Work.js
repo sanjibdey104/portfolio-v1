@@ -10,7 +10,7 @@ const WorkComponent = styled.section`
   padding: 1rem;
   font-size: 1.1rem;
   font-family: var(--font-secondary);
-  color: ${({ theme }) => theme.smText};
+  color: ${({ theme }) => theme.textColor};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -67,7 +67,7 @@ const WorkComponent = styled.section`
 
     ul {
       li {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         margin-bottom: 1rem;
         position: relative;
         padding-left: 1.5rem;

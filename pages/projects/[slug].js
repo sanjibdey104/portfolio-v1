@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { getProject, getProjectSlugs } from "../../lib/data";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
+import CustomLink from "../../components/CustomLink";
 
 const StyledProjectTourTemplate = styled.main`
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 5rem;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -11,9 +14,79 @@ const StyledProjectTourTemplate = styled.main`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  gap: 2rem;
 
-  font-family: var(--font-secondary);
+  #title {
+    font-size: 2.85rem;
+  }
+
+  p,
+  li,
+  a {
+    font-size: 1.1rem;
+    font-family: var(--font-secondary);
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      svg {
+        font-size: 1.2rem;
+        color: ${({ theme }) => theme.accentColor};
+      }
+    }
+  }
+
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+
+  section {
+    width: 100%;
+    padding: 0.85rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    & > * {
+      flex: 300px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1.5px solid;
+      height: min-content;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      list-style: initial;
+    }
+  }
+
+  section:nth-of-type(2n) {
+    flex-direction: row-reverse;
+    h2 {
+      text-align: right;
+    }
+  }
+
+  #goal {
+    ul {
+      list-style: none;
+    }
+  }
 `;
 
 const ProjectTemplate = ({ projectData }) => {
@@ -23,31 +96,71 @@ const ProjectTemplate = ({ projectData }) => {
     stack,
     githubLink,
     liveLink,
+    description,
     goal,
     learnings,
     prospective,
     problems,
+    screens,
   } = project;
+
+  const banner = screens[0];
+  // console.log(screens);
 
   return (
     <StyledProjectTourTemplate>
-      <h2>{title}</h2>
-      <p>{goal}</p>
+      <h2 id="title">{title}</h2>
 
-      <h2>learnings: </h2>
-      {learnings.map((learning, index) => (
-        <li key={index}>{learning}</li>
-      ))}
+      <p>{description}</p>
 
-      <h2>problems: </h2>
-      {problems.map((problem, index) => (
-        <li key={index}>{problem}</li>
-      ))}
+      <div className="links">
+        <CustomLink>
+          view the code <FiGithub />
+        </CustomLink>
+        <CustomLink>
+          catch it live <FiExternalLink />
+        </CustomLink>
+      </div>
 
-      <h2>prospective</h2>
-      {prospective.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
+      <div className="banner">
+        <img src={banner.url} alt="banner" />
+      </div>
+
+      <section id="goal">
+        <h2>Goal</h2>
+        <ul>
+          {goal.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Learnings</h2>
+        <ul>
+          {learnings.map((learning, index) => (
+            <li key={index}>{learning}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Problems</h2>
+        <ul>
+          {problems.map((problem, index) => (
+            <li key={index}>{problem}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Prospective</h2>
+        <ul>
+          {prospective.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
     </StyledProjectTourTemplate>
   );
 };

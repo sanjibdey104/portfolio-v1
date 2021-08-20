@@ -13,6 +13,11 @@ const ProjectsPage = styled(motion.section)`
   gap: 2rem;
   margin-bottom: 3rem;
 
+  h2 {
+    color: ${({ theme }) => theme.textColor};
+    font-size: 2.5rem;
+  }
+
   .github-link {
     width: 18rem;
     border: 0.5rem;
@@ -45,8 +50,8 @@ const ProjectsPage = styled(motion.section)`
 function projects({ projectsData }) {
   const { projects } = projectsData;
   return (
-    <ProjectsPage initial={{ y: 50 }} animate={{ y: 0 }}>
-      <h2>Projects in spotlight</h2>
+    <ProjectsPage>
+      <h2>Stuff I've worked on...</h2>
       <Projects projects={projects} />
       <a
         href="https://github.com/sanjibdey104"

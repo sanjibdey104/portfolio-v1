@@ -5,8 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     :root {
         --accent-color: #1976d2;
         --font-primary: 'Montserrat', sans-serif;
-        --font-secondary: 'Quicksand', sans-serif;
-        --font-secondary: 'Josefin Sans', sans-serif;
+        --font-secondary: 'Crimson Text', 'Source Serif Pro', serif;
     }
 
     html {
@@ -67,14 +66,14 @@ export const GlobalStyles = createGlobalStyle`
         justify-content: space-between;
 
         @media (max-width: 768px) {
-            width: 95%;
+            width: 100%;
         }
     }
 `;
 
 export const lightTheme = {
-  backgroundColor: "#eee",
-  textColor: "#000",
+  backgroundColor: "#f7f3f0",
+  textColor: "#121212",
   lgText: "#250902",
   smText: "#151515",
   lightText: "#4d4d4d",
@@ -85,8 +84,8 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  backgroundColor: "#121212",
-  textColor: "#fff",
+  backgroundColor: "#151515",
+  textColor: "hsla(0, 100%, 100%, 0.87)",
   lgText: "#d3cecc",
   smText: "#d1d5db",
   lightText: "#808080",

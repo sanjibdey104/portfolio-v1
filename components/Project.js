@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { SiGithub } from "react-icons/si";
-import { BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const ProjectCard = styled.li`
   width: 100%;
@@ -21,6 +20,33 @@ const ProjectCard = styled.li`
   }
   &:hover .card-layer-three {
     transform: rotate(10deg);
+  }
+
+  .project-tour-link {
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    border-bottom: 2px solid ${({ theme }) => theme.backgroundColor};
+
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    transform: translateX(15%);
+
+    svg {
+      font-size: 1.3rem;
+      color: ${({ theme }) => theme.accentColor};
+      opacity: 0;
+      transform: translateX(-45%);
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  &:hover .project-tour-link {
+    color: ${({ theme }) => theme.accentColor};
+    svg {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   .card-layer-one {
@@ -44,7 +70,9 @@ const ProjectCard = styled.li`
 
   #description {
     text-align: center;
+    /* font-weight: 300; */
     font-family: var(--font-secondary);
+    color: ${({ theme }) => theme.smText};
   }
 
   .card-layer-two,
@@ -70,18 +98,8 @@ const ProjectCard = styled.li`
   }
 `;
 
-const ProjectLinks = styled.section`
-  display: flex;
-  gap: 2rem;
-  font-size: 1.3rem;
-
-  a:hover {
-    color: ${({ theme }) => theme.accentColor};
-  }
-`;
-
 const Project = ({ projectDetails }) => {
-  const { title, slug, description, githubLink, liveLink } = projectDetails;
+  const { title, slug, description } = projectDetails;
 
   return (
     <Link href={`/projects/${slug}`}>
@@ -89,16 +107,11 @@ const Project = ({ projectDetails }) => {
         <div className="card-layer-one">
           <h3 id="title">{title}</h3>
           <p id="description">{description}</p>
-
-          <ProjectLinks id="project-links">
-            <a href={githubLink} rel="noreferrer" target="_blank">
-              <SiGithub />
-            </a>
-            <a href={liveLink} rel="noreferrer" target="_blank">
-              <BiLinkExternal />
-            </a>
-            <a href="#">take a tour</a>
-          </ProjectLinks>
+          <a href="#" className="project-tour-link">
+            learn more
+            <MdKeyboardArrowRight />
+            <MdKeyboardArrowRight />
+          </a>
         </div>
         <div className="card-layer-two"></div>
         <div className="card-layer-three"></div>

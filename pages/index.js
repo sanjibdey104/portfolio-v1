@@ -26,20 +26,21 @@ const Homepage = styled.main`
 
   h2 {
     font-size: clamp(1.3rem, 1.8vw, 1.5rem);
-    color: ${({ theme }) => theme.lgText};
-    border-bottom: 2px solid ${({ theme }) => theme.lgText};
+    color: ${({ theme }) => theme.accentColor};
+    border-bottom: 2px solid ${({ theme }) => theme.textColor};
   }
 
-  p {
-    font-size: 1.1rem;
+  p,
+  li {
+    font-size: 1.15rem;
     font-family: var(--font-secondary);
-    color: ${({ theme }) => theme.smText};
+    color: ${({ theme }) => theme.textColor};
   }
 
   .about-me,
   .experience,
   .technologies {
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -67,13 +68,13 @@ const Homepage = styled.main`
 
     svg {
       font-size: 1.75rem;
-      color: ${({ theme }) => theme.smText};
+      color: ${({ theme }) => theme.textColor};
     }
   }
 `;
 
 const Intro = styled(motion.section)`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 
   @media (max-width: 600px) {
@@ -82,12 +83,12 @@ const Intro = styled(motion.section)`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
   gap: 0.75rem;
 
   h2 {
     font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    color: ${({ theme }) => theme.textColor};
     border: 0;
   }
 
@@ -95,10 +96,7 @@ const Intro = styled(motion.section)`
     display: block;
     font-size: clamp(2rem, 10vw, 4rem);
     text-transform: uppercase;
-    text-shadow: 3px 3px ${({ theme }) => theme.layerShadow},
-      5px 5px 0px ${({ theme }) => theme.accentColor};
-    -webkit-text-stroke: 1px ${({ theme }) => theme.textColor};
-    color: #ffba08;
+    color: ${({ theme }) => theme.accentColor};
   }
 
   .cta {
@@ -118,7 +116,7 @@ const Intro = styled(motion.section)`
 
       font-size: 0.85rem;
       font-weight: 500;
-      padding: 0.4rem;
+      padding: 0.5rem;
       border-radius: 0.5rem;
 
       color: ${({ theme }) => theme.backgroundColor};
