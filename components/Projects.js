@@ -10,7 +10,6 @@ const ProjectList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 20rem));
   justify-content: space-evenly;
-  align-self: center;
   gap: 6rem;
 `;
 

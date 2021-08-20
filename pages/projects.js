@@ -16,7 +16,8 @@ const ProjectsPage = styled(motion.section)`
 
   h2 {
     color: ${({ theme }) => theme.textColor};
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .github-link {
