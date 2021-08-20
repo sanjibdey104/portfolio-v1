@@ -90,6 +90,7 @@ export const darkTheme = {
   smText: "#d1d5db",
   lightText: "#808080",
   accentColor: "#bb86fc",
+  accentColor: "#a1b567",
   layerShadow: "#000",
   mobileNavLink: "#000",
   mobileNavBg: "#fff",

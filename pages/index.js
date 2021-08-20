@@ -26,8 +26,8 @@ const Homepage = styled.main`
 
   h2 {
     font-size: clamp(1.3rem, 1.8vw, 1.5rem);
-    color: ${({ theme }) => theme.accentColor};
-    border-bottom: 2px solid ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.textColor};
+    border-bottom: 2px solid;
   }
 
   p,
@@ -54,9 +54,15 @@ const Homepage = styled.main`
   .about-me ul {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.85rem;
     font-family: var(--font-secondary);
     font-size: 1.1rem;
+
+    a {
+      position: relative;
+      color: ${({ theme }) => theme.accentColor};
+      font-weight: 600;
+    }
   }
 
   .tech-stack {
@@ -167,15 +173,27 @@ const Home = ({ workData }) => {
 
         <ul>
           <li>
-            I find blogging as a handy tool to document my learning and
-            hopefully help others along the way.
+            I've always had a soft corner for visual design, and several years
+            of internet quest naturally exposed me to a plethora of web
+            applications, and upon finding out that web development tech and
+            tools would allow me build such websites and applications from
+            scratch, it triggered a passion for it.
           </li>
           <li>
-            Exploring tech and tools that can help bring my notion to fruition.
+            Blogging is a handy tool I use to document my learning and hopefully
+            help others along the way. Catch it live here{" "}
+            <a href="https://webdevref.vercel.app/" target="_blank">
+              WebDevRef
+            </a>
+            .
           </li>
           <li>
-            Obsess over UI design and onboard the core learning in my own
-            projects.
+            I regularly scour{" "}
+            <a href="https://dribbble.com/" target="_blank">
+              Dribble
+            </a>{" "}
+            to satisfy my UI design cravings and bring onboard the principle
+            learning in my own projects.
           </li>
           <li>
             Outside dev environment, you could find me sketching, scribbling on
