@@ -10,7 +10,6 @@ import {
   SiFirebase,
   SiLinkedin,
   SiGmail,
-  SiTwitter,
 } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
@@ -84,7 +83,8 @@ const Intro = styled(motion.section)`
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 0.75rem;
 
   h2 {
@@ -100,30 +100,16 @@ const Intro = styled(motion.section)`
     color: ${({ theme }) => theme.accentColor};
   }
 
+  p {
+    margin: 1.5rem 0;
+  }
+
   .cta {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1rem;
-
-    /* a {
-      width: 10rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-
-      color: ${({ theme }) => theme.textColor};
-      border: 2px solid ${({ theme }) => theme.textColor};
-      transition: all 200ms ease-in-out;
-    } */
 
     a:nth-child(1) {
       color: ${({ theme }) => theme.backgroundColor};
@@ -154,10 +140,10 @@ const Home = ({ workData }) => {
         <h2>
           Namaste 🙏, I'm <span id="name">Sanjib</span>
         </h2>
-        <h2>A front-end web developer based in Delhi, India</h2>
+        <h2>A front-end web developer from India</h2>
         <p>
-          Passionate about building human-centered web applications (who isn't
-          🤷‍♂️ ?)
+          Passionate about building simple, handy, human-centered web
+          applications (those bots 🤖 can sort themselves)
         </p>
         <div className="cta">
           <CustomCta href="Sanjib_Kumar_Dey_Resume.pdf" download>
