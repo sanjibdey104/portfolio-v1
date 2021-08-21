@@ -7,7 +7,7 @@ const WorkComponent = styled.section`
 
   display: flex;
   gap: 2rem;
-  padding: 1rem;
+  padding-block: 1rem;
   font-size: 1.1rem;
   font-family: var(--font-secondary);
   color: ${({ theme }) => theme.textColor};
@@ -22,18 +22,31 @@ const WorkComponent = styled.section`
     flex-direction: column;
     gap: 1rem;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       flex-direction: row;
     }
 
     li {
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
       cursor: pointer;
+
+      font-size: 0.85rem;
+      font-family: var(--font-primary);
       font-weight: 500;
-      font-size: 1.2rem;
+      padding: 0.5rem;
+      color: ${({ theme }) => theme.midEmText};
 
       &.active {
         color: ${({ theme }) => theme.accentColor};
+        border-left: 2px solid ${({ theme }) => theme.accentColor};
+
+        @media screen and (max-width: 768px) {
+          border: 0;
+          border-bottom: 2px solid ${({ theme }) => theme.accentColor};
+        }
       }
     }
   }
@@ -59,6 +72,7 @@ const WorkComponent = styled.section`
       font-size: 1rem;
       font-family: inherit;
       margin-bottom: 2rem;
+      color: ${({ theme }) => theme.textColor};
     }
 
     #company {

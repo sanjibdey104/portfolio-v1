@@ -72,11 +72,8 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const lightTheme = {
-  backgroundColor: "#f7f3f0",
+  backgroundColor: "#fbfbfb",
   textColor: "#121212",
-  lgText: "#250902",
-  smText: "#151515",
-  lightText: "#4d4d4d",
   accentColor: "#3f51b5",
   layerShadow: "rgba(0,0,0,0.3)",
   mobileNavLink: "#ffffffda",
@@ -84,12 +81,8 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  backgroundColor: "#151515",
+  backgroundColor: "#121212",
   textColor: "hsla(0, 100%, 100%, 0.87)",
-  lgText: "#d3cecc",
-  smText: "#d1d5db",
-  lightText: "#808080",
-  accentColor: "#bb86fc",
   accentColor: "#a1b567",
   layerShadow: "#000",
   mobileNavLink: "#000",

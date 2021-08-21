@@ -27,7 +27,7 @@ const Homepage = styled.main`
   h2 {
     font-size: clamp(1.3rem, 1.8vw, 1.5rem);
     color: ${({ theme }) => theme.textColor};
-    border-bottom: 2px solid;
+    border-bottom: 1.5px solid;
   }
 
   p,
