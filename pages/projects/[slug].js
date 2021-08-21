@@ -25,6 +25,7 @@ const StyledProjectTourTemplate = styled.main`
   a {
     font-size: 1.1rem;
     font-family: var(--font-secondary);
+    color: ${({ theme }) => theme.midEmphasisText};
   }
 
   .links {

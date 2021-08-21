@@ -26,15 +26,17 @@ const Homepage = styled.main`
 
   h2 {
     font-size: clamp(1.3rem, 1.8vw, 1.5rem);
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.highEmphasis};
     border-bottom: 1.5px solid;
   }
 
   p,
-  li {
+  ul,
+  li,
+  svg {
     font-size: 1.15rem;
     font-family: var(--font-secondary);
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.midEmphasis};
   }
 
   .about-me,
@@ -54,9 +56,7 @@ const Homepage = styled.main`
   .about-me ul {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
-    font-family: var(--font-secondary);
-    font-size: 1.1rem;
+    gap: 1rem;
 
     a {
       position: relative;
@@ -74,7 +74,6 @@ const Homepage = styled.main`
 
     svg {
       font-size: 1.75rem;
-      color: ${({ theme }) => theme.textColor};
     }
   }
 `;
@@ -95,7 +94,6 @@ const Intro = styled(motion.section)`
 
   h2 {
     font-size: clamp(1.3rem, 2.2vw, 1.75rem);
-    color: ${({ theme }) => theme.textColor};
     border: 0;
   }
 
@@ -119,8 +117,12 @@ const Intro = styled(motion.section)`
 
     a:nth-child(1) {
       color: ${({ theme }) => theme.backgroundColor};
-      background-color: ${({ theme }) => theme.textColor};
-      border: 2px solid ${({ theme }) => theme.textColor};
+      background-color: ${({ theme }) => theme.highEmphasis};
+      border: 2px solid ${({ theme }) => theme.highEmphasis};
+
+      svg {
+        color: ${({ theme }) => theme.backgroundColor};
+      }
     }
 
     a:hover {
@@ -174,11 +176,10 @@ const Home = ({ workData }) => {
         <ul>
           <li>
             A soft corner for visual design is what exposed my passion for web
-            development. Years of quest on the internet quest exposed me to a
-            plethora of web applications, and eventually finding out that tech
-            and tools like HTML, CSS, JS would allow me visually shape and build
-            such websites and applications from scratch, was all it took to step
-            on this journey.
+            development. Years of internet quest exposed me to a plethora of web
+            applications, and finding out that tech and tools like HTML, CSS, JS
+            would allow me visually shape and build such websites and
+            applications from scratch, was all it took to step on this journey.
           </li>
           <li>
             Blogging is a handy tool I use to document my learning and hopefully
@@ -197,8 +198,8 @@ const Home = ({ workData }) => {
             learning in my own projects.
           </li>
           <li>
-            Outside dev environment, you could find me sketching, scribbling on
-            blank canvas, writing free verse poetry and short stories.
+            Outside tech, you could find me sketching, writing free verse poetry
+            and short stories.
           </li>
         </ul>
       </section>

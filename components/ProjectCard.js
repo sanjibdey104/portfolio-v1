@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import CustomLink from "./custom/CustomLink";
 
 const StyledProjectCard = styled.li`
   width: 100%;
@@ -55,7 +54,7 @@ const StyledProjectCard = styled.li`
   #description {
     text-align: center;
     font-family: var(--font-secondary);
-    color: ${({ theme }) => theme.smText};
+    color: ${({ theme }) => theme.midEmphasis};
   }
 
   .card-layer-two,

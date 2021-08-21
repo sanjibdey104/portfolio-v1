@@ -37,7 +37,12 @@ const WorkComponent = styled.section`
       font-family: var(--font-primary);
       font-weight: 500;
       padding: 0.5rem;
-      color: ${({ theme }) => theme.midEmText};
+      color: ${({ theme }) => theme.lowEmphasis};
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        color: ${({ theme }) => theme.accentColor};
+      }
 
       &.active {
         color: ${({ theme }) => theme.accentColor};
@@ -72,7 +77,7 @@ const WorkComponent = styled.section`
       font-size: 1rem;
       font-family: inherit;
       margin-bottom: 2rem;
-      color: ${({ theme }) => theme.textColor};
+      color: ${({ theme }) => theme.lowEmphasis};
     }
 
     #company {

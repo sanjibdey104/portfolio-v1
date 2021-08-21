@@ -24,10 +24,9 @@ export const GlobalStyles = createGlobalStyle`
         height: 100vh;
         
         background-color: ${({ theme }) => theme.backgroundColor};
-        color: ${({ theme }) => theme.textColor};
-        line-height: 1.4;
-        font-family: var(--font-secondary);
-
+        line-height: 1.5;
+        font-family: var(--font-primary);
+        color: ${({ theme }) => theme.highEmphasis};
     }
 
     a, button, input {
@@ -73,18 +72,22 @@ export const GlobalStyles = createGlobalStyle`
 
 export const lightTheme = {
   backgroundColor: "#fbfbfb",
-  textColor: "#121212",
   accentColor: "#3f51b5",
   layerShadow: "rgba(0,0,0,0.3)",
   mobileNavLink: "#ffffffda",
   mobileNavBg: "#000",
+  highEmphasis: "hsla(0, 0%, 0%, 0.87)",
+  midEmphasis: "hsla(0, 0%, 0%, 0.75)",
+  lowEmphasis: "hsla(0, 0%, 0%, 0.55)",
 };
 
 export const darkTheme = {
   backgroundColor: "#121212",
-  textColor: "hsla(0, 100%, 100%, 0.87)",
-  accentColor: "#a1b567",
+  accentColor: "#bb86fc",
   layerShadow: "#000",
   mobileNavLink: "#000",
   mobileNavBg: "#fff",
+  highEmphasis: "hsla(0, 100%, 100%, 0.87)",
+  midEmphasis: "hsla(0, 100%, 100%, 0.80)",
+  lowEmphasis: "hsla(0, 100%, 100%, 0.55)",
 };
