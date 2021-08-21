@@ -8,7 +8,6 @@ const WorkComponent = styled.section`
   display: flex;
   gap: 2rem;
   padding-block: 1rem;
-  font-size: 1.1rem;
   font-family: var(--font-secondary);
   color: ${({ theme }) => theme.fgLight};
 
@@ -33,7 +32,7 @@ const WorkComponent = styled.section`
       align-items: center;
       cursor: pointer;
 
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-family: var(--font-primary);
       font-weight: 500;
       padding: 0.5rem;
@@ -67,14 +66,14 @@ const WorkComponent = styled.section`
 
     .position {
       margin-bottom: 0.5rem;
-      font-size: 1.45rem;
+      font-size: 1.25rem;
       span {
         font-weight: 500;
       }
     }
 
     .duration {
-      font-size: 1rem;
+      font-size: 0.85rem;
       font-family: inherit;
       margin-bottom: 2rem;
       color: ${({ theme }) => theme.fgLighter};
@@ -86,7 +85,6 @@ const WorkComponent = styled.section`
 
     ul {
       li {
-        font-size: 1.1rem;
         margin-bottom: 1rem;
         position: relative;
         padding-left: 1.5rem;

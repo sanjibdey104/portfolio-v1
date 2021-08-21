@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
         --accent-color: #1976d2;
         --font-primary: 'Montserrat', sans-serif;
         --font-secondary: 'Crimson Text', 'Source Serif Pro', serif;
+        --font-secondary:'Karla', sans-serif;
     }
 
     html {

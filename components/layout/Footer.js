@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   gap: 0.3rem;
   font-size: 0.65rem;
+  color: ${({ theme }) => theme.fgLight};
 
   .contact-links {
     display: flex;

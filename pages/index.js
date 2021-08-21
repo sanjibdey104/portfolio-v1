@@ -34,7 +34,7 @@ const Homepage = styled.main`
   ul,
   li,
   svg {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-family: var(--font-secondary);
     color: ${({ theme }) => theme.fgLight};
   }
