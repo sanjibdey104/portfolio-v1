@@ -10,20 +10,20 @@ const StyledFooter = styled.footer`
   align-items: center;
   gap: 0.3rem;
   font-size: 0.65rem;
-  color: ${({ theme }) => theme.fgLight};
+  color: var(--fg-light);
 
   .contact-links {
     display: flex;
     gap: 2rem;
     align-items: center;
     margin-bottom: 0.75rem;
-    color: ${({ theme }) => theme.accentColor};
+    color: var(--accent-color-primary);
 
     a {
       font-size: 1.2rem;
 
       &:hover {
-        color: ${({ theme }) => theme.fgBold};
+        color: var(--fg-bold);
       }
     }
   }

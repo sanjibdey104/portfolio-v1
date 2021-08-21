@@ -9,7 +9,6 @@ import {
   SiGraphql,
   SiFirebase,
   SiLinkedin,
-  SiGmail,
 } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
@@ -26,8 +25,8 @@ const Homepage = styled.main`
 
   h2 {
     font-size: clamp(1.3rem, 1.8vw, 1.5rem);
-    color: ${({ theme }) => theme.fgBold};
-    border-bottom: 1.5px solid;
+    color: var(--fg-bold);
+    border-bottom: 1px solid;
   }
 
   p,
@@ -60,7 +59,7 @@ const Homepage = styled.main`
 
     a {
       position: relative;
-      color: ${({ theme }) => theme.accentColor};
+      color: var(--accent-color-primary);
       font-weight: 600;
     }
   }
@@ -74,38 +73,36 @@ const Homepage = styled.main`
 
     svg {
       font-size: 1.75rem;
+      color: var(--fg-light);
     }
   }
 `;
 
 const Intro = styled(motion.section)`
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   @media (max-width: 600px) {
     width: 100%;
   }
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.75rem;
-
   h2 {
-    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    font-size: clamp(1.85rem, 3.85vw, 3.85rem);
     border: 0;
   }
 
-  #name {
-    display: block;
-    font-size: clamp(2rem, 10vw, 4rem);
-    text-transform: uppercase;
-    color: ${({ theme }) => theme.accentColor};
+  p {
+    margin-top: 1rem;
+    font-size: 1.12rem;
   }
 
-  p {
-    margin: 1.5rem 0;
+  #name {
+    font-size: clamp(2.5rem, 13vw, 4.75rem);
+    color: var(--accent-color-primary);
+    text-shadow: 2px 2px var(--fg-bold);
   }
 
   .cta {
@@ -114,21 +111,11 @@ const Intro = styled(motion.section)`
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin: 2.5rem 0;
 
     a:nth-child(1) {
-      color: ${({ theme }) => theme.backgroundColor};
-      background-color: ${({ theme }) => theme.fgBold};
-      border: 2px solid ${({ theme }) => theme.fgBold};
-
-      svg {
-        color: ${({ theme }) => theme.backgroundColor};
-      }
+      background: var(--accent-color-secondary);
     }
-
-    a:hover {
-      border-radius: initial;
-    }
-
     svg {
       font-size: 1.3rem;
     }
@@ -140,13 +127,9 @@ const Home = ({ workData }) => {
 
   return (
     <Homepage>
-      <Intro
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
+      <Intro>
         <h2>
-          Namaste 🙏, I'm <span id="name">Sanjib</span>
+          Namaste 🙏, I'm <span id="name">SANJIB</span>
         </h2>
         <h2>A front-end web developer from India</h2>
         <p>
@@ -164,14 +147,11 @@ const Home = ({ workData }) => {
           >
             Forge a link @ <SiLinkedin />
           </CustomCta>
-          <CustomCta href="mailto:sanjibdey.dey4@gmail.com">
-            Drop a mail @ <SiGmail />
-          </CustomCta>
         </div>
       </Intro>
 
       <section className="about-me">
-        <h2>A bit more about me: </h2>
+        <h2>About me: </h2>
 
         <ul>
           <li>
@@ -179,7 +159,11 @@ const Home = ({ workData }) => {
             development. Years of internet quest exposed me to a plethora of web
             applications, and finding out that tech and tools like HTML, CSS, JS
             would allow me visually shape and build such websites and
-            applications from scratch, was all it took to step on this journey.
+            applications from scratch, is what got me started.
+          </li>
+          <li>
+            Passionate about building handy, human-centered web applications
+            (those bots 🤖 can sort themselves out)
           </li>
           <li>
             Blogging is a handy tool I use to document my learning and hopefully

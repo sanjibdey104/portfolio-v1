@@ -6,13 +6,13 @@ import Navbar from "./Navbar";
 const StyledHeader = styled.header`
   width: 100%;
   height: 3rem;
-  margin-bottom: 5rem;
+  position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     flex-direction: column;
   }
 `;

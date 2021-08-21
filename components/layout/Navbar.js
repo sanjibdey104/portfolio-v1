@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { ThemeToggleButton } from "./ThemeToggleButton";
 import Link from "next/link";
 import { NavbarDisplayContext } from "../../context/NavbarDisplayContext";
 
@@ -9,16 +8,17 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     width: 90%;
     position: fixed;
-    padding: 0.2rem 0;
+    padding: 0.5rem 0;
     bottom: 0.5rem;
     z-index: 10;
 
-    border-radius: 1rem;
-    background-color: ${({ theme }) => theme.mobileNavBg};
-    color: ${({ theme }) => theme.mobileNavLink};
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--fg-bold);
+    background-color: var(--accent-color-secondary);
 
     transform: translateY(120%);
     transition: transform 200ms ease-in-out;
@@ -31,69 +31,24 @@ const Nav = styled.nav`
 
 const NavLinks = styled.ul`
   width: 100%;
-  padding: 0 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 3rem;
 
   a {
-    cursor: pointer;
-    padding: 0.5rem;
-    position: relative;
-    color: ${({ theme }) => theme.fgBold};
+    color: var(--fg-bold);
+    font-weight: 600;
+    transition: all 200ms ease-in-out;
 
-    &:hover::before,
-    &:hover::after {
-      transform: scale(1);
-    }
-
-    &::before {
-      content: "";
-      width: 0.75rem;
-      height: 0.75rem;
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      border-left: 2px solid ${({ theme }) => theme.fgBold};
-      border-top: 2px solid ${({ theme }) => theme.fgBold};
-      transform: scale(0);
-      transition: transform 150ms ease-in-out;
-    }
-
-    &::after {
-      content: "";
-      width: 0.75rem;
-      height: 0.75rem;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      display: block;
-      border-right: 2px solid ${({ theme }) => theme.fgBold};
-      border-bottom: 2px solid ${({ theme }) => theme.fgBold};
-      transform: scale(0);
-      transition: transform 150ms ease-in-out;
+    &:hover {
+      color: var(--accent-color-primary);
     }
   }
 
-  @media (max-width: 768px) {
-    gap: 1.2rem;
-
+  @media (max-width: 600px) {
     a {
-      padding: 0;
-
-      &::before {
-        display: none;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-
-    li {
       font-size: 1.2rem;
+      font-weight: 500;
     }
   }
 `;
@@ -104,7 +59,7 @@ const NavToggleButton = styled.button`
   span {
     width: 70%;
     height: 2px;
-    background-color: ${({ theme }) => theme.mobileNavLink};
+    background-color: var(--fg-bold);
     margin: 0;
     padding: 0;
   }
@@ -137,19 +92,15 @@ const Navbar = () => {
       <NavLinks>
         <Link href="/">
           <li>
-            <a>Home</a>
+            <a>home.</a>
           </li>
         </Link>
 
         <Link href="/projects">
           <li>
-            <a>Projects</a>
+            <a>projects.</a>
           </li>
         </Link>
-
-        <li>
-          <ThemeToggleButton />
-        </li>
       </NavLinks>
 
       <NavToggleButton onClick={() => toggleNavDisplay()}>

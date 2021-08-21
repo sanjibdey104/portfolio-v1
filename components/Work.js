@@ -7,9 +7,7 @@ const WorkComponent = styled.section`
 
   display: flex;
   gap: 2rem;
-  padding-block: 1rem;
   font-family: var(--font-secondary);
-  color: ${({ theme }) => theme.fgLight};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -36,20 +34,20 @@ const WorkComponent = styled.section`
       font-family: var(--font-primary);
       font-weight: 500;
       padding: 0.5rem;
-      color: ${({ theme }) => theme.fgLighter};
+      color: var(--fg-lighter);
       transition: all 200ms ease-in-out;
 
       &:hover {
-        color: ${({ theme }) => theme.accentColor};
+        color: var(--accent-color-primary);
       }
 
       &.active {
-        color: ${({ theme }) => theme.accentColor};
-        border-left: 2px solid ${({ theme }) => theme.accentColor};
+        color: var(--accent-color-primary);
+        border-left: 2px solid var(--accent-color-primary);
 
         @media screen and (max-width: 768px) {
           border: 0;
-          border-bottom: 2px solid ${({ theme }) => theme.accentColor};
+          border-bottom: 2px solid var(--accent-color-primary);
         }
       }
     }
@@ -66,38 +64,34 @@ const WorkComponent = styled.section`
 
     .position {
       margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-      span {
-        font-weight: 500;
+      font-size: 1.35rem;
+      color: var(--fg-bold);
+      font-weight: 500;
+
+      #company {
+        color: var(--accent-color-primary);
       }
     }
 
     .duration {
-      font-size: 0.85rem;
-      font-family: inherit;
+      font-size: 0.9rem;
       margin-bottom: 2rem;
-      color: ${({ theme }) => theme.fgLighter};
+      color: var(--fg-lighter);
     }
 
-    #company {
-      color: ${({ theme }) => theme.accentColor};
-    }
+    li {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 1.5rem;
 
-    ul {
-      li {
-        margin-bottom: 1rem;
-        position: relative;
-        padding-left: 1.5rem;
-
-        &:before {
-          content: "▹";
-          display: inline;
-          position: absolute;
-          left: 0;
-          color: ${({ theme }) => theme.accentColor};
-          font-size: 1.3rem;
-          line-height: 1;
-        }
+      &:before {
+        content: "▹";
+        display: inline;
+        position: absolute;
+        left: 0;
+        color: var(--accent-color-primary);
+        font-size: 1.5rem;
+        line-height: 1.1;
       }
     }
   }

@@ -1,12 +1,26 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
-
+const GlobalStyles = createGlobalStyle`
     :root {
-        --accent-color: #1976d2;
         --font-primary: 'Montserrat', sans-serif;
-        --font-secondary: 'Crimson Text', 'Source Serif Pro', serif;
-        --font-secondary:'Karla', sans-serif;
+        --font-secondary: 'Karla', sans-serif;
+        --bg-light: #fbfbfb;
+        --mobile-nav-bg: #000000;
+        --mobile-nav-text: #ffffffda;
+
+        --accent-color-primary: #1976d2;
+        --accent-color-secondary: #ffc800;
+
+        --fg-bold: #212121;
+        --fg-light: #424242;
+        --fg-lighter: #616161;
+
+        --box-shadow: rgba(50, 50, 90, 0.25) 0px 8px 10px -5px, 
+        rgba(0, 0, 0, 0.2) 0px 8px 10px -8px, 
+        rgba(10, 40, 50, 0.2) 0px -2px 5px 0px inset;
+        --hover-box-shadow: rgba(50, 50, 90, 0.25) 0px 3px 5px -3px, 
+        rgba(0, 0, 0, 0.2) 0px 3px 5px -3px, 
+        rgba(10, 40, 50, 0.2) 0px -1px 3px 0px inset;
     }
 
     html {
@@ -19,15 +33,15 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-    
+
     body {
         width: 100%;
         height: 100vh;
         
-        background-color: ${({ theme }) => theme.backgroundColor};
         line-height: 1.5;
+        background-color: var(--bg-light);
         font-family: var(--font-primary);
-        color: ${({ theme }) => theme.highEmphasis};
+        color: var(--fg-light);
     }
 
     a, button, input {
@@ -37,6 +51,7 @@ export const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+        cursor: pointer;
     }
 
     img,svg {
@@ -64,31 +79,13 @@ export const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 3rem;
 
         @media (max-width: 768px) {
             width: 100%;
         }
+
     }
 `;
 
-export const lightTheme = {
-  backgroundColor: "#fbfbfb",
-  accentColor: "#3f51b5",
-  layerShadow: "rgba(0,0,0,0.3)",
-  mobileNavLink: "#ffffffda",
-  mobileNavBg: "#000",
-  fgBold: "hsla(0, 0%, 0%, 0.87)",
-  fgLight: "hsla(0, 0%, 0%, 0.75)",
-  fgLighter: "hsla(0, 0%, 0%, 0.55)",
-};
-
-export const darkTheme = {
-  backgroundColor: "#121212",
-  accentColor: "#bb86fc",
-  layerShadow: "#000",
-  mobileNavLink: "#000",
-  mobileNavBg: "#fff",
-  fgBold: "hsla(0, 100%, 100%, 0.87)",
-  fgLight: "hsla(0, 100%, 100%, 0.80)",
-  fgLighter: "hsla(0, 100%, 100%, 0.55)",
-};
+export default GlobalStyles;

@@ -1,45 +1,63 @@
 import styled from "styled-components";
 import { getProject, getProjectSlugs } from "../../lib/data";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import CustomLink from "../../components/custom/CustomLink";
 
 const StyledProjectTourTemplate = styled.main`
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   @media (max-width: 600px) {
     width: 100%;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
 
   #title {
-    font-size: 2.85rem;
+    font-size: clamp(2.5rem, 4.3vw, 4rem);
+    color: var(--fg-bold);
   }
 
   p,
   li,
   a {
-    font-size: 1.1rem;
     font-family: var(--font-secondary);
-    color: ${({ theme }) => theme.midEmphasisText};
+    color: var(--fg-light);
   }
 
+  .stack,
   .links {
     display: flex;
     gap: 2rem;
+  }
 
+  .stack {
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: circle;
+
+      li {
+        color: var(--accent-color-primary);
+        font-weight: 500;
+      }
+    }
+  }
+
+  .links {
     a {
       display: flex;
       gap: 0.5rem;
       align-items: center;
 
-      svg {
-        font-size: 1.2rem;
-        color: ${({ theme }) => theme.accentColor};
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: var(--accent-color-secondary);
+      box-shadow: var(--box-shadow);
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        box-shadow: var(--hover-box-shadow);
       }
     }
   }
@@ -51,21 +69,21 @@ const StyledProjectTourTemplate = styled.main`
   }
 
   section {
-    width: 100%;
-    padding: 0.85rem;
-    margin-bottom: 4rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    padding: 0.85rem;
+    margin-bottom: 4rem;
 
     & > * {
       flex: 300px;
     }
 
     h2 {
+      height: min-content;
       font-size: 1.5rem;
       border-bottom: 1.5px solid;
-      height: min-content;
+      color: var(--fg-bold);
     }
 
     ul {
@@ -114,13 +132,22 @@ const ProjectTemplate = ({ projectData }) => {
 
       <p>{description}</p>
 
+      <div className="stack">
+        <p>stack:</p>
+        <ul>
+          {stack.map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
+        </ul>
+      </div>
+
       <div className="links">
-        <CustomLink href={githubLink} rel="noreferrer" target="_blank">
+        <a href={githubLink} rel="noreferrer" target="_blank">
           view the code <FiGithub />
-        </CustomLink>
-        <CustomLink href={liveLink} rel="noreferrer" target="_blank">
+        </a>
+        <a href={liveLink} rel="noreferrer" target="_blank">
           catch it live <FiExternalLink />
-        </CustomLink>
+        </a>
       </div>
 
       {desktopBanner ? (

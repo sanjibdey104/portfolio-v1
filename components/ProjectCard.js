@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const StyledProjectCard = styled.li`
   width: 100%;
@@ -8,28 +9,39 @@ const StyledProjectCard = styled.li`
   height: 18rem;
   position: relative;
   border-radius: 0.5rem;
-  line-height: 1.6;
+  line-height: 1.5;
 
   transition: transform 200ms ease-in-out;
   transform-origin: center;
   cursor: pointer;
 
   &:hover .card-layer-two {
-    transform: rotate(5deg);
+    transform: rotate(7deg);
   }
   &:hover .card-layer-three {
-    transform: rotate(10deg);
+    transform: rotate(12deg);
   }
 
   .project-tour-link {
-    font-family: var(--font-secondary);
-    font-size: 1.1rem;
-    border-bottom: 2px solid ${({ theme }) => theme.backgroundColor};
+    color: var(--fg-light);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--bg-light);
     transition: all 200ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    svg {
+      font-size: 1.3rem;
+      position: absolute;
+      right: -1.5rem;
+    }
   }
 
   &:hover .project-tour-link {
-    border-bottom: 2px solid ${({ theme }) => theme.accentColor};
+    color: var(--accent-color-primary);
   }
 
   .card-layer-one {
@@ -42,19 +54,20 @@ const StyledProjectCard = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: ${({ theme }) => theme.backgroundColor};
-    box-shadow: 0 0 8px ${({ theme }) => theme.layerShadow};
+    background-color: var(--bg-light);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), inset 0 0 8px #ced4da;
   }
 
   #title {
-    color: ${({ theme }) => theme.accentColor};
+    color: var(--accent-color-primary);
     font-size: clamp(1.3rem, 2vw, 1.5rem);
   }
 
   #description {
     text-align: center;
     font-family: var(--font-secondary);
-    color: ${({ theme }) => theme.midEmphasis};
+    font-size: 0.9rem;
+    color: var(--fg-light);
   }
 
   .card-layer-two,
@@ -63,19 +76,19 @@ const StyledProjectCard = styled.li`
     position: absolute;
     inset: 0;
     border-radius: 0.5rem;
-    background-color: ${({ theme }) => theme.accentColor};
-    box-shadow: 0 0 5px ${({ theme }) => theme.layerShadow};
+    box-shadow: var(--box-shadow);
     transition: transform 200ms ease-in-out;
   }
 
   .card-layer-two {
     z-index: -1;
-    transform: rotate(3deg);
+    transform: rotate(5deg);
+    background-color: var(--accent-color-primary);
   }
 
   .card-layer-three {
     z-index: -2;
-    transform: rotate(6deg);
+    transform: rotate(8deg);
     background-color: #ffba08;
   }
 `;
@@ -90,7 +103,7 @@ const ProjectCard = ({ projectDetails }) => {
           <h3 id="title">{title}</h3>
           <p id="description">{description}</p>
           <a href={`/projects/${slug}`} className="project-tour-link">
-            learn more...
+            learn more <BsArrowRightShort />
           </a>
         </div>
         <div className="card-layer-two"></div>

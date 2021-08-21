@@ -11,15 +11,16 @@ const StyledCustomCta = styled.a`
 
   font-size: 0.85rem;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
 
-  color: ${({ theme }) => theme.fgBold};
-  border: 2px solid ${({ theme }) => theme.fgBold};
+  color: var(--fg-bold);
+  box-shadow: var(--box-shadow);
   transition: all 200ms ease-in-out;
 
   &:hover {
-    border-radius: initial;
+    box-shadow: var(--hover-box-shadow);
+    background-color: var(--accent-primary);
   }
 `;
 
