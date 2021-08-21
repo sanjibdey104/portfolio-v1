@@ -148,8 +148,8 @@ const Home = ({ workData }) => {
         </h2>
         <h2>A front-end web developer from India</h2>
         <p>
-          Passionate about building simple, handy, human-centered web
-          applications (those bots 🤖 can sort themselves)
+          Passionate about building handy, human-centered web applications
+          (those bots 🤖 can sort themselves out)
         </p>
         <div className="cta">
           <CustomCta href="Sanjib_Kumar_Dey_Resume.pdf" download>
@@ -173,11 +173,12 @@ const Home = ({ workData }) => {
 
         <ul>
           <li>
-            I've always had a soft corner for visual design, and several years
-            of internet quest naturally exposed me to a plethora of web
-            applications, and upon finding out that web development tech and
-            tools would allow me build such websites and applications from
-            scratch, it triggered a passion for it.
+            A soft corner for visual design is what exposed my passion for web
+            development. Years of quest on the internet quest exposed me to a
+            plethora of web applications, and eventually finding out that tech
+            and tools like HTML, CSS, JS would allow me visually shape and build
+            such websites and applications from scratch, was all it took to step
+            on this journey.
           </li>
           <li>
             Blogging is a handy tool I use to document my learning and hopefully
