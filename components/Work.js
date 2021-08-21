@@ -10,7 +10,7 @@ const WorkComponent = styled.section`
   padding-block: 1rem;
   font-size: 1.1rem;
   font-family: var(--font-secondary);
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.fgLight};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -37,7 +37,7 @@ const WorkComponent = styled.section`
       font-family: var(--font-primary);
       font-weight: 500;
       padding: 0.5rem;
-      color: ${({ theme }) => theme.lowEmphasis};
+      color: ${({ theme }) => theme.fgLighter};
       transition: all 200ms ease-in-out;
 
       &:hover {
@@ -77,7 +77,7 @@ const WorkComponent = styled.section`
       font-size: 1rem;
       font-family: inherit;
       margin-bottom: 2rem;
-      color: ${({ theme }) => theme.lowEmphasis};
+      color: ${({ theme }) => theme.fgLighter};
     }
 
     #company {

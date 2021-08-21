@@ -22,7 +22,7 @@ const StyledFooter = styled.footer`
       font-size: 1.2rem;
 
       &:hover {
-        color: ${({ theme }) => theme.highEmphasis};
+        color: ${({ theme }) => theme.fgBold};
       }
     }
   }

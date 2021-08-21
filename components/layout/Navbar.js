@@ -41,6 +41,7 @@ const NavLinks = styled.ul`
     cursor: pointer;
     padding: 0.5rem;
     position: relative;
+    color: ${({ theme }) => theme.fgBold};
 
     &:hover::before,
     &:hover::after {
@@ -55,8 +56,8 @@ const NavLinks = styled.ul`
       left: 0;
       top: 0;
       display: block;
-      border-left: 2px solid ${({ theme }) => theme.textColor};
-      border-top: 2px solid ${({ theme }) => theme.textColor};
+      border-left: 2px solid ${({ theme }) => theme.fgBold};
+      border-top: 2px solid ${({ theme }) => theme.fgBold};
       transform: scale(0);
       transition: transform 150ms ease-in-out;
     }
@@ -69,8 +70,8 @@ const NavLinks = styled.ul`
       right: 0;
       bottom: 0;
       display: block;
-      border-right: 2px solid ${({ theme }) => theme.textColor};
-      border-bottom: 2px solid ${({ theme }) => theme.textColor};
+      border-right: 2px solid ${({ theme }) => theme.fgBold};
+      border-bottom: 2px solid ${({ theme }) => theme.fgBold};
       transform: scale(0);
       transition: transform 150ms ease-in-out;
     }

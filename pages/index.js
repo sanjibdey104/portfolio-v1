@@ -26,7 +26,7 @@ const Homepage = styled.main`
 
   h2 {
     font-size: clamp(1.3rem, 1.8vw, 1.5rem);
-    color: ${({ theme }) => theme.highEmphasis};
+    color: ${({ theme }) => theme.fgBold};
     border-bottom: 1.5px solid;
   }
 
@@ -36,7 +36,7 @@ const Homepage = styled.main`
   svg {
     font-size: 1.15rem;
     font-family: var(--font-secondary);
-    color: ${({ theme }) => theme.midEmphasis};
+    color: ${({ theme }) => theme.fgLight};
   }
 
   .about-me,
@@ -117,8 +117,8 @@ const Intro = styled(motion.section)`
 
     a:nth-child(1) {
       color: ${({ theme }) => theme.backgroundColor};
-      background-color: ${({ theme }) => theme.highEmphasis};
-      border: 2px solid ${({ theme }) => theme.highEmphasis};
+      background-color: ${({ theme }) => theme.fgBold};
+      border: 2px solid ${({ theme }) => theme.fgBold};
 
       svg {
         color: ${({ theme }) => theme.backgroundColor};

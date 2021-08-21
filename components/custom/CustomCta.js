@@ -14,8 +14,8 @@ const StyledCustomCta = styled.a`
   padding: 0.5rem;
   border-radius: 0.5rem;
 
-  color: ${({ theme }) => theme.textColor};
-  border: 2px solid ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.fgBold};
+  border: 2px solid ${({ theme }) => theme.fgBold};
   transition: all 200ms ease-in-out;
 
   &:hover {

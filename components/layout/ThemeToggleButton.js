@@ -11,7 +11,7 @@ const ThemeSwitch = styled.button`
   svg {
     width: 1.5rem;
     height: 1.5rem;
-    color: ${({ theme }) => theme.highEmphasis};
+    color: ${({ theme }) => theme.fgBold};
   }
 
   @media (max-width: 768px) {

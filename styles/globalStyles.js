@@ -76,9 +76,9 @@ export const lightTheme = {
   layerShadow: "rgba(0,0,0,0.3)",
   mobileNavLink: "#ffffffda",
   mobileNavBg: "#000",
-  highEmphasis: "hsla(0, 0%, 0%, 0.87)",
-  midEmphasis: "hsla(0, 0%, 0%, 0.75)",
-  lowEmphasis: "hsla(0, 0%, 0%, 0.55)",
+  fgBold: "hsla(0, 0%, 0%, 0.87)",
+  fgLight: "hsla(0, 0%, 0%, 0.75)",
+  fgLighter: "hsla(0, 0%, 0%, 0.55)",
 };
 
 export const darkTheme = {
@@ -87,7 +87,7 @@ export const darkTheme = {
   layerShadow: "#000",
   mobileNavLink: "#000",
   mobileNavBg: "#fff",
-  highEmphasis: "hsla(0, 100%, 100%, 0.87)",
-  midEmphasis: "hsla(0, 100%, 100%, 0.80)",
-  lowEmphasis: "hsla(0, 100%, 100%, 0.55)",
+  fgBold: "hsla(0, 100%, 100%, 0.87)",
+  fgLight: "hsla(0, 100%, 100%, 0.80)",
+  fgLighter: "hsla(0, 100%, 100%, 0.55)",
 };

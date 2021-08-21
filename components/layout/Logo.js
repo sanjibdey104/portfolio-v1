@@ -8,7 +8,7 @@ const StyledLogo = styled.h3`
   margin-right: auto;
   padding: 0.5rem;
 
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.accentColor};
   border-bottom-right-radius: 50%;
 
   display: grid;
@@ -23,8 +23,8 @@ const StyledLogo = styled.h3`
     left: 0;
     top: 0;
     display: block;
-    border-left: 2px solid ${({ theme }) => theme.textColor};
-    border-top: 2px solid ${({ theme }) => theme.textColor};
+    border-left: 2px solid ${({ theme }) => theme.fgBold};
+    border-top: 2px solid ${({ theme }) => theme.fgBold};
   }
 
   &::after {
@@ -35,8 +35,8 @@ const StyledLogo = styled.h3`
     right: 0;
     bottom: 0;
     display: block;
-    border-right: 2px solid ${({ theme }) => theme.textColor};
-    border-bottom: 2px solid ${({ theme }) => theme.textColor};
+    border-right: 2px solid ${({ theme }) => theme.fgBold};
+    border-bottom: 2px solid ${({ theme }) => theme.fgBold};
   }
 
   &:hover {
