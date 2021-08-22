@@ -21,7 +21,6 @@ const StyledFooter = styled.footer`
 
     a {
       font-size: 1.2rem;
-
       &:hover {
         color: var(--fg-bold);
       }
