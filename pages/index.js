@@ -137,7 +137,7 @@ const Home = ({ workData }) => {
           (those bots 🤖 can sort themselves out)
         </p>
         <div className="cta">
-          <CustomCta href="Sanjib_Kumar_Dey_Resume.pdf" download>
+          <CustomCta href="Resume_Sanjib_Kumar_Dey.pdf" download>
             Fetch resume <FiDownload />
           </CustomCta>
           <CustomCta
