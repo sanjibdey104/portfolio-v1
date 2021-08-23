@@ -10,4 +10,4 @@
 - styled-components
 
 ## Goal
-# GETTING A JOB
+# SHOWCASE MY WORK AND GET A JOB 👨‍💻
