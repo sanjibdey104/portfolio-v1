@@ -7,7 +7,7 @@
 - [NextJS](https://nextjs.org/), because it's just awesome
 - [GraphCMS](https://graphcms.com/) for content management
 - [Graphql](https://graphql.org/) for querying
-- [styled-components](https://styled-components.com/) to make it look pleasing
+- [styled-components](https://styled-components.com/) for the visual appeal
 - Hosted with [Vercel](https://vercel.com/)
 
 ## Goal
