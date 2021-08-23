@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
         --fg-bold: #212121;
         --fg-light: #424242;
         --fg-lighter: #616161;
+        --fg-lightest: #adb5bd;
 
         --box-shadow: rgba(50, 50, 90, 0.25) 0px 8px 10px -5px, 
         rgba(0, 0, 0, 0.2) 0px 8px 10px -8px, 
@@ -66,6 +67,7 @@ const GlobalStyles = createGlobalStyle`
         border: 0;
         padding: 0.5rem;
         background-color: transparent;
+        cursor: pointer;
     }
 
     .container {

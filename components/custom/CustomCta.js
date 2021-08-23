@@ -22,6 +22,10 @@ const StyledCustomCta = styled.a`
     box-shadow: var(--hover-box-shadow);
     background-color: var(--accent-primary);
   }
+
+  svg {
+    font-size: 1.2rem;
+  }
 `;
 
 const CustomCta = ({ children, ...props }) => {

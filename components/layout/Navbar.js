@@ -33,7 +33,7 @@ const NavLinks = styled.ul`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  gap: 3rem;
+  gap: 2rem;
 
   a {
     color: var(--fg-bold);
@@ -99,6 +99,12 @@ const Navbar = () => {
         <Link href="/projects">
           <li>
             <a>projects.</a>
+          </li>
+        </Link>
+
+        <Link href="/contact">
+          <li>
+            <a>contact.</a>
           </li>
         </Link>
       </NavLinks>
