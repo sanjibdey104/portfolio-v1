@@ -16,6 +16,7 @@ import { getPortfolioData } from "../lib/data";
 import { motion } from "framer-motion";
 import React from "react";
 import CustomCta from "../components/custom/CustomCta";
+import HighlightedText from "../components/custom/HighlightedText";
 
 const Homepage = styled.main`
   display: flex;
@@ -90,19 +91,29 @@ const Intro = styled(motion.section)`
   }
 
   h2 {
-    font-size: clamp(1.85rem, 3.85vw, 3.85rem);
+    font-size: clamp(1.85rem, 3.75vw, 3.75rem);
     border: 0;
   }
 
   p {
     margin-top: 1rem;
-    font-size: 1.12rem;
+    font-size: 1.1rem;
   }
 
   #name {
-    font-size: clamp(2.5rem, 13vw, 4.75rem);
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
     color: var(--accent-color-primary);
     text-shadow: 2px 2px var(--fg-bold);
+  }
+
+  .highlighted-span {
+    position: relative;
+
+    #underline {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
   }
 
   .cta {
@@ -111,7 +122,7 @@ const Intro = styled(motion.section)`
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 2.5rem 0;
+    margin: 2rem 0;
 
     a:nth-child(1) {
       background: var(--accent-color-secondary);
@@ -133,8 +144,14 @@ const Home = ({ workData }) => {
         </h2>
         <h2>A front-end web developer from India</h2>
         <p>
-          Passionate about building handy, human-centered web applications
-          (those bots 🤖 can sort themselves out)
+          Passionate about building handy,{" "}
+          <HighlightedText>human-centered</HighlightedText> web applications
+          (those bots 🤖 can sort themselves out).
+        </p>
+        <p>
+          I'm currently looking for developer role. Have a look around, if
+          profile looks promising, maybe{" "}
+          <HighlightedText>hire me?</HighlightedText>
         </p>
         <div className="cta">
           <CustomCta href="Resume_Sanjib_Kumar_Dey.pdf" download>
@@ -156,14 +173,10 @@ const Home = ({ workData }) => {
         <ul>
           <li>
             A soft corner for visual design is what exposed my passion for web
-            development. Years of internet quest exposed me to a plethora of web
-            applications, and finding out that tech and tools like HTML, CSS, JS
-            would allow me visually shape and build such websites and
-            applications from scratch, is what got me started.
-          </li>
-          <li>
-            Passionate about building handy, human-centered web applications
-            (those bots 🤖 can sort themselves out)
+            development. Exposure to lethora of web applications, and finding
+            out that tech and tools like HTML, CSS, JS would allow me visually
+            shape and build such websites and applications from scratch, is what
+            got me here.
           </li>
           <li>
             Blogging is a handy tool I use to document my learning and hopefully
@@ -178,8 +191,8 @@ const Home = ({ workData }) => {
             <a href="https://dribbble.com/" target="_blank">
               Dribble
             </a>{" "}
-            to satisfy my UI design cravings and bring onboard the principle
-            learning in my own projects.
+            to meet my UI idea cravings and bring onboard the principle learning
+            in my own projects.
           </li>
           <li>
             Outside tech, you could find me sketching, writing free verse poetry
