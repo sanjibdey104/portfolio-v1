@@ -111,7 +111,8 @@ const Intro = styled(motion.section)`
 
     #underline {
       position: absolute;
-      inset: 0;
+      bottom: 0;
+      left: 0;
       z-index: -1;
     }
   }
@@ -144,8 +145,7 @@ const Home = ({ workData }) => {
         </h2>
         <h2>A front-end web developer from India</h2>
         <p>
-          Passionate about building handy,{" "}
-          <HighlightedText>human-centered</HighlightedText> web applications
+          Passionate about building handy, human-centered web applications
           (those bots 🤖 can sort themselves out).
         </p>
         <p>
