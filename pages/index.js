@@ -172,11 +172,11 @@ const Home = ({ workData }) => {
 
         <ul>
           <li>
-            A soft corner for visual design is what exposed my passion for web
-            development. Exposure to lethora of web applications, and finding
-            out that tech and tools like HTML, CSS, JS would allow me visually
-            shape and build such websites and applications from scratch, is what
-            got me here.
+            A soft corner for visual design, exposure to plethora of web
+            applications, and eventually finding out that tech and tools like
+            HTML, CSS, JS would allow me visually shape and build such websites
+            and applications from scratch, is what exposed my passion for web
+            development.
           </li>
           <li>
             Blogging is a handy tool I use to document my learning and hopefully
