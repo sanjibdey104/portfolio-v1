@@ -53,13 +53,12 @@ const Homepage = styled.main`
     }
   }
 
-  .about-me ul {
+  .about-me div {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
     a {
-      position: relative;
       color: var(--accent-color-primary);
       font-weight: 600;
     }
@@ -75,6 +74,32 @@ const Homepage = styled.main`
     svg {
       font-size: 1.75rem;
       color: var(--fg-light);
+    }
+  }
+
+  .highlighted-span {
+    position: relative;
+
+    #svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: visible;
+    }
+
+    .path {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: dash 650ms ease-out forwards;
+      animation-delay: 1s;
+      animation-play-state: running;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
     }
   }
 `;
@@ -104,17 +129,6 @@ const Intro = styled(motion.section)`
     font-size: clamp(2.5rem, 12vw, 4.5rem);
     color: var(--accent-color-primary);
     text-shadow: 2px 2px var(--fg-bold);
-  }
-
-  .highlighted-span {
-    position: relative;
-
-    #underline {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-    }
   }
 
   .cta {
@@ -149,8 +163,9 @@ const Home = ({ workData }) => {
           (those bots 🤖 can sort themselves out).
         </p>
         <p>
-          I'm currently looking for developer role. Have a look around, if
-          profile looks promising, maybe{" "}
+          I'm <HighlightedText>currently looking</HighlightedText> for{" "}
+          <HighlightedText>developer role</HighlightedText>. Have a look around,
+          if profile looks promising, maybe{" "}
           <HighlightedText>hire me?</HighlightedText>
         </p>
         <div className="cta">
@@ -170,35 +185,40 @@ const Home = ({ workData }) => {
       <section className="about-me">
         <h2>About me: </h2>
 
-        <ul>
-          <li>
-            A soft corner for visual design, exposure to plethora of web
-            applications, and eventually finding out that tech and tools like
-            HTML, CSS, JS would allow me visually shape and build such websites
-            and applications from scratch, is what exposed my passion for web
-            development.
-          </li>
-          <li>
-            Blogging is a handy tool I use to document my learning and hopefully
-            help others along the way. Catch it live here{" "}
+        <div>
+          <p>
+            A <HighlightedText>knack for visual design</HighlightedText>,
+            exposure to plethora of web applications, and eventually finding out
+            that tech and tools like HTML, CSS, JS would allow me visually shape
+            and <HighlightedText>build</HighlightedText> such{" "}
+            <HighlightedText>robust</HighlightedText>{" "}
+            <HighlightedText> applications</HighlightedText> from scratch, is
+            what exposed my passion for web development.
+          </p>
+          <p>
+            Blogging is a handy tool I use to
+            <HighlightedText> document</HighlightedText> my{" "}
+            <HighlightedText>learning</HighlightedText> and hopefully{" "}
+            <HighlightedText>help others</HighlightedText> along the way. Catch
+            it live here{" "}
             <a href="https://webdevref.vercel.app/" target="_blank">
               WebDevRef
             </a>
             .
-          </li>
-          <li>
+          </p>
+          <p>
             I regularly scour{" "}
             <a href="https://dribbble.com/" target="_blank">
               Dribble
             </a>{" "}
             to meet my UI idea cravings and bring onboard the principle learning
             in my own projects.
-          </li>
-          <li>
+          </p>
+          <p>
             Outside tech, you could find me sketching, writing free verse poetry
             and short stories.
-          </li>
-        </ul>
+          </p>
+        </div>
       </section>
 
       <section className="experience">
