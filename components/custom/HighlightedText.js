@@ -47,7 +47,7 @@ const HighlightedText = ({ children }) => {
     let curveYEnd =
       Math.floor(Math.random() * (curveYEndMax - curveYEndMin)) + curveYEndMin;
 
-    let endX = spanWidth - 10;
+    let endX = spanWidth - 7;
     let endY = Math.floor(Math.random() * (endYMax - endYMin)) + endYMin;
 
     let generatedPath = `M ${moveX} ${moveY} C ${curveXStart} ${curveYStart} ${curveXEnd} ${curveYEnd} ${endX} ${endY}`;
