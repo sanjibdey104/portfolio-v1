@@ -37,6 +37,7 @@ function Footer() {
             href="https://github.com/sanjibdey104"
             rel="noreferrer"
             target="_blank"
+            aria-label="Github"
           >
             <FiGithub />
           </a>
@@ -46,6 +47,7 @@ function Footer() {
             href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
             rel="noreferrer"
             target="_blank"
+            aria-label="Linkedin"
           >
             <FiLinkedin />
           </a>
@@ -55,6 +57,7 @@ function Footer() {
             href="mailto:sanjibdey.dey4@gmail.com"
             rel="noreferrer"
             target="_blank"
+            aria-label="Email"
           >
             <FiMail />
           </a>
@@ -64,6 +67,7 @@ function Footer() {
             href="https://twitter.com/Sanjib_104"
             rel="noreferrer"
             target="_blank"
+            aria-label="Twitter"
           >
             <FiTwitter />
           </a>
