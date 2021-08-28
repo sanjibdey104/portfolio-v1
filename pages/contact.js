@@ -100,22 +100,23 @@ const contact = () => {
     <StyledContactPage>
       <h3>reach out on below channels</h3>
       <div className="links">
-        <CustomCta href="mailto:sanjibdey.dey4@gmail.com">
-          Drop a mail <FiMail />
+        <CustomCta href="mailto:sanjibdey.dey4@gmail.com" aria-label="Email">
+          Drop a mail <FiMail aria-hidden="true" />
         </CustomCta>
         <CustomCta
           href="https://twitter.com/Sanjib_104"
           rel="noreferrer"
           target="_blank"
+          aria-label="Twitter"
         >
-          Nudge the bird <FiTwitter />
+          Nudge the bird <FiTwitter aria-hidden="true" />
         </CustomCta>
         <CustomCta
           href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
           rel="noreferrer"
           target="_blank"
         >
-          Forge a link <FiLinkedin />
+          Forge a link <FiLinkedin aria-hidden="true" />
         </CustomCta>
       </div>
 
@@ -135,6 +136,7 @@ const contact = () => {
             placeholder="Bond, James Bond"
             value={formData.name}
             onChange={handleInput}
+            aria-label="name"
           />
           {renderErrorMsg("name")}
           <label htmlFor="email">Email: </label>
@@ -145,6 +147,7 @@ const contact = () => {
             placeholder="bond007@mi6.com"
             value={formData.email}
             onChange={handleInput}
+            aria-label="email"
           />
           {renderErrorMsg("email")}
           <label htmlFor="message">Message: </label>
@@ -157,12 +160,14 @@ const contact = () => {
             name="message"
             value={formData.message}
             onChange={handleInput}
+            aria-label="message"
           ></textarea>
           {renderErrorMsg("message")}
           <button
             type="submit"
             id="dispatch-btn"
             disabled={serverState.submitting}
+            aria-label="form submit button"
           >
             Dispatch
           </button>

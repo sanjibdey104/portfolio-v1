@@ -22,7 +22,7 @@ const StyledProjectCard = styled.li`
     transform: rotate(12deg);
   }
 
-  .project-tour-link {
+  .project-link {
     color: var(--fg-light);
     font-size: 0.85rem;
     font-weight: 500;
@@ -40,7 +40,7 @@ const StyledProjectCard = styled.li`
     }
   }
 
-  &:hover .project-tour-link {
+  &:hover .project-link {
     color: var(--accent-color-primary);
   }
 
@@ -98,17 +98,19 @@ const ProjectCard = ({ projectDetails }) => {
 
   return (
     <Link href={`/projects/${slug}`}>
-      <StyledProjectCard className="project-card">
-        <div className="card-layer-one">
-          <h3 id="title">{title}</h3>
-          <p id="description">{description}</p>
-          <a href={`/projects/${slug}`} className="project-tour-link">
-            learn more <BsArrowRightShort />
-          </a>
-        </div>
-        <div className="card-layer-two"></div>
-        <div className="card-layer-three"></div>
-      </StyledProjectCard>
+      <a aria-label="project page link">
+        <StyledProjectCard className="project-card">
+          <div className="card-layer-one">
+            <h3 id="title">{title}</h3>
+            <p id="description">{description}</p>
+            <p className="project-link">
+              learn more <BsArrowRightShort />
+            </p>
+          </div>
+          <div className="card-layer-two"></div>
+          <div className="card-layer-three"></div>
+        </StyledProjectCard>
+      </a>
     </Link>
   );
 };

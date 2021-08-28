@@ -45,6 +45,7 @@ const StyledProjectTourTemplate = styled.main`
   }
 
   .links {
+    margin-bottom: 1rem;
     a {
       display: flex;
       gap: 0.5rem;
@@ -66,6 +67,7 @@ const StyledProjectTourTemplate = styled.main`
     img {
       width: 100%;
     }
+    margin: 2rem 0;
   }
 
   section {
@@ -142,17 +144,27 @@ const ProjectTemplate = ({ projectData }) => {
       </div>
 
       <div className="links">
-        <a href={githubLink} rel="noreferrer" target="_blank">
+        <a
+          href={githubLink}
+          rel="noreferrer"
+          target="_blank"
+          aria-label="github repo link"
+        >
           view the code <FiGithub />
         </a>
-        <a href={liveLink} rel="noreferrer" target="_blank">
+        <a
+          href={liveLink}
+          rel="noreferrer"
+          target="_blank"
+          aria-label="live site link"
+        >
           catch it live <FiExternalLink />
         </a>
       </div>
 
       {desktopBanner ? (
         <div className="banner">
-          <img src={desktopBanner.url} alt="banner" />
+          <img src={desktopBanner.url} alt="project banner" />
         </div>
       ) : null}
 
