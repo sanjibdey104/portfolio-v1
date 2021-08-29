@@ -1,7 +1,7 @@
 # Portfolio Website
-### 1st iteration of my portfolio website built with [Next.js](https://nextjs.org/) and [GraphCMS](https://graphcms.com/)
+1st iteration of my portfolio website built with [Next.js](https://nextjs.org/) and [GraphCMS](https://graphcms.com/)
 
-### catch it live at: [sanjibkumardey.vercel.app/](https://sanjibkumardey.vercel.app/)
+#### catch it live at: [sanjibkumardey.vercel.app/](https://sanjibkumardey.vercel.app/)
 
 ### Stack
 - [NextJS](https://nextjs.org/), because it's just awesome
@@ -9,6 +9,9 @@
 - [Graphql](https://graphql.org/) for querying
 - [styled-components](https://styled-components.com/) for the visual appeal
 - Hosted with [Vercel](https://vercel.com/)
+
+### Mockup
+![website mockup](assets/mockup/portfolio_v1_mockup.png)
 
 ## Goal
 # SHOWCASE MY WORK AND GET A JOB 👨‍💻
