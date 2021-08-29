@@ -15,7 +15,7 @@ const StyledProjectList = styled.ul`
 
 const ProjectList = ({ projects }) => {
   const sortedProjectList = projects.slice().sort(function (a, b) {
-    return new Date(b.updatedAt) - new Date(a.updatedAt);
+    return a.unikey - b.unikey;
   });
 
   return (

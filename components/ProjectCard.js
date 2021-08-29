@@ -95,6 +95,7 @@ const StyledProjectCard = styled.li`
 
 const ProjectCard = ({ projectDetails }) => {
   const { title, slug, description } = projectDetails;
+  console.log(projectDetails.unikey);
 
   return (
     <Link href={`/projects/${slug}`}>
