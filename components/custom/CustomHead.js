@@ -14,11 +14,11 @@ const CustomHead = () => {
         crossOrigin="true"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap"
         rel="stylesheet"
       />
     </Head>

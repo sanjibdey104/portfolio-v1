@@ -75,7 +75,7 @@ const HighlightedText = ({ children }) => {
           d={newPath}
           stroke={strokeColor}
           fill="transparent"
-          strokeWidth={spanHeight}
+          strokeWidth={spanHeight - 2}
           strokeLinecap="square"
         />
       </svg>

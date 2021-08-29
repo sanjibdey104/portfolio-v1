@@ -87,20 +87,6 @@ const Homepage = styled.main`
       z-index: -1;
       overflow: visible;
     }
-
-    .path {
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300;
-      animation: dash 650ms ease-out forwards;
-      animation-delay: 1s;
-      animation-play-state: running;
-    }
-
-    @keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
   }
 `;
 
@@ -163,9 +149,9 @@ const Home = ({ workData }) => {
           (those bots 🤖 can sort themselves out).
         </p>
         <p>
-          I'm <HighlightedText>currently looking</HighlightedText> for{" "}
+          I'm <HighlightedText>currently looking</HighlightedText> for a{" "}
           <HighlightedText>developer role</HighlightedText>. Have a look around,
-          if profile looks promising, maybe{" "}
+          if the profile looks promising, maybe{" "}
           <HighlightedText>hire me?</HighlightedText>
         </p>
         <div className="cta">
@@ -187,17 +173,17 @@ const Home = ({ workData }) => {
 
         <div>
           <p>
-            A <HighlightedText>knack for visual design</HighlightedText>,
+            <HighlightedText>A knack for visual design</HighlightedText>,
             exposure to plethora of web applications, and eventually finding out
             that tech and tools like HTML, CSS, JS would allow me visually shape
             and <HighlightedText>build</HighlightedText> such{" "}
             <HighlightedText>robust</HighlightedText>{" "}
-            <HighlightedText> applications</HighlightedText> from scratch, is
-            what exposed my passion for web development.
+            <HighlightedText>applications</HighlightedText> from scratch,
+            exposed my passion for web development.
           </p>
           <p>
-            Blogging is a handy tool I use to
-            <HighlightedText> document</HighlightedText> my{" "}
+            Blogging is a tool I use to{" "}
+            <HighlightedText>document</HighlightedText> my{" "}
             <HighlightedText>learning</HighlightedText> and hopefully{" "}
             <HighlightedText>help others</HighlightedText> along the way. Catch
             it live here{" "}
@@ -211,7 +197,7 @@ const Home = ({ workData }) => {
             <a href="https://dribbble.com/" target="_blank">
               Dribble
             </a>{" "}
-            to meet my UI idea cravings and bring onboard the principle learning
+            to meet my UI idea cravings and bring onboard the design principles
             in my own projects.
           </p>
           <p>
