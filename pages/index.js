@@ -87,6 +87,18 @@ const Homepage = styled.main`
       z-index: -1;
       overflow: visible;
     }
+
+    .path {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: dash 650ms ease-out forwards;
+      animation-delay: 1s;
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
   }
 `;
 

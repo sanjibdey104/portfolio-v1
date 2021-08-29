@@ -17,7 +17,7 @@ const WorkComponent = styled.section`
     width: 25%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -29,11 +29,12 @@ const WorkComponent = styled.section`
       display: flex;
       align-items: center;
       cursor: pointer;
+      position: relative;
 
       font-size: 0.9rem;
       font-family: var(--font-primary);
       font-weight: 500;
-      padding: 0.5rem;
+      padding: 0.75rem;
       color: var(--fg-lighter);
       transition: all 200ms ease-in-out;
 
@@ -49,6 +50,24 @@ const WorkComponent = styled.section`
           border: 0;
           border-bottom: 2px solid var(--accent-color-primary);
         }
+      }
+
+      &:nth-child(2)::before {
+        content: "👈";
+        position: absolute;
+        top: -1rem;
+        right: 15%;
+        transform: rotate(-30deg);
+        font-size: 1.1rem;
+      }
+
+      &:nth-child(2)::after {
+        content: "👈";
+        position: absolute;
+        bottom: -1.5rem;
+        right: 15%;
+        transform: rotate(30deg);
+        font-size: 1.1rem;
       }
     }
   }
