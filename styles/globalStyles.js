@@ -73,6 +73,7 @@ const GlobalStyles = createGlobalStyle`
     .container {
         width: 80%;
         margin: 0 auto;
+        max-width: 1100px;
         min-height: 100vh;
         padding: 1rem;
         position: relative;
