@@ -14,18 +14,18 @@ const HighlightedText = ({ children }) => {
     generateRandomStrokeColor();
   }, []);
 
-  let moveXMin = 10;
-  let moveXMax = 12;
+  let moveXMin = 5;
+  let moveXMax = 10;
   let moveYMin = 5;
   let moveYMax = 10;
 
-  let curveXStartMin = 18;
+  let curveXStartMin = 20;
   let curveXStartMax = 25;
   let curveYStartMin = 5;
   let curveYStartMax = 10;
 
-  let curveXEndMin = spanWidth - 25;
-  let curveXEndMax = spanWidth - 20;
+  let curveXEndMin = spanWidth - 20;
+  let curveXEndMax = spanWidth - 15;
   let curveYEndMin = 5;
   let curveYEndMax = 10;
 
