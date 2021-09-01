@@ -26,6 +26,16 @@ const StyledFooter = styled.footer`
       }
     }
   }
+
+  #attributions {
+    a {
+      color: var(--accent-color-primary);
+      font-weight: 500;
+      &:hover {
+        color: var(--fg-bold);
+      }
+    }
+  }
 `;
 
 function Footer() {
@@ -74,7 +84,20 @@ function Footer() {
         </li>
       </ul>
       <p>&copy; 2021, Sanjib Kumar Dey</p>
-      <p>build with 💗 and Next JS</p>
+      <p>build with 💗 and powered by</p>
+      <p id="attributions">
+        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+          Next.js
+        </a>
+        ,{" "}
+        <a href="https://graphcms.com/" target="_blank" rel="noreferrer">
+          GraphCMS
+        </a>
+        ,{" "}
+        <a href="https://vercel.com/" target="_blank" rel="noreferrer">
+          Vercel
+        </a>
+      </p>
     </StyledFooter>
   );
 }
