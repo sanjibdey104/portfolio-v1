@@ -194,6 +194,11 @@ const Home = ({ workData }) => {
             exposed my passion for web development.
           </p>
           <p>
+            I've been researching and building applications with the intent of
+            implementing my learnings, get better conceptual clarity, developing
+            accessible, user-facing applications.
+          </p>
+          <p>
             Blogging is a tool I use to{" "}
             <HighlightedText>document</HighlightedText> my{" "}
             <HighlightedText>learning</HighlightedText> and hopefully{" "}
