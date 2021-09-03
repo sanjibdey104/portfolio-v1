@@ -1,22 +1,12 @@
+import React from "react";
 import styled from "styled-components";
-import {
-  SiHtml5,
-  SiCss3,
-  SiSass,
-  SiJavascript,
-  SiReact,
-  SiNextDotJs,
-  SiGraphql,
-  SiFirebase,
-  SiLinkedin,
-} from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
 import { getPortfolioData } from "../lib/data";
-import { motion } from "framer-motion";
-import React from "react";
 import CustomCta from "../components/custom/CustomCta";
 import HighlightedText from "../components/custom/HighlightedText";
+import TechStack from "../components/TechStack";
 
 const Homepage = styled.main`
   display: flex;
@@ -64,19 +54,6 @@ const Homepage = styled.main`
     }
   }
 
-  .tech-stack {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-
-    svg {
-      font-size: 1.75rem;
-      color: var(--fg-light);
-    }
-  }
-
   .highlighted-span {
     position: relative;
 
@@ -102,7 +79,7 @@ const Homepage = styled.main`
   }
 `;
 
-const Intro = styled(motion.section)`
+const Intro = styled.section`
   width: 75%;
   margin: 0 auto;
   display: flex;
@@ -230,17 +207,8 @@ const Home = ({ workData }) => {
       </section>
 
       <section className="technologies">
-        <h2>technologies I've worked with:</h2>
-        <div className="tech-stack">
-          <SiHtml5 />
-          <SiCss3 />
-          <SiSass />
-          <SiJavascript />
-          <SiReact />
-          <SiNextDotJs />
-          <SiGraphql />
-          <SiFirebase />
-        </div>
+        <h2>tech and tools I've worked with:</h2>
+        <TechStack />
       </section>
     </Homepage>
   );
