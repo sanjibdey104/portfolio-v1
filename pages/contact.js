@@ -172,16 +172,7 @@ const contact = () => {
             Dispatch
           </button>
         </form>
-        {serverState.status && (
-          // <p
-          //   className={
-          //     !serverState.status.isSubmitSuccessful ? "error-response" : ""
-          //   }
-          // >
-          //   {serverState.status.msg}
-          // </p>
-          <ToastMessage serverState={serverState} />
-        )}
+        {serverState.status && <ToastMessage serverState={serverState} />}
       </div>
     </StyledContactPage>
   );
