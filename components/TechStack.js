@@ -49,7 +49,7 @@ const TechStack = () => {
       </li>
       <li>
         <SiJavascript />
-        JS
+        JavaScript
       </li>
       <li>
         <SiReact />
