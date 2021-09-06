@@ -21,9 +21,7 @@ const Homepage = styled.main`
   }
 
   p,
-  ul,
-  li,
-  svg {
+  ul {
     font-size: 1rem;
     font-family: var(--font-secondary);
     color: ${({ theme }) => theme.fgLight};

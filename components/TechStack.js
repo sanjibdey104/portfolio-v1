@@ -30,7 +30,6 @@ const StyledTechStack = styled.ul`
   svg {
     font-size: 1.75rem;
     color: var(--fg-light);
-    position: relative;
   }
 `;
 
