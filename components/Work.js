@@ -51,24 +51,6 @@ const WorkComponent = styled.section`
           border-bottom: 2px solid var(--accent-color-primary);
         }
       }
-
-      &:nth-child(2)::before {
-        content: "👈";
-        position: absolute;
-        top: -1rem;
-        right: 15%;
-        transform: rotate(-30deg);
-        font-size: 1.1rem;
-      }
-
-      &:nth-child(2)::after {
-        content: "👈";
-        position: absolute;
-        bottom: -1.5rem;
-        right: 15%;
-        transform: rotate(30deg);
-        font-size: 1.1rem;
-      }
     }
   }
 

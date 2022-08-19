@@ -136,10 +136,11 @@ const Home = ({ workData }) => {
           (those bots 🤖 can sort themselves out).
         </p>
         <p>
-          I'm <HighlightedText>currently looking</HighlightedText> for a{" "}
-          <HighlightedText>developer role</HighlightedText>. Have a look around,
-          if the profile looks promising, maybe{" "}
-          <HighlightedText>hire me?</HighlightedText>
+          I'm <HighlightedText>currently working</HighlightedText> at{" "}
+          <a href="https://qoruz.com/" target="_blank">
+            Qoruz
+          </a>{" "}
+          as a front-end developer.
         </p>
         <div className="cta">
           <CustomCta href="Resume_Sanjib_Kumar_Dey.pdf" download>
