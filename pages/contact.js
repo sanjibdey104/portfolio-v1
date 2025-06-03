@@ -1,4 +1,3 @@
-import React from "react";
 import { FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 import styled from "styled-components";
 import ContactForm from "../components/custom/ContactForm";

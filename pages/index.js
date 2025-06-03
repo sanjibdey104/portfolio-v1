@@ -1,9 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import { SiLinkedin } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
-import { getPortfolioData } from "../lib/data";
 import CustomCta from "../components/custom/CustomCta";
 import HighlightedText from "../components/custom/HighlightedText";
 import TechStack from "../components/TechStack";
@@ -121,9 +119,7 @@ const Intro = styled.section`
   }
 `;
 
-const Home = ({ workData }) => {
-  const { works } = workData;
-
+const Home = () => {
   return (
     <Homepage>
       <Intro>
@@ -204,7 +200,7 @@ const Home = ({ workData }) => {
 
       <section className="experience">
         <h2>experience</h2>
-        <Work works={works} />
+        {/* <Work works={works} />/ */}
       </section>
 
       <section className="technologies">
@@ -213,16 +209,6 @@ const Home = ({ workData }) => {
       </section>
     </Homepage>
   );
-};
-
-export const getStaticProps = async () => {
-  const { workData } = await getPortfolioData();
-
-  return {
-    props: {
-      workData,
-    },
-  };
 };
 
 export default Home;

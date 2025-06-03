@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
@@ -21,7 +20,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Logo />
-      <Navbar />
+      {/* <Navbar /> */}
     </StyledHeader>
   );
 };

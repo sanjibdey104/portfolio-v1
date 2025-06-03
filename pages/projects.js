@@ -1,5 +1,3 @@
-import React from "react";
-import { getPortfolioData } from "../lib/data";
 import styled from "styled-components";
 import ProjectList from "../components/ProjectList";
 import CustomCta from "../components/custom/CustomCta";
@@ -30,12 +28,11 @@ const ProjectsPage = styled.section`
   }
 `;
 
-function projects({ projectsData }) {
-  const { projects } = projectsData;
+function projects() {
   return (
     <ProjectsPage>
       <h2>Stuff I've worked on...</h2>
-      <ProjectList projects={projects} />
+      <ProjectList projects={[]} />
       <CustomCta
         id="github-link"
         href="https://github.com/sanjibdey104"
@@ -49,15 +46,5 @@ function projects({ projectsData }) {
     </ProjectsPage>
   );
 }
-
-export const getStaticProps = async () => {
-  const { projectsData } = await getPortfolioData();
-
-  return {
-    props: {
-      projectsData,
-    },
-  };
-};
 
 export default projects;
