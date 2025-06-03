@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        --font-primary: 'Montserrat', sans-serif;
-        --font-secondary: 'Karla', sans-serif;
+        --font-primary: 'Epilogue', sans-serif;
+        --font-secondary: 'Inter', sans-serif;
         --bg-light: #fbfbfb;
         --mobile-nav-bg: #000000;
         --mobile-nav-text: #ffffffda;
@@ -82,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 3rem;
+        gap: 8rem;
 
         @media (max-width: 768px) {
             width: 100%;

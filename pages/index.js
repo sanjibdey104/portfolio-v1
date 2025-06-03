@@ -21,7 +21,7 @@ const Homepage = styled.main`
   p,
   ul {
     font-size: 1rem;
-    font-family: var(--font-secondary);
+    /* font-family: var(--font-secondary); */
     color: ${({ theme }) => theme.fgLight};
   }
 
@@ -76,15 +76,11 @@ const Homepage = styled.main`
 `;
 
 const Intro = styled.section`
-  width: 75%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
+  gap: 1.5rem;
 
   h2 {
     font-size: clamp(1.85rem, 3.75vw, 3.75rem);
@@ -92,14 +88,31 @@ const Intro = styled.section`
   }
 
   p {
-    margin-top: 1rem;
+    margin: 0;
     font-size: 1.1rem;
   }
 
-  #name {
-    font-size: clamp(2.5rem, 12vw, 4.5rem);
-    color: var(--accent-color-primary);
-    text-shadow: 2px 2px var(--fg-bold);
+  .hero-text {
+    font-size: clamp(4.5rem, 16vw, 6.5rem);
+    line-height: clamp(4.5rem, 16vw, 6.5rem);
+  }
+
+  .brief-intro-text {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: var(--fg-lighter);
+
+    p {
+      display: inline-block;
+      font-size: inherit;
+    }
+
+    p.dev-name,
+    p.location-name,
+    a.current-company {
+      color: var(--fg-light);
+      font-weight: bolder;
+    }
   }
 
   .cta {
@@ -107,14 +120,26 @@ const Intro = styled.section`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem 0;
+    gap: 2rem;
 
-    a:nth-child(1) {
-      background: var(--accent-color-secondary);
-    }
-    svg {
-      font-size: 1.3rem;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      color: var(--fg-lighter);
+      font-size: 1rem;
+      line-height: 1rem;
+
+      svg {
+        font-size: 1rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--fg-light);
+      }
     }
   }
 `;
@@ -123,34 +148,34 @@ const Home = () => {
   return (
     <Homepage>
       <Intro>
-        <h2>
-          Namaste 🙏, I'm <span id="name">SANJIB</span>
-        </h2>
-        <h2>A front-end web developer from India</h2>
-        <p>
-          Passionate about building handy, human-centered web applications
-          (those bots 🤖 can sort themselves out).
-        </p>
-        <p>
-          I'm currently working at{" "}
-          <b>
-            <a href="https://qoruz.com/" target="_blank">
-              Qoruz
-            </a>
-          </b>{" "}
-          as a front-end developer.
-        </p>
+        <h1 className="hero-text">Frontend Developer</h1>
+
+        <div className="brief-intro-text">
+          Namaste, I'm <p className="dev-name">Sanjib</p>. A{" "}
+          <p className="location-name">Bangalore</p> based web developer,
+          currently at{" "}
+          <a
+            className="current-company"
+            href="https://qoruz.com/"
+            target="_blank"
+          >
+            Qoruz
+          </a>
+          .
+        </div>
+
         <div className="cta">
-          <CustomCta href="Resume_Sanjib_Kumar_Dey.pdf" download>
-            Fetch resume <FiDownload />
-          </CustomCta>
-          <CustomCta
+          <a href="Resume_Sanjib_Kumar_Dey.pdf" download>
+            <span>Download resume</span> <FiDownload />
+          </a>
+
+          {/* <a
             href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
             rel="noreferrer"
             target="_blank"
           >
-            Forge a link @ <SiLinkedin />
-          </CustomCta>
+            <span>Connect on</span> <SiLinkedin />
+          </a> */}
         </div>
       </Intro>
 
