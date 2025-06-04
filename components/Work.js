@@ -88,7 +88,7 @@ const Work = () => {
               <h4>Tools used:</h4>
 
               <p className="tools-used">
-                TypeScript, ReactJS, NextJS, TailwindCSS
+                JavaScript, TypeScript, ReactJS, NextJS, Bootstrap
               </p>
             </div>
           </div>
@@ -104,23 +104,19 @@ const Work = () => {
           <div className="job-desc">
             <p>Worked as a Middleware Engineer for a UK based retail client.</p>
 
-            <ul>
-              <li>
-                - Primarily focused on acquiring business-level understanding
-                and investigate data flow and mapping logic issues
-              </li>
-              <li>
-                - Work in collaboration and ensure proper handover with
-                engineers from DBMS, Inventory Management, eCommerce Team
-              </li>
+            <p>
+              - Primarily focused on acquiring business-level understanding and
+              investigate data flow and mapping logic issues
+            </p>
 
-              <li>
-                - Track, troubleshoot and document recurring production bugs
-              </li>
-              <li>
-                - Engaged with Development Team over DevOps migration phase
-              </li>
-            </ul>
+            <p>
+              - Work in collaboration and ensure proper handover with engineers
+              from DBMS, Inventory Management, eCommerce Team
+            </p>
+
+            <p>- Track, troubleshoot and document recurring production bugs</p>
+
+            <p>- Engaged with Development Team over DevOps migration phase</p>
 
             <div className="tools-desc">
               <h4>Tools used:</h4>

@@ -54,6 +54,12 @@ const StyledContactForm = styled.form`
     font-weight: 500;
     padding: 0.5rem 0;
   }
+
+  @media (max-width: 768px) {
+    .submit-button {
+      margin: 0;
+    }
+  }
 `;
 
 const ContactForm = (props) => {

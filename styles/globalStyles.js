@@ -24,21 +24,21 @@ const GlobalStyles = createGlobalStyle`
         rgba(10, 40, 50, 0.2) 0px -1px 3px 0px inset;
     }
 
-    html {
-        box-sizing: border-box;
-        font-size: 100%;
-    }
-
     *,*::before,*::after {
         box-sizing: inherit;
         margin: 0;
         padding: 0;
     }
 
+    html {
+        box-sizing: border-box;
+        font-size: 100%;
+    }
+
+  
+
     body {
         width: 100%;
-        height: 100vh;
-        
         line-height: 1.5;
         background-color: var(--bg-light);
         font-family: var(--font-primary);
@@ -82,10 +82,10 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* gap: 5rem; */
-
+        
         @media (max-width: 768px) {
             width: 100%;
+            margin: 0;
         }
 
     }

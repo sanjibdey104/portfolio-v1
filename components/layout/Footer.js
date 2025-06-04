@@ -5,11 +5,18 @@ import ContactForm from "../custom/ContactForm";
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 5rem;
   padding: 5rem 0 2rem 0;
 
   & > section {
     flex: 1;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+
+    .left {
+      order: 2;
+    }
   }
 
   .left {
@@ -45,6 +52,7 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    color: var(--fg-lightest);
 
     .tech-behind {
       display: flex;

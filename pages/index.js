@@ -14,7 +14,7 @@ const Homepage = styled.main`
   }
 
   .section-title {
-    font-size: clamp(1.3rem, 1.8vw, 1.5rem);
+    font-size: clamp(1.4rem, 1.8vw, 1.6rem);
     border-bottom: 1px solid;
   }
 
@@ -85,8 +85,7 @@ const Intro = styled.section`
 
   .brief-intro-text {
     font-size: 1.2rem;
-    line-height: 1.2rem;
-    color: var(--fg-lighter);
+    color: var(--fg-lightest);
 
     p {
       display: inline-block;
@@ -97,29 +96,36 @@ const Intro = styled.section`
     p.location-name,
     a.current-company {
       color: var(--fg-light);
-      font-weight: bolder;
+      font-weight: 600;
     }
   }
 
-  .cta {
-    a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+  .download-resume-handler {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-      color: var(--fg-lighter);
+    color: var(--fg-lighter);
+    font-size: 1rem;
+    line-height: 1rem;
+
+    svg {
       font-size: 1rem;
-      line-height: 1rem;
+    }
 
-      svg {
-        font-size: 1rem;
-      }
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--fg-light);
+    }
+  }
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: var(--fg-light);
-      }
+  @media (max-width: 768px) {
+    height: 60vh;
+
+    .hero-text {
+      font-size: clamp(4rem, 14vw, 6rem);
+      line-height: clamp(4rem, 14vw, 6rem);
     }
   }
 `;
@@ -144,11 +150,13 @@ const Home = () => {
           .
         </div>
 
-        <div className="cta">
-          <a href="Resume_Sanjib_Kumar_Dey.pdf" download>
-            <span>Download resume</span> <FiDownload />
-          </a>
-        </div>
+        <a
+          className="download-resume-handler"
+          href="Resume_Sanjib_Kumar_Dey.pdf"
+          download
+        >
+          <span>Download resume</span> <FiDownload />
+        </a>
       </Intro>
 
       <div className="about-section">
