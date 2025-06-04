@@ -1,1 +1,2 @@
-
+My simple portfolio site built on NextJS and deployed on Vercel.
+Updating as I upskill...
