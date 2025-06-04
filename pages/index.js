@@ -9,44 +9,44 @@ import TechStack from "../components/TechStack";
 const Homepage = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 7.5rem;
-  margin-bottom: 5rem;
-
-  h2 {
-    font-size: clamp(1.3rem, 1.8vw, 1.5rem);
-    color: var(--fg-bold);
-    border-bottom: 1px solid;
-  }
 
   p,
   ul {
     font-size: 1rem;
-    /* font-family: var(--font-secondary); */
-    color: ${({ theme }) => theme.fgLight};
+    margin: 0;
+    padding: 0;
   }
 
-  .about-me,
-  .experience,
-  .technologies {
-    width: 70%;
-    margin: 0 auto;
+  .section-title {
+    font-size: clamp(1.3rem, 1.8vw, 1.5rem);
+    border-bottom: 1px solid;
+  }
+
+  .about-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
 
-    @media (max-width: 600px) {
-      width: 100%;
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 
-  .about-me div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .tech-and-tools-section {
+    .tech-and-tools-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
 
-    a {
-      color: var(--accent-color-primary);
-      font-weight: 600;
+      li {
+        color: var(--fg-lighter);
+
+        &:hover {
+          color: var(--fg-light);
+        }
+      }
     }
   }
 
@@ -76,21 +76,11 @@ const Homepage = styled.main`
 `;
 
 const Intro = styled.section`
-  margin: 0 auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
   gap: 1.5rem;
-
-  h2 {
-    font-size: clamp(1.85rem, 3.75vw, 3.75rem);
-    border: 0;
-  }
-
-  p {
-    margin: 0;
-    font-size: 1.1rem;
-  }
 
   .hero-text {
     font-size: clamp(4.5rem, 16vw, 6.5rem);
@@ -116,12 +106,6 @@ const Intro = styled.section`
   }
 
   .cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-
     a {
       display: flex;
       align-items: center;
@@ -168,70 +152,30 @@ const Home = () => {
           <a href="Resume_Sanjib_Kumar_Dey.pdf" download>
             <span>Download resume</span> <FiDownload />
           </a>
-
-          {/* <a
-            href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span>Connect on</span> <SiLinkedin />
-          </a> */}
         </div>
       </Intro>
 
-      <section className="about-me">
-        <h2>About me: </h2>
+      <div className="about-section">
+        <section className="experience">
+          <h2 className="section-title">experience</h2>
+          {/* <Work works={works} />/ */}
+        </section>
 
-        <div>
-          <p>
-            <HighlightedText>A knack for visual design</HighlightedText>,
-            exposure to plethora of web applications, and eventually finding out
-            that tech and tools like HTML, CSS, JS would allow me visually shape
-            and <HighlightedText>build</HighlightedText> such{" "}
-            <HighlightedText>robust</HighlightedText>{" "}
-            <HighlightedText>applications</HighlightedText> from scratch,
-            exposed my passion for web development.
-          </p>
-          <p>
-            I've been researching and building applications with the intent of
-            implementing my learnings, get better conceptual clarity, developing
-            accessible, user-facing applications.
-          </p>
-          <p>
-            Blogging is a tool I use to{" "}
-            <HighlightedText>document</HighlightedText> my{" "}
-            <HighlightedText>learning</HighlightedText> and hopefully{" "}
-            <HighlightedText>help others</HighlightedText> along the way. Catch
-            it live here{" "}
-            <a href="https://webdevref.vercel.app/" target="_blank">
-              WebDevRef
-            </a>
-            .
-          </p>
-          <p>
-            I regularly scour{" "}
-            <a href="https://dribbble.com/" target="_blank">
-              Dribble
-            </a>{" "}
-            to meet my UI idea cravings and bring onboard the design principles
-            in my own projects.
-          </p>
-          <p>
-            Outside tech, you could find me sketching, writing free verse poetry
-            and short stories.
-          </p>
-        </div>
-      </section>
+        <section className="tech-and-tools-section">
+          <h2 className="section-title">tech and tools</h2>
 
-      <section className="experience">
-        <h2>experience</h2>
-        {/* <Work works={works} />/ */}
-      </section>
-
-      <section className="technologies">
-        <h2>tech and tools I've worked with:</h2>
-        <TechStack />
-      </section>
+          <ul className="tech-and-tools-list">
+            <li>HTML</li>
+            <li>CSS/SASS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React.js</li>
+            <li>Next.js</li>
+            <li>GraphQL</li>
+            <li>Firebase</li>
+          </ul>
+        </section>
+      </div>
     </Homepage>
   );
 };

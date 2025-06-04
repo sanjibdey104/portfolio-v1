@@ -3,43 +3,40 @@ import useForm from "../../hooks/useForm";
 import ToastMessage from "../ToastMessage";
 
 const StyledContactForm = styled.form`
-  width: 20rem;
-  height: fit-content;
-  box-shadow: var(--box-shadow);
-  border-radius: 0.5rem;
-  padding: 1rem;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 0.85rem;
-
-  label {
-    font-size: 0.85rem;
-  }
 
   input,
   textarea {
-    font-family: var(--font-secondary);
+    padding: 12px 16px;
+    border: 1px solid #f3f3f3;
+
     font-size: 1rem;
-    padding: 0.3rem 0.5rem;
-    border: 1px solid var(--fg-lightest);
-    border-radius: 0.5rem;
+    background-color: #f3f3f3;
 
     &::placeholder {
-      color: var(--fg-lightest);
+      color: var(--fg-lighter);
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      border: 1px solid var(--fg-lighter);
+      outline: 1px solid var(--fg-lighter);
     }
   }
 
-  #dispatch-btn {
-    width: 5rem;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
-    background-color: var(--accent-color-secondary);
+  .submit-button {
+    margin-left: auto;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--fg-bold);
 
     &:hover {
-      box-shadow: var(--hover-box-shadow);
+      color: var(--fg-lightest);
     }
   }
 
@@ -71,50 +68,50 @@ const ContactForm = (props) => {
   return (
     <div>
       <StyledContactForm onSubmit={handleFormSubmit} noValidate {...props}>
-        <label htmlFor="name">Name: </label>
         <input
           type="text"
           id="name"
           name="name"
-          placeholder="Bond, James Bond"
+          placeholder="Name"
           value={formData.name}
           onChange={handleInput}
           aria-label="name"
         />
         {renderErrorMsg("name")}
-        <label htmlFor="email">Email: </label>
+
         <input
           type="text"
           id="email"
           name="email"
-          placeholder="bond007@mi6.com"
+          placeholder="Email"
           value={formData.email}
           onChange={handleInput}
           aria-label="email"
         />
         {renderErrorMsg("email")}
-        <label htmlFor="message">Message: </label>
+
         <textarea
           name="message"
           id="message"
           cols="30"
           rows="5"
-          placeholder="Can I have one Vesper Martini, please? Shaken, not stirred."
-          name="message"
+          placeholder="Your message"
           value={formData.message}
           onChange={handleInput}
           aria-label="message"
         ></textarea>
         {renderErrorMsg("message")}
+
         <button
           type="submit"
-          id="dispatch-btn"
+          className="submit-button"
           disabled={serverState.submitting}
           aria-label="form submit button"
         >
           Dispatch
         </button>
       </StyledContactForm>
+
       {serverState.status && <ToastMessage serverState={serverState} />}
     </div>
   );
