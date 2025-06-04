@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import { SiLinkedin } from "react-icons/si";
 import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
-import CustomCta from "../components/custom/CustomCta";
-import HighlightedText from "../components/custom/HighlightedText";
-import TechStack from "../components/TechStack";
 
 const Homepage = styled.main`
   display: flex;
@@ -158,7 +154,7 @@ const Home = () => {
       <div className="about-section">
         <section className="experience">
           <h2 className="section-title">experience</h2>
-          {/* <Work works={works} />/ */}
+          <Work />
         </section>
 
         <section className="tech-and-tools-section">
