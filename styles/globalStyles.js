@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
         color: var(--fg-light);
     }
 
-    a, button, input {
+    a, button, input,textarea {
         font-family: inherit;
     }
 
