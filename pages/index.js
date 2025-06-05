@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { FiDownload } from "react-icons/fi";
 import Work from "../components/Work";
+import { FiDownload } from "react-icons/fi";
+import styled from "styled-components";
 
 const Homepage = styled.main`
   display: flex;
