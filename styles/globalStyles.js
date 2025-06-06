@@ -82,10 +82,19 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         
         @media (max-width: 768px) {
             width: 100%;
             margin: 0;
+        }
+
+
+        #screensaver {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
         }
 
     }
