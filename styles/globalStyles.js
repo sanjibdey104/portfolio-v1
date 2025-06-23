@@ -82,6 +82,7 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 24px;
 
         
         @media (max-width: 768px) {

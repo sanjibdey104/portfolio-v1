@@ -52,11 +52,11 @@ const BouncingBallCanvas = () => {
   return (
     <canvas
       id="bouncing-ball-canvas"
-      width="80"
-      height="31"
+      width="60"
+      height="30"
       style={{
-        width: "80px",
-        height: "31px",
+        width: "50px",
+        height: "30px",
         zIndex: "-1",
       }}
     ></canvas>
