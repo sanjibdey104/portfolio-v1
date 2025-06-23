@@ -33,14 +33,30 @@ const Homepage = styled.main`
   .tech-and-tools-section {
     .tech-and-tools-list {
       display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
 
       li {
+        position: relative;
+        padding-left: 0.5rem;
         color: var(--fg-lighter);
+        line-height: 1;
 
         &:hover {
           color: var(--fg-light);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: var(--fg-lightest);
         }
       }
     }
