@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Work from "../components/Work";
 import { FiDownload } from "react-icons/fi";
+import Footer from "../components/layout/Footer";
 
 const Homepage = styled.main`
   display: flex;
@@ -198,6 +199,8 @@ const Home = () => {
           </ul>
         </section>
       </div>
+
+      <Footer />
     </Homepage>
   );
 };
