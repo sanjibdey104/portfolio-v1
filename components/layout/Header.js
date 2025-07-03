@@ -1,20 +1,24 @@
 import styled from "styled-components";
 import Logo from "./Logo";
-import BouncingBallCanvas from "../canvas/BouncingBallCanvas";
+import Link from "next/link";
 
 const StyledHeader = styled.header`
   width: 100%;
   height: 3rem;
-  position: relative;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  #bouncing-ball-canvas {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .nav-link {
+      font-size: 12px;
+      border: 1px solid red;
+    }
   }
 `;
 
@@ -23,7 +27,11 @@ const Header = () => {
     <StyledHeader>
       <Logo />
 
-      <BouncingBallCanvas />
+      <section className="nav-links">
+        <Link href="/blog">
+          <a className="nav-link blog-nav-link">Blog</a>
+        </Link>
+      </section>
     </StyledHeader>
   );
 };

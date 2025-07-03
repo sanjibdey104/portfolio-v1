@@ -1,4 +1,12 @@
 import { useEffect } from "react";
+import styled from "styled-components";
+
+const StyledBoucingBallCanvas = styled.canvas`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+`;
 
 const BouncingBallCanvas = () => {
   useEffect(() => {
@@ -50,16 +58,16 @@ const BouncingBallCanvas = () => {
   }, []);
 
   return (
-    <canvas
+    <StyledBoucingBallCanvas
       id="bouncing-ball-canvas"
-      width="80"
-      height="31"
+      width="60"
+      height="24"
       style={{
-        width: "80px",
-        height: "31px",
+        width: "60px",
+        height: "24px",
         zIndex: "-1",
       }}
-    ></canvas>
+    ></StyledBoucingBallCanvas>
   );
 };
 
