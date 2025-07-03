@@ -4,20 +4,29 @@ import Link from "next/link";
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 3rem;
+  height: 5rem;
+
+  position: sticky;
+  top: 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bg-light);
+  z-index: 2;
 
-  .nav-link {
+  .nav-links {
     display: flex;
     align-items: center;
     gap: 8px;
 
-    .nav-link {
-      font-size: 12px;
-      border: 1px solid red;
+    a.nav-link {
+      font-size: 0.8rem;
+      color: var(--fg-lighter);
+
+      &:hover {
+        color: var(--fg-light);
+      }
     }
   }
 `;

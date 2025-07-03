@@ -75,13 +75,13 @@ const GlobalStyles = createGlobalStyle`
         margin: 0 auto;
         max-width: 1100px;
         min-height: 100vh;
-        padding: 1rem;
-        position: relative;
+        padding: 0 1rem 1rem 1rem;
         font-family: var(--font-primary);
-
+        
         display: flex;
         flex-direction: column;
         gap: 48px;
+        position: relative;
         
         @media (max-width: 768px) {
             width: 100%;
