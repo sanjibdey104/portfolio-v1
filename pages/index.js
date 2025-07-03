@@ -6,6 +6,7 @@ import Footer from "../components/layout/Footer";
 const Homepage = styled.main`
   display: flex;
   flex-direction: column;
+  gap: 48px;
 
   p,
   ul {
@@ -98,8 +99,17 @@ const Intro = styled.section`
   gap: 1.5rem;
 
   .hero-text {
-    font-size: clamp(4.5rem, 16vw, 6.5rem);
-    line-height: clamp(4.5rem, 16vw, 6.5rem);
+    color: var(--fg-lightest);
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    p.dev-name {
+      display: inline-block;
+      color: var(--fg-light);
+      font-weight: 700;
+      font-size: clamp(2.5rem, 10vw, 3.5rem);
+      line-height: clamp(2.5rem, 10vw, 3.5rem);
+    }
   }
 
   .brief-intro-text {
@@ -140,12 +150,7 @@ const Intro = styled.section`
   }
 
   @media (max-width: 768px) {
-    height: 60vh;
-
-    .hero-text {
-      font-size: clamp(4rem, 14vw, 6rem);
-      line-height: clamp(4rem, 14vw, 6rem);
-    }
+    height: 50vh;
   }
 `;
 
@@ -153,12 +158,13 @@ const Home = () => {
   return (
     <Homepage>
       <Intro className="intro-section">
-        <h1 className="hero-text">Frontend Developer</h1>
+        <h1 className="hero-text">
+          <span>Namaste, I'm</span> <p className="dev-name">Sanjib.</p>
+        </h1>
 
         <div className="brief-intro-text">
-          Namaste, I'm <p className="dev-name">Sanjib</p>. A{" "}
-          <p className="location-name">Bangalore</p> based web developer,
-          currently at{" "}
+          A <p className="location-name">Bangalore</p> based web developer,
+          currently working at{" "}
           <a
             className="current-company"
             href="https://qoruz.com/"
