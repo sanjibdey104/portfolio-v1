@@ -79,8 +79,8 @@ const Work = () => {
 
           <div className="job-desc">
             <p>
-              Working as a Senior Frontend Developer primarily focused on React
-              JS.
+              Working as a Senior Frontend Developer primarily working with
+              React JS.
             </p>
             <p>Delivering design to code with complete ownership.</p>
 
