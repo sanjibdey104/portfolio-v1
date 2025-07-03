@@ -5,20 +5,25 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
+import { globalBlogComponents } from "../../lib/mdx-global-components-map";
 
 export default function BlogPost({ source, frontMatter }) {
+  const components = {
+    ...globalBlogComponents,
+  };
+
   return (
     <>
       <Head>
         <title>{frontMatter.title}</title>
       </Head>
-      <article
-        style={{ maxWidth: "700px", margin: "2rem auto", padding: "0 1rem" }}
-      >
+
+      <section>
         <h1>{frontMatter.title}</h1>
         <p>{frontMatter.date}</p>
-        <MDXRemote {...source} />
-      </article>
+
+        <MDXRemote {...source} components={components} />
+      </section>
     </>
   );
 }
