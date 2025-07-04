@@ -90,7 +90,6 @@ const Homepage = styled.main`
 `;
 
 const Intro = styled.section`
-  height: 100vh;
   position: relative;
 
   display: flex;
@@ -99,21 +98,21 @@ const Intro = styled.section`
   gap: 1.5rem;
 
   .hero-text {
-    color: var(--fg-lightest);
     font-weight: 500;
     font-size: 1.2rem;
+    color: var(--fg-lighter);
 
     p.dev-name {
       display: inline-block;
       color: var(--fg-light);
       font-weight: 700;
-      font-size: clamp(2.5rem, 10vw, 3.5rem);
-      line-height: clamp(2.5rem, 10vw, 3.5rem);
+      font-size: 2rem;
+      /* line-height: clamp(2.5rem, 10vw, 3.5rem); */
     }
   }
 
   .brief-intro-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--fg-lightest);
 
     p {
@@ -136,7 +135,7 @@ const Intro = styled.section`
 
     color: var(--fg-lighter);
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 1.5;
 
     svg {
       font-size: 1rem;
@@ -148,15 +147,28 @@ const Intro = styled.section`
       color: var(--fg-light);
     }
   }
-
-  @media (max-width: 768px) {
-    height: 50vh;
-  }
 `;
 
 const Home = () => {
   return (
     <Homepage>
+      <section className="theme-testing">
+        <p className="light-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum,
+          reprehenderit.
+        </p>
+
+        <p className="lighter-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum,
+          reprehenderit.
+        </p>
+
+        <p className="lightest-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum,
+          reprehenderit.
+        </p>
+      </section>
+
       <Intro className="intro-section">
         <h1 className="hero-text">
           <span>Namaste, I'm</span> <p className="dev-name">Sanjib.</p>

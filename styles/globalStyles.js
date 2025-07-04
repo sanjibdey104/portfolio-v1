@@ -2,26 +2,32 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        --font-primary: 'Epilogue', sans-serif;
-        --font-secondary: 'Inter', sans-serif;
-        --bg-light: #fbfbfb;
-        --mobile-nav-bg: #000000;
-        --mobile-nav-text: #ffffffda;
+        /* font */
+        --font-primary: 'Inter', sans-serif;
 
-        --accent-color-primary: #1976d2;
-        --accent-color-secondary: #ffc800;
+        /* background */
+        --bg-color: #f0f4f9;
 
-        --fg-bold: #212121;
-        --fg-light: #424242;
-        --fg-lighter: #616161;
-        --fg-lightest: #adb5bd;
+        /* foreground */        
+        --fg-deep: #1f1f1f;
+        --fg-light:#0f0f0f;
+        --fg-lighter: #555555;
+        --fg-lightest: #888888;
 
-        --box-shadow: rgba(50, 50, 90, 0.25) 0px 8px 10px -5px, 
-        rgba(0, 0, 0, 0.2) 0px 8px 10px -8px, 
-        rgba(10, 40, 50, 0.2) 0px -2px 5px 0px inset;
-        --hover-box-shadow: rgba(50, 50, 90, 0.25) 0px 3px 5px -3px, 
-        rgba(0, 0, 0, 0.2) 0px 3px 5px -3px, 
-        rgba(10, 40, 50, 0.2) 0px -1px 3px 0px inset;
+        background-color: var(--bg-color);
+        color: var(--fg-light);
+    }
+
+    [data-theme="dark"] {
+        --bg-color: #131314;
+
+        --fg-deep: #fff;
+        --fg-light: #e3e3e3;
+        --fg-lighter: #c4c7c5;
+        --fg-lightest: #888;
+
+        background-color: var(--bg-color);
+        color: var(--fg-deep);
     }
 
     *,*::before,*::after {
@@ -87,6 +93,18 @@ const GlobalStyles = createGlobalStyle`
             width: 100%;
             margin: 0;
         }
+    }
+
+    .light-text {
+        color: var(--fg-light)
+    }
+
+    .lighter-text {
+        color: var(--fg-lighter)
+    }
+
+    .lightest-text {
+        color: var(--fg-lightest)
     }
 `;
 
