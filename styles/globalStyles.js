@@ -45,10 +45,11 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         width: 100%;
-        line-height: 1.5;
         background-color: var(--bg-light);
         font-family: var(--font-primary);
         color: var(--fg-light);
+        line-height: 1.5;
+        font-size: 1rem;
     }
 
     a, button, input,textarea {
@@ -77,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     .container {
-        width: 80%;
+        width: 75%;
         margin: 0 auto;
         max-width: 1100px;
         min-height: 100vh;

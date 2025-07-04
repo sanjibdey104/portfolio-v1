@@ -1,5 +1,6 @@
-import Document from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { themeInitScript } from "../lib/theme-init"; // ✅ import from lib
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -27,5 +28,19 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          {/* 🟡 Add script to set theme before React loads */}
+          <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
