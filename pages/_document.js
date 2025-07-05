@@ -1,7 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { themeInitScript } from "../lib/theme-init"; // ✅ import from lib
-
+import { themeInitScript } from "../lib/theme-init"; //
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();

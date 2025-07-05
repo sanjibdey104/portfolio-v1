@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
 
     applyTheme(theme);
 
-    // ✅ Only sync with system if user hasn't set a manual theme
+    // Only sync with system if user hasn't set a manual theme
     if (!storedTheme) {
       const handleChange = (e) => {
         const newTheme = e.matches ? "dark" : "light";

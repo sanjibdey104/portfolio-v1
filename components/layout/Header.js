@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import Link from "next/link";
+import ThemeToggle from "../ThemeToggle";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -12,8 +13,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-light);
-  z-index: 2;
+  background-color: var(--bg-color);
 
   .nav-links {
     display: flex;
@@ -40,6 +40,8 @@ const Header = () => {
         <Link href="/blog">
           <a className="nav-link blog-nav-link">Blog</a>
         </Link>
+
+        <ThemeToggle />
       </section>
     </StyledHeader>
   );
