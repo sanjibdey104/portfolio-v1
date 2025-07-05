@@ -4,10 +4,12 @@ import Link from "next/link";
 
 const StyledLogo = styled.h3`
   margin: 0;
-  font-size: 1.3rem;
-  color: var(--fg-bold);
   position: relative;
   cursor: pointer;
+
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  color: var(--fg-deep);
 `;
 
 const Logo = () => {

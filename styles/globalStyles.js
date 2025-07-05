@@ -9,25 +9,28 @@ const GlobalStyles = createGlobalStyle`
         --bg-color: #f0f4f9;
 
         /* foreground */        
-        --fg-deep: #1f1f1f;
-        --fg-light:#0f0f0f;
-        --fg-lighter: #555555;
-        --fg-lightest: #888888;
-
+        --fg-deep: #0f0f0f;
+        --fg-light: #555555;
+        --fg-lighter: #888888;
+        
         background-color: var(--bg-color);
         color: var(--fg-light);
+
+        /* --fg-light: #0f0f0f; */
     }
 
     [data-theme="dark"] {
         --bg-color: #131314;
 
-        --fg-deep: #fff;
-        --fg-light: #e3e3e3;
-        --fg-lighter: #c4c7c5;
-        --fg-lightest: #888;
-
+        --fg-deep: #ffffff;
+        --fg-light: #bbbbbb;
+        --fg-lighter: #888888;
+        
         background-color: var(--bg-color);
-        color: var(--fg-deep);
+        color: var(--fg-light);
+        
+        /* --fg-light: #e3e3e3; */
+        /* --fg-lighter: #c4c7c5; */
     }
 
     *,*::before,*::after {
@@ -43,19 +46,30 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         width: 100%;
-        line-height: 1.5;
         font-size: 1rem;
+        line-height: 1.5;
         font-family: var(--font-primary);
     }
 
-    a, button, input,textarea {
-        font-family: inherit;
-    }
-
     a {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
         text-decoration: none;
-        color: inherit;
+        color: var(--fg-deep);
         cursor: pointer;
+
+        &:hover, &:active {
+            color: var(--fg-light);
+        }
+
+        svg {
+            font-size: 1rem;
+            width: 1rem;
+            height: 1rem;
+        }
     }
 
     img,svg {
@@ -73,8 +87,31 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
 
+    h1,h2,h3,h4,h5,p,ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,h2,h3,h4,h5 {
+        color: var(--fg-deep);
+    }
+
+    .prose {
+        color: var(--fg-light);
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
+
     .container {
-        width: 75%;
+        width: 70%;
         margin: 0 auto;
         max-width: 1100px;
         min-height: 100vh;
@@ -91,15 +128,15 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
-    .light-text {
-        color: var(--fg-light);
+    .text-light {
+        color: var(--fg-deep);
     }
 
-    .lighter-text {
+    .text-lighter {
         color: var(--fg-lighter);
     }
 
-    .lightest-text {
+    .text-lightest {
         color: var(--fg-lightest);
     }
 `;

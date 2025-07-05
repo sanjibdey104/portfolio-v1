@@ -18,7 +18,7 @@ const BouncingBallCanvas = () => {
       let hasBottomCollision = false;
 
       const ball = {
-        x: 44,
+        x: 42,
         y: 0,
         radius: 3,
         yVelocity: 0,
@@ -60,10 +60,10 @@ const BouncingBallCanvas = () => {
   return (
     <StyledBoucingBallCanvas
       id="bouncing-ball-canvas"
-      width="60"
+      width="50"
       height="24"
       style={{
-        width: "60px",
+        width: "50px",
         height: "24px",
         zIndex: "-1",
       }}

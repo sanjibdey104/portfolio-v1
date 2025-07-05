@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 const WorkComponent = styled.section`
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
 
   .company-list {
@@ -14,30 +9,20 @@ const WorkComponent = styled.section`
     gap: 4rem;
 
     .company {
-      display: flex;
-      flex-direction: column;
       gap: 1rem;
 
       .company-info {
-        display: flex;
-        flex-direction: column;
-
         .company-name {
-          color: var(--fg-bold);
-          font-weight: 600;
           font-size: 1.2rem;
         }
 
         .job-duration {
           font-size: 0.8rem;
-          font-weight: 400;
           color: var(--fg-lighter);
         }
       }
 
       .job-desc {
-        display: flex;
-        flex-direction: column;
         gap: 1rem;
 
         p,
@@ -47,17 +32,17 @@ const WorkComponent = styled.section`
         }
 
         .tools-desc {
+          margin-top: 0.5rem;
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
 
           h4 {
-            color: var(--fg-lightest);
-            font-weight: 400;
+            color: var(--fg-lighter);
           }
 
           .tools-used {
-            color: var(--fg-lighter);
+            color: var(--fg-deep);
             font-weight: 500;
           }
         }
@@ -68,16 +53,16 @@ const WorkComponent = styled.section`
 
 const Work = () => {
   return (
-    <WorkComponent>
-      <ul className="company-list">
-        <li className="company qoruz">
-          <div className="company-info">
-            <p className="company-name">Qoruz</p>
+    <WorkComponent className="flex-col">
+      <ul className="company-list flex-col">
+        <li className="company flex-col qoruz">
+          <div className="company-info flex-col">
+            <h3 className="company-name">Qoruz</h3>
 
             <p className="job-duration">Oct 2021 - Present</p>
           </div>
 
-          <div className="job-desc">
+          <div className="job-desc flex-col">
             <p>
               Working as a Senior Frontend Developer primarily working with
               React JS.
@@ -88,20 +73,20 @@ const Work = () => {
               <h4>Tools used:</h4>
 
               <p className="tools-used">
-                JavaScript, TypeScript, ReactJS, NextJS, Bootstrap
+                JavaScript, TypeScript, React.js, Next.js, Bootstrap
               </p>
             </div>
           </div>
         </li>
 
-        <li className="company tcs">
-          <div className="company-info">
-            <p className="company-name">TCS (Tata Consultancy Services)</p>
+        <li className="company flex-col tcs">
+          <div className="company-info flex-col">
+            <h3 className="company-name">TCS (Tata Consultancy Services)</h3>
 
             <p className="job-duration">Sep 2017 - Jan 2020</p>
           </div>
 
-          <div className="job-desc">
+          <div className="job-desc flex-col">
             <p>Worked as a Middleware Engineer for a UK based retail client.</p>
 
             <p>

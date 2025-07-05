@@ -16,6 +16,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-color);
+  z-index: 2;
 
   .nav-links {
     display: flex;
