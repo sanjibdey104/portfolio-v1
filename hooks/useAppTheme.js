@@ -13,12 +13,13 @@ export default function useAppTheme() {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     // Only sync with system if user hasn't set a manual theme
     if (!storedTheme) {
       const onSysThemePrefChange = (e) => {
         const newTheme = e.matches ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.setAttribute("data-theme", newTheme);
       };
 
       mediaQuery.addEventListener("change", onSysThemePrefChange);
