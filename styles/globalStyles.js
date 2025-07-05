@@ -121,7 +121,7 @@ const GlobalStyles = createGlobalStyle`
         
         display: flex;
         flex-direction: column;
-        gap: 6rem;
+        gap: 5rem;
         
         @media (max-width: 768px) {
             width: 100%;

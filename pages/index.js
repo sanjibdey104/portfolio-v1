@@ -3,7 +3,7 @@ import WorkHistory from "../components/WorkHistory";
 import UnderConstructionMsg from "../components/UnderConstructionMsg";
 
 const Homepage = styled.main`
-  gap: 6rem;
+  gap: 5rem;
 
   .section-title {
     font-size: 1rem;
@@ -66,18 +66,6 @@ const Intro = styled.section`
       color: var(--fg-deep);
     }
   }
-
-  .in-progress {
-    border-left: 5px solid red;
-    height: 20px;
-    padding-left: 1rem;
-    align-items: center;
-    gap: 5px;
-
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--fg-deep);
-  }
 `;
 
 const Home = () => {
@@ -104,10 +92,14 @@ const Home = () => {
         <p className="prose">
           My approach to learning and upskilling is Project Driven Development.
           Be it Vanilla.js, React frameworks, Web APIs, Chrome Extentions or
-          custom google tools based workflow. This portfolio is my way to not
-          only highlight my projects, but my documenting my raw thought process
-          and problem solving approach, with all the set-backs and learning,
-          hoping that might help someone build their own learning framework.
+          custom google tools based workflow.
+        </p>
+
+        <p className="prose">
+          This portfolio is my way to not only highlight my projects, but my
+          documenting my raw thought process and problem solving approach, with
+          all the set-backs and learning, hoping that might help someone build
+          their own learning framework.
         </p>
 
         <UnderConstructionMsg />
