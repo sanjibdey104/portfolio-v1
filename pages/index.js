@@ -102,6 +102,13 @@ const Home = () => {
           help someone build their own learning framework.
         </p>
 
+        <p className="prose">
+          Beyond programming, I enjoy movies, photography, reading fiction,
+          writing poems and short-stories. And many of my personal projects are
+          hobby-centric, as an effort to embrace a create-more-than-consume
+          mindset.
+        </p>
+
         <UnderConstructionMsg />
 
         {/* <a
