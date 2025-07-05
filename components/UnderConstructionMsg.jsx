@@ -23,8 +23,8 @@ const StyledUnderConstructionMsg = styled.div`
 const UnderConstructionMsg = () => {
   return (
     <StyledUnderConstructionMsg>
-      <FiTool /> THIS IS A NEW VERSION. UPDATE IS STILL IN PROGRESS. PLEASE
-      VISIT AGAIN FOR FINAL VERSION.
+      <FiTool /> THIS IS A NEW VERSION. UPDATES ARE IN PROGRESS. PLEASE VISIT
+      AGAIN SOON.
     </StyledUnderConstructionMsg>
   );
 };
