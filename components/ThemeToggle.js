@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/theme-context";
 import styled from "styled-components";
 
@@ -10,14 +10,6 @@ const StyledThemeToggle = styled.button`
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  // [TODO]: extract into an util
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  if (!hasMounted) return null;
 
   return (
     <StyledThemeToggle onClick={toggleTheme}>

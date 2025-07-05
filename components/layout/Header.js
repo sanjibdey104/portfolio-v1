@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import Link from "next/link";
-import ThemeToggle from "../ThemeToggle";
+import { clientOnly } from "../../lib/client-only-import";
+
+const ThemeToggle = clientOnly(() => import("../ThemeToggle"));
 
 const StyledHeader = styled.header`
   width: 100%;
