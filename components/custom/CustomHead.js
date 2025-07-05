@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { themeInitScript } from "../../lib/theme-init";
 
 const CustomHead = () => {
   return (
@@ -33,6 +34,7 @@ const CustomHead = () => {
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet"
       />
+      <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
     </Head>
   );
 };

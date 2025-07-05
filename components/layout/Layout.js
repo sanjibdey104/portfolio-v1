@@ -5,6 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <CustomHead />
+
       <div className="container">
         <Header />
         {children}
