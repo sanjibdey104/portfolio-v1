@@ -47,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         width: 100%;
         font-size: 1rem;
+        font-weight: 400;
         line-height: 1.5;
         font-family: var(--font-primary);
     }
@@ -116,11 +117,11 @@ const GlobalStyles = createGlobalStyle`
         max-width: 1100px;
         min-height: 100vh;
         padding: 0 1rem 2rem 1rem;
+        position: relative;
         
         display: flex;
         flex-direction: column;
-        gap: 48px;
-        position: relative;
+        gap: 6rem;
         
         @media (max-width: 768px) {
             width: 100%;

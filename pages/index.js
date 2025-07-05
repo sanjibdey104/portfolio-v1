@@ -1,25 +1,18 @@
-import { techAndTools } from "../data";
-import Work from "../components/Work";
 import styled from "styled-components";
-import Footer from "../components/layout/Footer";
-import { FiDownload } from "react-icons/fi";
+import WorkHistory from "../components/WorkHistory";
+import UnderConstructionMsg from "../components/UnderConstructionMsg";
 
 const Homepage = styled.main`
-  gap: 4rem;
+  gap: 6rem;
 
   .section-title {
-    /* width: fit-content; */
     font-size: 1rem;
     color: var(--fg-light);
     border-bottom: 1px solid var(--fg-light);
   }
 
   .about-section {
-    gap: 4rem;
-
-    section {
-      gap: 1rem;
-    }
+    gap: 1rem;
   }
 
   .tech-and-tools-section {
@@ -73,6 +66,18 @@ const Intro = styled.section`
       color: var(--fg-deep);
     }
   }
+
+  .in-progress {
+    border-left: 5px solid red;
+    height: 20px;
+    padding-left: 1rem;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--fg-deep);
+  }
 `;
 
 const Home = () => {
@@ -96,23 +101,31 @@ const Home = () => {
           </a>
         </p>
 
-        <a
+        <p className="prose">
+          My approach to learning and upskilling is Project Driven Development.
+          Be it Vanilla.js, React frameworks, Web APIs, Chrome Extentions or
+          custom google tools based workflow. This portfolio is my way to not
+          only highlight my projects, but my documenting my raw thought process
+          and problem solving approach, with all the set-backs and learning,
+          hoping that might help someone build their own learning framework.
+        </p>
+
+        <UnderConstructionMsg />
+
+        {/* <a
           className="download-resume-handler"
           href="Resume_Sanjib_Kumar_Dey.pdf"
           download
         >
           <span>Download resume</span> <FiDownload />
-        </a>
+        </a> */}
       </Intro>
 
       <div className="about-section flex-col">
-        <section className="experience flex-col">
-          <h3 className="section-title">experience</h3>
-          <Work />
-        </section>
-      </div>
+        <h3 className="section-title">experience</h3>
 
-      <Footer />
+        <WorkHistory />
+      </div>
     </Homepage>
   );
 };

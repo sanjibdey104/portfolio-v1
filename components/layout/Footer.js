@@ -1,17 +1,29 @@
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  margin-top: 5rem;
+  margin-top: auto;
   gap: 1rem;
 
   font-size: 0.75rem;
   line-height: 0.75rem;
   color: var(--fg-light);
 
-  .connect-links {
+  .work-together-prompt {
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+
+    .connect-links {
+      align-items: center;
+      gap: 1rem;
+
+      a:hover,
+      a:focus {
+        text-decoration: none;
+        color: var(--fg-lighter);
+      }
+    }
   }
 
   .attribution {
@@ -31,51 +43,39 @@ const StyledFooter = styled.footer`
 function Footer() {
   return (
     <StyledFooter className="flex-col">
-      <p className="work-together-header">
-        If you found anything interesting, feel free to connect:
-      </p>
+      <div className="work-together-prompt flex-row">
+        <p>If you found anything interesting, feel free to connect:</p>
 
-      <ul className="connect-links flex-row">
-        <li>
-          <a
-            id="github_connect-link"
-            href="https://github.com/sanjibdey104"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="Github"
-          >
-            <FiGithub />
-          </a>
-        </li>
+        <ul className="connect-links flex-row">
+          <li>
+            <a
+              id="github_connect-link"
+              href="https://github.com/sanjibdey104"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="Github"
+            >
+              <FiGithub />
+            </a>
+          </li>
 
-        <li>
-          <a
-            id="linkedin_connect-link"
-            href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="Linkedin"
-          >
-            <FiLinkedin />
-          </a>
-        </li>
-
-        <li>
-          <a
-            id="email_connect-link"
-            href="mailto:sanjibdey.dey4@gmail.com"
-            rel="noreferrer"
-            target="_blank"
-            aria-label="Email"
-          >
-            <FiMail />
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a
+              id="linkedin_connect-link"
+              href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="Linkedin"
+            >
+              <FiLinkedin />
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <div className="attribution flex-col">
         <div className="tech-behind flex-row">
-          <p>built with 💗 and powered by</p>
+          <p>Built with 💗 and powered by</p>
           <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
             Next.js
           </a>{" "}

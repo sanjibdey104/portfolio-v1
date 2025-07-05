@@ -1,10 +1,13 @@
-import React from "react";
+import styled from "styled-components";
+import UnderConstructionMsg from "../components/UnderConstructionMsg";
+
+const StyledBlogSection = styled.section``;
 
 const Blog = () => {
   return (
-    <section className="blog-listing page">
-      <h3>Welcome to the Blog space</h3>
-    </section>
+    <StyledBlogSection className="blog-listing page">
+      <UnderConstructionMsg />
+    </StyledBlogSection>
   );
 };
 

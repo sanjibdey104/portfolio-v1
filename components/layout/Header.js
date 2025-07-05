@@ -12,23 +12,23 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
 
-  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-color);
   z-index: 2;
 
   .nav-links {
-    display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 1rem;
 
     a.nav-link {
-      font-size: 0.8rem;
-      color: var(--fg-lighter);
+      font-size: 0.9rem;
+      color: var(--fg-light);
 
-      &:hover {
-        color: var(--fg-light);
+      &:hover,
+      &:focus {
+        color: var(--fg-deep);
+        text-decoration: none;
       }
     }
   }
@@ -36,10 +36,10 @@ const StyledHeader = styled.header`
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <StyledHeader className="flex-row">
       <Logo />
 
-      <section className="nav-links">
+      <section className="nav-links flex-row">
         <Link href="/blog">
           <a className="nav-link blog-nav-link">Blog</a>
         </Link>
