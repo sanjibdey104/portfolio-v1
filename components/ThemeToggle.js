@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../context/theme-context";
 import styled from "styled-components";
 
 const StyledThemeToggle = styled.button`
@@ -8,19 +9,15 @@ const StyledThemeToggle = styled.button`
 `;
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState("light");
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  // [TODO]: extract into an util
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    const current = document.documentElement.getAttribute("data-theme");
-    setTheme(current || "light");
+    setHasMounted(true);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    setTheme(newTheme);
-  };
+  if (!hasMounted) return null;
 
   return (
     <StyledThemeToggle onClick={toggleTheme}>

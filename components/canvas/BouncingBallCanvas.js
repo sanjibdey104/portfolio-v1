@@ -67,7 +67,7 @@ const BouncingBallCanvas = () => {
         height: "24px",
         zIndex: "-1",
       }}
-    ></StyledBoucingBallCanvas>
+    />
   );
 };
 

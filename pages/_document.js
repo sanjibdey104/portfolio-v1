@@ -32,10 +32,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
-        <body>
+        <Head>
           {/* 🟡 Add script to set theme before React loads */}
           <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        </Head>
+
+        <body>
           <Main />
           <NextScript />
         </body>

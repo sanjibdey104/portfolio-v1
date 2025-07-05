@@ -41,15 +41,11 @@ const GlobalStyles = createGlobalStyle`
         font-size: 100%;
     }
 
-  
-
     body {
         width: 100%;
-        background-color: var(--bg-light);
-        font-family: var(--font-primary);
-        color: var(--fg-light);
         line-height: 1.5;
         font-size: 1rem;
+        font-family: var(--font-primary);
     }
 
     a, button, input,textarea {
@@ -83,7 +79,6 @@ const GlobalStyles = createGlobalStyle`
         max-width: 1100px;
         min-height: 100vh;
         padding: 0 1rem 1rem 1rem;
-        font-family: var(--font-primary);
         
         display: flex;
         flex-direction: column;
@@ -97,15 +92,15 @@ const GlobalStyles = createGlobalStyle`
     }
 
     .light-text {
-        color: var(--fg-light)
+        color: var(--fg-light);
     }
 
     .lighter-text {
-        color: var(--fg-lighter)
+        color: var(--fg-lighter);
     }
 
     .lightest-text {
-        color: var(--fg-lightest)
+        color: var(--fg-lightest);
     }
 `;
 
