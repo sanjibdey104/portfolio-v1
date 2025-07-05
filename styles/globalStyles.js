@@ -51,6 +51,22 @@ const GlobalStyles = createGlobalStyle`
         font-family: var(--font-primary);
     }
 
+    button {
+        border: 0;
+        padding: 0.5rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    h1,h2,h3,h4,h5,p,ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,h2,h3,h4,h5 {
+        color: var(--fg-deep);
+    }
+
     a {
         width: fit-content;
         display: flex;
@@ -62,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
 
         &:hover, &:active {
-            color: var(--fg-light);
+            text-decoration: underline;
         }
 
         svg {
@@ -78,22 +94,6 @@ const GlobalStyles = createGlobalStyle`
 
     ul {
         list-style: none;
-    }
-
-    button {
-        border: 0;
-        padding: 0.5rem;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    h1,h2,h3,h4,h5,p,ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    h1,h2,h3,h4,h5 {
-        color: var(--fg-deep);
     }
 
     .prose {
@@ -115,7 +115,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0 auto;
         max-width: 1100px;
         min-height: 100vh;
-        padding: 0 1rem 1rem 1rem;
+        padding: 0 1rem 2rem 1rem;
         
         display: flex;
         flex-direction: column;

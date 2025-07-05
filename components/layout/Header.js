@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import Logo from "./Logo";
-import Link from "next/link";
 import { clientOnly } from "../../lib/client-only-import";
+import Link from "next/link";
+import Logo from "../ui/Logo";
+import styled from "styled-components";
 
 const ThemeToggle = clientOnly(() => import("../ThemeToggle"));
 

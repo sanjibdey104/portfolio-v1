@@ -110,16 +110,6 @@ const Home = () => {
           <h3 className="section-title">experience</h3>
           <Work />
         </section>
-
-        <section className="tech-and-tools-section flex-col">
-          <h2 className="section-title">tech and tools</h2>
-
-          <ul className="tech-and-tools-list flex-row">
-            {techAndTools.map((tool) => (
-              <li key={tool.value}>{tool.label}</li>
-            ))}
-          </ul>
-        </section>
       </div>
 
       <Footer />
