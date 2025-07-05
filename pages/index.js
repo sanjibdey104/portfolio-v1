@@ -90,16 +90,16 @@ const Home = () => {
         </p>
 
         <p className="prose">
-          My approach to learning and upskilling is Project Driven Development.
-          Be it Vanilla.js, React frameworks, Web APIs, Chrome Extentions or
-          custom google tools based workflow.
+          My approach to learning and upskilling is Project Driven Development -
+          be it Vanilla.js, Web APIs, Chrome Extentions, custom workflow tooling
+          or recent indulgence in math and physics-based simulations.
         </p>
 
         <p className="prose">
-          This portfolio is my way to not only highlight my projects, but my
-          documenting my raw thought process and problem solving approach, with
-          all the set-backs and learning, hoping that might help someone build
-          their own learning framework.
+          This portfolio is my way to not only highlight my projects, but also
+          document my raw thought process and problem solving approach -
+          including all the set-backs and learning - in the hope that it might
+          help someone build their own learning framework.
         </p>
 
         <UnderConstructionMsg />
