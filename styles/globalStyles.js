@@ -17,6 +17,9 @@ const GlobalStyles = createGlobalStyle`
         color: var(--fg-light);
 
         /* --fg-light: #0f0f0f; */
+
+        /* accent colors */
+        --green-100: #99d98c;
     }
 
     [data-theme="dark"] {

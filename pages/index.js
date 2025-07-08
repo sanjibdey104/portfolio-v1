@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import WorkHistory from "../components/WorkHistory";
 import UnderConstructionMsg from "../components/UnderConstructionMsg";
+import CurrentlyReading from "../components/CurrentlyReading";
 
 const Homepage = styled.main`
   gap: 5rem;
 
   .about-section {
-    gap: 1rem;
+    gap: 4rem;
   }
 
   .tech-and-tools-section {
@@ -116,6 +117,8 @@ const Home = () => {
 
       <div className="about-section flex-col">
         <WorkHistory />
+
+        <CurrentlyReading />
       </div>
     </Homepage>
   );
