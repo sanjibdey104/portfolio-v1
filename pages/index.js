@@ -5,12 +5,6 @@ import UnderConstructionMsg from "../components/UnderConstructionMsg";
 const Homepage = styled.main`
   gap: 5rem;
 
-  .section-title {
-    font-size: 1rem;
-    color: var(--fg-light);
-    border-bottom: 1px solid var(--fg-light);
-  }
-
   .about-section {
     gap: 1rem;
   }
@@ -121,8 +115,6 @@ const Home = () => {
       </Intro>
 
       <div className="about-section flex-col">
-        <h3 className="section-title">experience</h3>
-
         <WorkHistory />
       </div>
     </Homepage>
