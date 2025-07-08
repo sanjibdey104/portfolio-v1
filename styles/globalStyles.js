@@ -132,6 +132,13 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
+    .section-separator {
+        width: 100%;
+        height: 2px;
+        border: none;
+        border-bottom: 1px solid var(--fg-light);
+    }
+
     .text-light {
         color: var(--fg-deep);
     }

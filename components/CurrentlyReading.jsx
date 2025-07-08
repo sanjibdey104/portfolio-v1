@@ -45,7 +45,7 @@ const CurrentlyReading = () => {
   return (
     <StyledCurrentlyReading className="flex-row">
       <section className="current-read-stat">
-        <div class="pulsating-dot"></div>
+        <div className="pulsating-dot"></div>
         <span>Currently reading: </span>
         <a
           className="current-title-link"

@@ -118,6 +118,8 @@ const Home = () => {
       <div className="about-section flex-col">
         <WorkHistory />
 
+        <hr class="section-separator" />
+
         <CurrentlyReading />
       </div>
     </Homepage>
