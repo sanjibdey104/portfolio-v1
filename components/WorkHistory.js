@@ -83,18 +83,14 @@ const WorkHistory = () => {
           <p>Worked as a Middleware Engineer for a UK based retail client.</p>
 
           <p>
-            - Primarily focused on acquiring business-level understanding and
-            investigate data flow and mapping logic issues
+            - Acquired business flow understanding to assist with data flow and
+            mapping logic issues.
           </p>
 
           <p>
-            - Work in collaboration and ensure proper handover with engineers
-            from DBMS, Inventory Management, eCommerce Team
+            - Work with DBMS, Inventory and E-Commerce Teams to help
+            troubleshoot and document recurring production bugs.
           </p>
-
-          <p>- Track, troubleshoot and document recurring production bugs</p>
-
-          <p>- Engaged with Development Team over DevOps migration phase</p>
 
           <div className="tools-desc">
             <p className="desc-title">Tools used:</p>
