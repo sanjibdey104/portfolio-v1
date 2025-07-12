@@ -9,36 +9,6 @@ const Homepage = styled.main`
   .about-section {
     gap: 4rem;
   }
-
-  .tech-and-tools-section {
-    .tech-and-tools-list {
-      flex-wrap: wrap;
-      gap: 1rem;
-
-      li {
-        position: relative;
-        padding-left: 0.5rem;
-        color: var(--fg-light);
-
-        &:hover {
-          color: var(--fg-deep);
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0px;
-          top: 50%;
-          transform: translateY(-50%);
-
-          width: 4px;
-          height: 4px;
-          border-radius: 50%;
-          background-color: var(--fg-lighter);
-        }
-      }
-    }
-  }
 `;
 
 const Intro = styled.section`
